@@ -20,7 +20,7 @@ from typing import List, Optional
 import os
 
 
-data_file_name = "data/eminen.txt"
+data_file_name = "data/washingmachine_data.txt"
 
 
 @dataclass
