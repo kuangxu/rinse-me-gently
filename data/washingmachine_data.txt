@@ -1,0 +1,842 @@
+
+
+
+
+TOP-LOADING HIGH EFFICIENCY LOW-WATER WASHER
+USE AND CARE GUIDE
+
+W10783959A
+W10783960A - SP
+
+Designed to use only HE High Efficiency detergents.
+Conçue pour l’utilisation d’un détergent haute efficacité seulement.
+
+TABLE OF CONTENTS
+WASHER SAFETY...........................................................2
+WHAT’S NEW UNDER THE LID? .................................3
+CONTROL PANEL AND FEATURES............................4
+CYCLE GUIDE...................................................................6
+USING YOUR WASHER.................................................7
+WASHER MAINTENANCE...........................................10
+TROUBLESHOOTING ...................................................12
+WARRANTY ....................................................................17
+ASSISTANCE OR SERVICE ..........................BACK COVER
+
+TABLE DES MATIÈRES
+SÉCURITÉ DE LA LAVEUSE .......................................18
+QUOI DE NEUF SOUS LE COUVERCLE? ...............19
+TABLEAU DE COMMANDE ET CARACTÉRISTIQUES...........................................................20
+GUIDE DE PROGRAMMES.........................................22
+UTILISATION DE LA LAVEUSE ..................................23
+ENTRETIEN DE LA LAVEUSE.....................................26
+DÉPANNAGE ..................................................................28
+GARANTIE.......................................................................34
+ASSISTANCE OU SERVICE......COUVERTURE ARRIÈRE
+
+Para una versión de estas instrucciones en español, visite www.maytag.com
+
+WASHER SAFETY
+Your safety and the safety of others are very important.
+We have provided many important safety messages in this manual and on your appliance. Always read and obey all safety messages.
+This is the safety alert symbol.
+This symbol alerts you to potential hazards that can kill or hurt you and others.
+All safety messages will follow the safety alert symbol and either the word “DANGER” or “WARNING.” These words mean:
+DANGER: You can be killed or seriously injured if you don't immediately follow instructions.
+WARNING: You can be killed or seriously injured if you don't follow instructions.
+All safety messages will tell you what the potential hazard is, tell you how to reduce the chance of injury, and tell you what can happen if the instructions are not followed.
+
+IMPORTANT SAFETY INSTRUCTIONS
+WARNING: To reduce the risk of fire, electric shock, or injury to persons when using your appliance, follow basic precautions, including the following:
+- Read all instructions before using the appliance.
+- Do not wash articles that have been previously cleaned in, washed in, soaked in, or spotted with gasoline, dry-cleaning solvents, or other flammable or explosive substances, as they give off vapors that could ignite or explode.
+- Do not add gasoline, dry-cleaning solvents, or other flammable or explosive substances to the wash water. These substances give off vapors that could ignite or explode.
+- Under certain conditions, hydrogen gas may be produced in a hot water system that has not been used for 2 weeks or more. HYDROGEN GAS IS EXPLOSIVE. If the hot water system has not been used for such a period, before using a washing machine, turn on all hot water faucets and let the water flow from each for several minutes. This will release any accumulated hydrogen gas. As the gas is flammable, do not smoke or use an open flame during this time.
+- Do not allow children to play on or in the appliance. Close supervision of children is necessary when the appliance is used near children.
+- Before the appliance is removed from service or discarded, remove the door or lid.
+- Do not reach into the appliance if the tub or agitator is moving.
+- Do not install or store this appliance where it will be exposed to the weather.
+- Do not tamper with controls.
+- Do not repair or replace any part of the appliance or attempt any servicing unless specifically recommended in the user-maintenance instructions or in published user-repair instructions that you understand and have the skills to carry out.
+- See “Electrical Requirements” for grounding instructions.
+
+SAVE THESE INSTRUCTIONS
+
+WHAT’S NEW UNDER THE LID?
+Choosing the Right Detergent
+Use only High Efficiency detergents. The package will be marked “HE” or “High Efficiency.” Low-water washing creates excessive sudsing with a regular non-HE detergent. Using regular detergent will likely result in longer cycle times and reduced rinsing performance. It may also result in component failures and noticeable mold or mildew. HE detergents are made to produce the right amount of suds for the best performance. Follow the manufacturer’s instructions to determine the amount of detergent to use and do not go over the Max line. See “Using Laundry Product Dispensers” for more information.
+Use only High Efficiency (HE) detergent.
+
+Normal Sounds You Can Expect
+At different stages of the wash cycle, you may hear sounds and pauses different from those of your previous washer. For example, you may hear a clicking and hum at the beginning of the cycle as the lid lock goes through a self-test. There will be different kinds of humming and whirring sounds as the agitator tests for load balance or moves the load. Sometimes, you may hear nothing as the washer determines the correct water level for the load and allows the load to soak.
+
+Improved Cleaning
+Low-water cleaning means concentrated cleaning. Rather than diluting detergent as done in an agitator-style washer, this washer delivers the detergent directly to the soils. This low water wash also allows the clothing to move in a more effective way to remove soils.
+
+Cleaning with Less Water
+The most striking difference in your new washer is the low-water washplate wash system. The washer automatically adjusts the water level to the load size. No water-level selector is needed.
+
+Traditional agitator-style washer | Washer with low-water washplate wash system
+Washplate
+
+Automatic Load Size Sensing
+Once you start the cycle, the washer will fill to the water level. When the washer is done filling, it will start to agitate after it determines the correct level for the load. The washer will then fill to the appropriate water level based on the load size. This low-water wash method uses less water and energy compared to a traditional agitator-style washer.
+As the washer dampens and moves the load, the level of the items will settle in the basket. This is normal, and does not indicate that more items should be added.
+IMPORTANT: You will not see a washer basket full of water as with your past agitator-style washer. It is normal for some of the load to be above the water line.
+For best performance, evenly load items in loose heaps around the washplate.
+
+CONTROL PANEL AND FEATURES
+PROGRESS LIGHTS
+The Progress Lights show the progress of a cycle. At each stage of the process, you may notice sounds or pauses that are different from traditional washers.
+
+SENSING
+When the START/Pause button is pressed, the washer will fill to an initial water level and begin sensing to determine the load size. The washer will then continue filling to the appropriate water level based on load size and proceed to Wash. If the lid is opened or the START/Pause button is pressed, the cycle will pause. Closing the lid and/or pressing the START/Pause button will resume the cycle. If the cycle remains paused with the lid open for 10 minutes, the washer will pump out the water.
+
+WASH
+During the first stage of the sensing/wash cycle, water will partially fill the washer and begin to move the load. It is normal to have the sensing light on during this stage. You will hear the agitator rotate followed by a several second pause. This process will repeat for several minutes, allowing the entire load to become saturated. The lower water level combined with HE detergent at this stage allows for concentrated cleaning. It is normal for the load to be above the water line during this stage. At the beginning of the second stage, the washer will add water to the correct level based on the load size. You will hear the agitator increase speed during this stage of the wash cycle. The motor sounds may change at different stages in the wash cycle.
+
+SOIL LEVEL
+Select the setting most suitable for your load. For heavily soiled and sturdy fabrics, select Heavy Soil Level for more wash time. For lightly soiled and delicate fabrics, select Light Soil Level for less wash time. A lighter soil-level setting will help reduce tangling and wrinkling.
+
+WASH TEMP
+Wash Temp senses and maintains uniform water temperatures by regulating incoming hot and cold water. Select a wash temperature based on the type of fabric and soils being washed. For best results and following the garment label instructions, use the warmest wash water safe for your fabric.
+- On some models and cycles, warm and hot water may be cooler than your previous washer.
+- Even in a cold and cool water wash, some warm water may be added to the washer to maintain a minimum temperature.
+
+WASH CYCLE KNOB
+Use the Wash Cycle knob to select cycles on your washer. See “Cycle Guide” for detailed descriptions of cycles.
+
+CYCLE OPTIONS
+The following options may be added to most cycles.
+EXTRA RINSE
+This option can be used to automatically add a second rinse to most cycles.
+FABRIC SOFTENER ADDED
+This option must be set to “On” if using fabric softener.
+
+START/PAUSE BUTTON
+Press to start the selected cycle; press again to pause the cycle and unlock the lid.
+NOTE: If the washer is spinning, it may take several minutes to unlock the lid.
+
+Not all features and options are available on all models. Appearance may vary.
+
+RINSE
+You will hear sounds similar to the wash cycle as the washer rinses and moves the load. You may hear the motor turning on briefly (short hum) to move the basket while filling.
+
+SPIN
+The washer spins the load at increasing speeds for proper water removal based on the selected cycle and spin speed.
+
+DONE
+Once the cycle is complete, this light will come on. For best results, promptly remove the load.
+
+LID LOCKED
+The Lock feature allows for higher spin speeds. When lit, the lid is locked and cannot be opened without pausing the cycle. When the light is off, the lid can be opened.
+To open the lid after it has been locked, press START/Pause. The lid will unlock once the washer movement has stopped. This may take several minutes if the load was spinning at high speed. Press START/Pause while the lid is closed to resume the cycle.
+
+CYCLE GUIDE
+For best fabric care, choose the cycle that best fits the load being washed. Recommended settings for best performance are shown in Bold. Not all settings and options are available on each cycle.
+NOTE: If you are using fabric softener, be sure to select the Fabric Softener-On option.
+*All rinses are cold.
+
+Items to wash: | Cycle: | Wash Temp*: | Spin Speed: | Cycle Details:
+---|---|---|---|---
+Sturdy fabrics, colorfast items, towels, jeans | Power Wash® | Hot Warm Cool Cold Tap Cold | High | Use this cycle for sturdy fabrics and heavily soiled garments. The water-level detection process may take more time for some articles than others, this is because some fabrics absorb more water than others.
+Casual and mixed loads, jeans, towels, sturdy fabrics | Deep Water Wash | Hot Warm Cool Cold Tap Cold | High | Provides additional water and alternating wash action for heavily soiled mixed loads. Water-level sensing process may take longer for some items than for others because they will absorb more water than other fabric types.
+Large items such as sheets, sleeping bags, small comforters, jackets, small washable rugs | Bulky/Sheets | Hot Warm Cool Cold Tap Cold | Low | Use this cycle to wash large items such as jackets and small comforters. The washer will fill with enough water to wet down the load before the wash portion of the cycle begins and uses a higher water level than other cycles.
+Cottons, linens, and mixed-item loads | Normal | Hot Warm Cool Cold Tap Cold | High | Use this cycle for normally soiled cottons and mixed-fabric loads.
+No-iron fabrics, cottons, perm. press, linens, synthetics | Wrinkle Control | Hot Warm Cool Cold Tap Cold | Low | Use this cycle to wash loads of no-iron fabrics such as sport shirts, blouses, casual business clothes, permanent press, and blends.
+Machine-wash silks, handwash fabrics | Hand Wash | Hot Warm Cool Cold Tap Cold | Low | Use this cycle to wash lightly soiled items indicating “Machine Washable Silks” or “Gentle” cycle on the care label. Place small items in mesh garment bags before washing. This cycle uses a higher, preset water level.
+Bright or darkly colored cottons, linens, casual and mixed loads | Cold Wash | Cold | High | Cold water with an additional wash action gently lifts stains while caring for fabrics. Settings may be adjusted as desired but must use only cold water settings.
+Heavily soiled fabrics | Soak | Hot Warm Cool Cold Tap Cold | No Spin | Use this cycle to soak small spots of set in stains on fabrics. The washer will use intermittent agitation and soaking. After time has expired, water will drain, but the washer will not spin. Cycle is complete.
+Swimsuits and items requiring rinsing without detergent | Rinse & Spin | Cold rinse only | High | Combines a rinse and high-speed spin for loads requiring an additional rinse cycle. Use this cycle to complete a load after power interruption or for loads that require rinsing only.
+Hand-washed items or dripping wet items | Drain & Spin | N/A | High | This cycle uses a spin to shorten drying times for heavy fabrics or special-care items washed by hand. Use this cycle to drain washer after canceling a cycle or completing a cycle after a power failure.
+No clothes in washer | Clean Washer with affresh® | Hot Warm Cool Cold Tap Cold | Low | Use this cycle every 30 washes to keep the inside of your washer fresh and clean. This cycle uses a higher water level. Use with affresh® Washer Cleaner tablet or liquid chlorine bleach to thoroughly clean the inside of your washer. This cycle should not be interrupted. See “Washer Care.” IMPORTANT: Do not place garments or other items in the washer during the Clean Washer with affresh® cycle. Use this cycle with an empty wash tub.
+
+USING YOUR WASHER
+1. Sort and prepare your laundry
+- Empty pockets. Loose change, buttons, or any small object can pass under the washplate and become trapped, causing unexpected sounds.
+- Sort items by recommended cycle, water temperature, and colorfastness.
+- Separate heavily soiled items from lightly soiled.
+- Separate delicate items from sturdy fabrics.
+- Do not dry items if stains remain after washing, because heat can set stains into fabric.
+- Treat stains promptly.
+- Close zippers, fasten hooks, tie strings and sashes, and remove non-washable trim and ornaments.
+- Mend rips and tears to avoid further damage to items during washing.
+Helpful Tips:
+- When washing water-proof or water-resistant items, load evenly.
+- Use mesh garment bags to help avoid tangling when washing delicate or small items.
+- Turn knits inside out to avoid pilling. Separate lint-takers from lint-givers. Synthetics, knits, and corduroy fabrics will pick up lint from towels, rugs, and chenille fabrics.
+Always read and follow fabric care label instructions to avoid damage to your items.
+
+2. Add laundry products
+Add single-dose laundry packets, Oxi-type boosters, color-safe bleach, or fabric-softener crystals to the bottom of the washer basket before adding clothes.
+NOTE: Follow the manufacturer’s instructions to determine the amount of laundry products to use.
+
+3. Load laundry into washer
+Load garments in loose heaps evenly around basket wall. For best results, do not pack the load tightly. Do not wrap large items such as sheets around the wash plate; load them in loose piles around the sides of the basket. Try mixing different sized items to reduce tangling.
+IMPORTANT: Do not tightly pack or force items into washer. Items need to move freely for best cleaning and to reduce wrinkling and tangling.
+
+4. Add HE detergent
+Add a measured amount of HE liquid detergent into detergent tray. This tray holds 3 oz. (89 mL). If adding powder HE detergent, remove inside tray. Do not overfill tray. Adding too much detergent may cause detergent to be dispensed into the washer too early.
+NOTE: Make sure tray is in drawer when using liquid detergent and removed when using powder detergent. Do not go over the Max line.
+IMPORTANT: Use only High Efficiency detergents. The package will be marked “HE” or “High Efficiency.” Low-water washing creates excessive sudsing with a regular non-HE detergent. Using regular detergent will likely result in longer cycle times and reduced rinsing performance. It may also result in component failures and noticeable mold or mildew. HE detergents are made to produce the right amount of suds for the best performance. Follow the manufacturer’s instructions to determine the amount of detergent to use.
+HELPFUL TIP: See “Washer Maintenance” for recommended method of cleaning washer dispenser trays.
+HE removal detergent tray
+NOTE: Do not add single-dose laundry packets, color-safe bleach, Oxi-type boosters, or fabric-softener crystals to dispensers. They will not dispense correctly. Add to the basket prior to adding laundry.
+
+Using Laundry Product Dispensers
+
+5. Add liquid chlorine bleach to dispenser
+Do not overfill, dilute, or use more than 1 cup (250 mL). Do not use color-safe bleach or Oxi products in the same cycle with liquid chlorine bleach.
+Liquid Chlorine Bleach
+
+6. Add liquid fabric softener to dispenser
+Pour a measured amount of liquid fabric softener into tray; always follow manufacturer’s directions for correct amount of fabric softener based on your load size. Close dispenser drawer, then select Fabric Softener - On option. Fabric Softener is added during rinse.
+IMPORTANT: Fabric Softener option must be selected to ensure proper distribution at correct time in cycle. Do not overfill or dilute. Overfilling dispenser will cause fabric softener to immediately dispense into washer.
+If Extra Rinse option is selected, fabric softener will be dispensed into the last rinse. It is normal for a small amount of water to remain in the dispenser at the end of a cycle.
+Fabric softener tray
+
+7. Select cycle
+Turn cycle knob to choose your wash cycle. For more information, see “Cycle Guide.”
+
+8. Select SOIL LEVEL
+Once you select a cycle, select the soil level by turning the Soil Level knob to the desired setting.
+
+9. Select wash temperature
+Once you select a cycle, select the wash temperature by turning the Wash Temp knob to the desired setting. Always read and follow fabric care label instructions to avoid damage to your items.
+
+Wash Temp | Suggested Fabrics
+---|---
+Hot | Some cold water is added to save energy. This will be cooler than your hot water heater setting. | Whites and pastels Durable items Heavy soils
+Warm | Some cold water will be added, so this will be cooler than what your previous washer provided. | Bright colors Moderate to light soils
+Cool | Warm water is added to assist in soil removal and to help dissolve detergents. | Colors that bleed or fade Light soils
+Cold | Warm water may be added to assist in soil removal and to help dissolve detergents. | Dark colors that bleed or fade Light soils
+Tap Cold | This is the temperature from your faucet. | Dark colors that bleed or fade Light soils
+
+10. Select cycle options, if desired
+If you would like to add an Extra Rinse and/or Fabric Softener option, turn the knob for that feature to ON.
+
+11. Press START/Pause to begin wash cycle
+Press the START/Pause button to start the wash cycle. When the cycle has finished, the Done indicator will light. Promptly remove garments after cycle has completed to avoid odor, reduce wrinkling, and prevent rusting of metal hooks, zippers, and snaps.
+Unlocking the lid to add items
+If you need to open the lid to add 1 or 2 missed garments:
+Press START/Pause. The lid will unlock once the washer movement has stopped. This may take several minutes if the load was spinning at high speed. Add garments, close lid, and press START/Pause again to restart the cycle.
+If lid is left open for more than 10 minutes the water will pump out automatically.
+
+WASHER MAINTENANCE
+NON-USE AND VACATION CARE
+Operate your washer only when you are home. If moving, or not using your washer for a period of time, follow these steps:
+1. Unplug or disconnect power to washer.
+2. Turn off water supply to washer, to avoid flooding due to water-pressure surge.
+
+WATER INLET HOSES
+Replace inlet hoses after 5 years of use to reduce the risk of hose failure. Periodically inspect and replace inlet hoses if bulges, kinks, cuts, wear, or leaks are found.
+When replacing your inlet hoses, mark the date of replacement on the label with a permanent marker.
+NOTE: This washer does not include inlet hoses. See the “Installation Instructions” for more information.
+
+WASHER CARE
+Recommendations to Help Keep Your Washer Clean and Performing at its Best
+1. Always use High Efficiency (HE) detergents and follow the HE detergent manufacturer’s instructions regarding the amount of HE detergent to use. Never use more than the recommended amount because that may increase the rate at which detergent and soil residue accumulate inside your washer, which in turn may result in undesirable odor.
+2. Use warm and hot wash water settings sometimes (not exclusively cold water washes), because they do a better job of controlling the rate at which soils and detergent accumulate.
+3. Always leave the washer lid open between uses to help dry out the washer and prevent the buildup of odor-causing residue.
+
+Cleaning Your Top Loading Washer
+Read these instructions completely before beginning the routine cleaning processes recommended below. This washer maintenance procedure should be performed, at a minimum, once per month or every 30 wash cycles, whichever occurs sooner, to control the rate at which soils and detergent may otherwise accumulate in your washer.
+
+Cleaning the Inside of the Washer
+To keep your washer odor-free, follow the usage instructions provided above, and use this recommended monthly cleaning procedure:
+
+Clean Washer Cycle
+This washer has a special cycle that uses higher water volumes in combination with affresh® Washer Cleaner or liquid chlorine bleach to clean the inside of the washer.
+Begin procedure
+1. affresh® Washer Cleaner Cycle Procedure (Recommended for Best Performance):
+a. Open the washer lid and remove any clothing or items.
+b. Place an affresh® Washer Cleaner tablet in the bottom of the washer basket.
+c. Do not place an affresh® Washer Cleaner tablet in the detergent dispenser.
+d. Do not add any detergent or other chemical to the washer when following this procedure.
+e. Close the washer lid.
+f. Select the Clean Washer cycle.
+g. Press the START/Pause button to begin the cycle.
+The Clean Washer Cycle Operation is described below.
+NOTE: For best results, do not interrupt cycle. If cycle must be interrupted, press Power/Cancel. (For models with no Power/Cancel button, press and hold START/Pause for three seconds). After the Clean Washer cycle has stopped, run a Rinse & Spin cycle to rinse cleaner from washer.
+
+2. Chlorine Bleach Procedure (Alternative):
+a. Open the washer lid and remove any clothing or items.
+b. Add 1 cup (236 mL) of liquid chlorine bleach to the bleach compartment.
+NOTE: Use of more liquid chlorine bleach than is recommended above could cause washer damage over time.
+c. Close the washer lid.
+d. Do not add any detergent or other chemical to the washer when following this procedure.
+e. Select the Clean Washer cycle.
+f. Press the START/Pause button to begin the cycle.
+The Clean Washer Cycle Operation is described below.
+NOTE: For best results, do not interrupt cycle. If cycle must be interrupted, press Power/Cancel. (For models with no Power/Cancel button, press and hold START/Pause for three seconds). After the Clean Washer cycle has stopped, run a Rinse & Spin cycle to rinse cleaner from washer.
+
+Description of Clean Washer Cycle Operation:
+1. This cycle will fill to a water level higher than in normal wash cycles to provide rinsing at a level above the water line for normal wash cycle.
+2. During this cycle, there will be some agitation and spinning to increase the removal of soils.
+After this cycle is complete, leave the lid open to allow for better ventilation and drying of the washer interior.
+
+Cleaning the Outside of the Washer
+Use a soft, damp cloth or sponge to wipe away any spills. Use only mild soaps or cleaners when cleaning external washer surfaces.
+IMPORTANT: To avoid damaging the washer’s finish, do not use abrasive products.
+
+WINTER STORAGE CARE
+IMPORTANT: To avoid damage, install and store washer where it will not freeze. Some water may stay in hoses, and freezing can damage washer. If storing or moving during freezing weather, winterize your washer.
+To winterize washer:
+1. Shut off both water faucets; disconnect and drain water inlet hoses.
+2. Put 1 qt. (1 L) of R.V.-type antifreeze in basket and run washer on Rinse & Spin cycle for about 30 seconds to mix antifreeze and remaining water.
+3. Unplug washer or disconnect power.
+
+To use washer again:
+1. Flush water pipes and hoses. Reconnect water inlet hoses. Turn on both water faucets.
+2. Plug in washer or reconnect power.
+3. Run washer through Bulky/Sheets cycle to clean washer and remove any antifreeze. Use half the manufacturer’s recommended amount of detergent for a medium-size load.
+
+TRANSPORTING YOUR WASHER
+1. Shut off both water faucets. Disconnect and drain water inlet hoses.
+2. If washer will be moved during  freezing weather, follow “Winter Storage Care” directions before moving.
+3. Disconnect drain hose from drain system and drain any remaining water into a pan or bucket. Disconnect drain hose from back of washer.
+4. Unplug power cord.
+5. Place inlet hoses and drain hose inside washer basket.
+6. Drape power cord over edge and into washer basket.
+7. Place packing tray from original shipping materials back inside washer. If you do not have packing tray, place heavy blankets or towels into basket opening. Close lid and place tape over lid and down front of washer. Keep lid taped until washer is placed in new location. Transport washer in upright position.
+
+REINSTALLING/USING WASHER AGAIN
+To reinstall washer after non-use, vacation, winter storage, or moving:
+1. Refer to Installation Instructions to locate, level, and connect washer.
+2. Before using again, run washer through the following recommended procedure:
+To use washer again:
+1. Flush water pipes and hoses. Reconnect water inlet hoses. Turn on both water faucets.
+2. Plug in washer or reconnect power.
+3. Run washer through Bulky/Sheets cycle to clean washer and remove any antifreeze. Use half the manufacturer’s recommended amount of detergent for a medium-size load.
+
+CLEANING YOUR DISPENSER TRAY
+IMPORTANT: Dispenser trays are not dishwasher safe.
+You may find laundry product residue leftover in your dispenser trays. To remove residue, follow this recommended cleaning procedure:
+1. Pull drawer out until you feel resistance.
+2. Push tab downward and then continue pulling out.
+3. Wash in warm, soapy water, using a mild detergent.
+4. Rinse with warm water.
+5. Air dry or dry with a towel, then place back into slot.
+
+TROUBLESHOOTING
+First try the solutions suggested here or visit our website at www.maytag.com/product_help - In Canada www.maytag.ca for assistance and to possibly avoid a service call.
+
+If you experience | Possible Causes | Solution
+---|---|---
+Vibration or Off-Balance | Feet may not be in contact with the floor and locked. | Front and rear feet must be in firm contact with floor, and washer must be level to operate properly. See “Installation Instructions”.
+| Check floor for flexing or sagging. If flooring is uneven, a 3/4" (19 mm) piece of plywood under your washer will reduce sound. See “Level the Washer” in Installation Instructions.
+| Load could be unbalanced. | Load dry items in loose heaps evenly around washplate. Adding wet items to washer or adding more water to basket could unbalance washer. Wash smaller loads to reduce imbalance. Do not tightly pack. Avoid washing single items. Use Bulky/Sheets cycle for oversized, non-absorbent items such as comforters or poly-filled jackets. See “Cycle Guide” and “Using Your Washer” in this Use and Care Guide.
+Noises - For normal operating sounds, goto www.maytag.com/product_help | Empty pockets before washing. Loose items such as coins could fall between basket and tub or may block pump. It may be necessary to call for service to remove items.
+| It is normal to hear metal items on clothing such as snaps, buckles, or zippers touch against the stainless steel basket.
+| Objects may be caught in washer drain system. | 
+| Clicking or metallic noises. | 
+| Gurgling or humming. | It is normal to hear the pump making a continuous humming sound with periodic gurgling or surging as final amounts of water are removed during the spin/drain cycles.
+| Washer may be draining water. | 
+Washer not level. | Water may splash off basket if washer is not level. Check that load is not unbalanced or tightly packed.
+Water Leaks | Check the following for proper installation: | Fill hoses not attached tightly. Tighten fill-hose connection. Make sure all four fill hose flat washers are properly seated.
+| Drain hose connection. | Pull drain hose from washer cabinet and properly secure it to drainpipe or laundry tub.
+| Check household plumbing for leaks or clogged sink or drain. Water can backup out of a clogged sink or drainpipe. Check all household plumbing for leaks (laundry tubs, drain pipe, water pipes, and faucets.)
+| Fill hose washers. | 
+| Washer not loaded as recommended. | Unbalanced loading can cause basket to be out of alignment and cause water to splash off tub. See “Using Your Washer” for loading instructions.
+| Do not place tape over drain opening. | 
+Not enough water in washer. Load not completely covered in water. | This is normal operation for an HE low-water washer. The load will not be completely underwater. The washer senses load sizes and adds correct amount of water for optimal cleaning. See “What’s New under the Lid.”
+IMPORTANT: Do not add more water to washer.
+Humming. | You may hear the hum of the sensing spins after you have started the washer. This is normal. Load sensing may be occurring.
+Whirring. | You may hear the whirring sound of the basket decelerating. This is normal. Basket deceleration may be occurring.
+Washer won’t run or fill, washer stops working or wash light remains on (indicating that the washer was unable to fill appropriately). | Check for proper water supply. | Both hoses must be attached and have water flowing to inlet valve. Both hot and cold water faucets must be turned on. Check that inlet valve screens have not become clogged. Check for any kinks in inlet inlet hoses, which can restrict water flow.
+| Washer may be tightly packed. | Remove several items, rearrange load evenly in basket and add detergent. Close lid and press START/Pause. Do not add more than 1 or 2 additional items after cycle has started to avoid tightly packing or unbalancing.
+| Not using HE detergent or using too much HE detergent. | Only use HE detergent. Suds from regular detergents can slow or stop the washer. Always measure detergent and follow detergent directions based on your load requirements. To remove suds, cancel cycle. Select RINSE & SPIN. Press START/Pause. Do not add more detergent.
+| Normal washer operation. | Lid must be closed for washer to run. Washer will pause during certain phases of cycle. Do not interrupt cycle. Washer may be stopped to reduce suds.
+| Check proper electrical supply. | Plug power cord into a grounded 3 prong outlet. Do not use an extension cord. Ensure there is power to outlet. Reset a tripped circuit breaker. Replace any blown fuses. NOTE: If problems continue, contact an electrician.
+Do not add more water to the washer.
+Incorrect or wrong wash or rinse temperatures. | Check for proper water supply. | Make sure hot and cold inlet hoses are not reversed. Both hoses must be attached to both washer and faucet, and have both hot and cold water flowing to inlet valve. Check that inlet valve screens are not clogged. Remove any kinks in hoses.
+Load not rinsed. | Check for proper water supply. | Make sure hot and cold inlet hoses are not reversed. Both hoses must be attached and have water flowing to the inlet valve. Both hot and cold water faucets must be on. Inlet valve screens on washer may be clogged. Remove any kinks in the inlet hose.
+| Not using HE detergent or using too much HE detergent. | The suds from regular detergent can keep washer from operating correctly. Use only HE detergent. Be sure to measure correctly. Always measure detergent and follow detergent directions based on load size and soil level.
+| Washer not loaded as recommended. | The washer is less efficient at rinsing when tightly packed. Load items in loose heaps evenly around the washplate. The washer will not rinse well if tightly packed. Load with dry items only. Use cycle designed for the fabrics being washed. Add only 1 or 2 items after washer has started.
+| Using a cycle with a low spin speed. | Cycles with lower spin speeds remove less water than cycles with high spin speeds. Use the recommended cycle/spin speed for your item. To remove extra water in the load, select Drain & Spin. Load may need to be rearranged to allow even distribution of the load in the basket.
+| The washer may be tightly packed or unbalanced. | Small items may have been caught in pump or between basket and tub, which can slow draining. Empty pockets and use garment bags for small items.
+| Tightly packed or unbalanced loads may not allow the washer to spin correctly, leaving the load wetter than normal. Evenly arrange the wet load for balanced spinning. Select the Drain & Spin cycle to remove excess water. See “Using Your Washer” for loading recommendations.
+Washer not draining/ spinning, loads are still wet, or spin light remains on (indicating that the washer was unable to pump out water within 10 minutes). | Check plumbing for correct drain hose installation. Drain hose extends into standpipe farther than 4.5" (114 mm). | Check drain hose for proper installation. Use drain hose form and securely attach to drainpipe or tub. Do not tape over drain opening. Lower drain hose if the end is higher than 96" (2.4 m) above the floor. Remove any clogs from drain hose.
+| Too much detergent causing suds to slow or stop draining and spinning. | Use only HE detergent. Always measure and follow detergent directions for your load. To remove extra suds, select Rinse & Spin. Do not add detergent.
+| The high spin speeds combined with air flow during the final spin can cause items near the top of the load to develop dry spots during the final spin. This is normal. High speed spins extract more moisture than traditional top-load washers.
+Dry spots on load after cycle. | 
+Washer not loaded as recommended. | Washer senses load size and adds correct amount of water. This is normal and necessary for clothes to move. It is normal for the wash load to be not completely covered in water. Added water lifts the laundry off the washplate, resulting in less effective cleaning. Washer is less efficient at cleaning when tightly packed. Load items in loose heaps evenly around the washplate. Load with dry items only. Add only 1 or 2 items after washer has started.
+Not cleaning or removing stains. | Added more water to washer. | 
+| Not using HE detergent or using too much HE detergent. | The suds from regular detergent can keep washer from operating correctly. Use only HE detergent. Be sure to measure correctly. Always measure detergent and follow manufacturer’s directions based on load size and soil level.
+| Not using correct cycle for fabric type. | Use a higher soil level cycle option and warmer wash temperature to improve cleaning. Use Power Wash® cycle for tough cleaning. See the “Cycle Guide” to match your load with the best cycle and fabric type.
+| Not using dispenser. | Use dispenser for chlorine bleach and for fabric softener to avoid staining. Load dispenser before starting a cycle. Do not add products directly onto load.
+| Not washing like colors together. | Wash like colors together and remove promptly after the cycle is complete to avoid dye transfer.
+Load is tangling. | Washer not loaded as recommended. See “Using Your Washer” section. | Select a cycle with a slower wash action and spin speed, however items will be wetter than those using a higher speed spin. See the “Cycle Guide” to match your load with the best cycle. Load items in loose heaps evenly around the washplate. Reduce tangling by mixing types of load items. Use the recommended cycle for the type of items being washed.
+Sand, pet hair, lint, etc. on load after washing. | Heavy sand, pet hair, lint, and detergent or bleach residues may require additional rinsing. | Add an Extra Rinse to the selected cycle.
+| Adding detergent on top of load. | Add detergent, oxi products and color-safe bleach to the bottom of the basket before adding the load items.
+Incorrect dispenser operation. | Clogged dispenser. | Use only liquid chlorine bleach in the bleach dispenser.
+| Not selecting Fabric Softener-On. | Always select “On” when adding fabric softener. Cycles that use spray rinsing will add additional water for proper fabric softener dispensing when “On” is selected.
+Odors. | Monthly maintenance not done as recommended. | Run the Clean Washer with affresh® cycle monthly. See “Washer Care” in “Washer Maintenance.” Unload washer as soon as cycle is complete.
+| Using wrong or too much detergent. | Use only HE detergent. Be sure to measure correctly. Always follow the manufacturer’s directions. See “Washer Care” section.
+Fabric Damage. | Empty pockets, zip zippers, and snap or hook fasteners before washing to avoid snags and tears. | 
+| Sharp items were in pockets during wash cycle. | 
+| Strings and straps could have tangled. | 
+| Items may have been damaged before washing. | Mend rips and broken threads in seams before washing.
+| Fabric damage can occur if washer is tightly packed. | 
+| Liquid chlorine bleach may have been added incorrectly. | Do not pour liquid chlorine bleach directly onto load. Wipe up bleach spills. Undiluted bleach will damage fabrics. Do not use more than recommended by manufacturer. Do not place load items on top of bleach dispenser when loading and unloading washer.
+| Garment care instructions may not have been followed. | Always read and follow garment manufacturer’s care label instructions. See the “Cycle Guide” to match your load with the best cycle. Load items in loose heaps evenly around the washplate. Load with dry items only. Use cycle designed for the fabrics being washed. Add only 1 or 2 items after washer is started.
+| Tie all strings and straps before starting wash load. | 
+Lid locked light is flashing. | The lid is not closed. | Close the lid. The washer will not start or fill with the lid open.
+| A cycle was stopped or paused using the Start/Pause/Unlock button. | The washer may still be spinning. The lid will not unlock until the basket has stopped spinning. This may take several minutes if washing large loads or heavy fabrics.
+Single-dose laundry packet not dissolving. | Adding laundry packet incorrectly. | Be sure laundry packet is added to washer basket before adding clothes. Follow the manufacturer’s instructions to avoid damage to your items.
+
+MAYTAG® LAUNDRY LIMITED WARRANTY
+WHAT IS COVERED
+FIRST YEAR LIMITED WARRANTY (PARTS AND LABOR)
+For one year from the date of purchase, when this major appliance is installed, operated, and maintained according to instructions attached to or furnished with the product, Maytag brand of Whirlpool Corporation or Whirlpool Canada LP (hereafter “Maytag”) will pay for factory specified parts and repair labor to correct defects in materials or workmanship that existed when this major appliance was purchased, or at its sole discretion replace the product. In the event of product replacement, your appliance will be warranted by the remaining term of the original unit’s warranty period.
+
+SECOND THROUGH TENTH YEAR LIMITED WARRANTY (DRIVE MOTOR AND WASH BASKET ONLY - LABOR NOT INCLUDED)
+In the second through tenth years from the date of original purchase, when this major appliance is installed, operated, and maintained according to instructions attached to or furnished with the product, Maytag will pay for factory specified parts for the following components to correct non-cosmetic defects in materials or workmanship in these parts that prevent function of this major appliance and that existed when this major appliance was purchased. This is a limited 10 year warranty on the below named parts only and does not include repair labor.
+- Drive Motor
+- Wash Basket (Side Walls Only)
+
+YOUR SOLE AND EXCLUSIVE REMEDY UNDER THIS LIMITED WARRANTY SHALL BE PRODUCT REPAIR AS PROVIDED HEREIN. Service must be provided by a Maytag designated service company. This limited warranty is valid only in the United States or Canada and applies only when the major appliance is used in the country in which it was purchased. This limited warranty is effective from the date of original consumer purchase. Proof of original purchase date is required to obtain service under this limited warranty.
+
+WHAT IS NOT COVERED
+1. Commercial, non-residential, multiple-family use, or use inconsistent with published user, operator, or installation instructions.
+2. In-home instruction on how to use your product.
+3. Service to correct improper product maintenance or installation, installation not in accordance with electrical or plumbing codes, or correction of household electrical or plumbing (i.e. house wiring, fuses, or water inlet hoses).
+4. Consumable parts (i.e. light bulbs, batteries, air or water filters, preservation solutions, etc.).
+5. Defects or damage caused by the use of non-genuine Maytag parts or accessories.
+6. Conversion of your product from natural gas or L.P. gas or reversal of appliance doors.
+7. Damage from accident, misuse, abuse, fire, floods, acts of God, or use with products not approved by Maytag.
+8. Repairs to parts or systems to correct product damage or defects caused by unauthorized service, alteration, or modification of the appliance.
+9. Cosmetic damage including scratches, dents, chips, and other damage to appliance finishes unless such damage results from defects in materials and workmanship and is reported to Maytag within 30 days.
+10. Discoloration, rust, or oxidation of surfaces resulting from caustic or corrosive environments, including but not limited to, high salt concentrations, high moisture or humidity, or exposure to chemicals.
+11. Pick-up or delivery. This product is intended for in-home repair.
+12. Travel or transportation expenses for service in remote locations where an authorized Maytag servicer is not available.
+13. Removal or reinstallation of inaccessible appliances or built-in fixtures (i.e. trim, decorative panels, flooring, cabinetry, islands, countertops, drywall, etc.) that interfere with servicing, removal, or replacement of the product.
+14. Service or parts for appliances with original model/serial numbers removed, altered, or not easily determined.
+The cost of repair or replacement under these excluded circumstances shall be borne by the customer.
+
+ATTACH YOUR RECEIPT HERE. PROOF OF PURCHASE IS REQUIRED TO OBTAIN WARRANTY SERVICE.
+Please have the following information available when you call the Customer eXperience Center:
+- Name, address, and telephone number
+- Model number and serial number
+- A clear, detailed description of the problem
+- Proof of purchase including dealer or retailer name and address
+
+IF YOU NEED SERVICE:
+1. Before contacting us to arrange service, please determine whether your product requires repair. Some questions can be addressed without service. Please take a few minutes to review the Troubleshooting or Problem Solver section of the Use and Care Guide, scan the QR code on the right to access additional resources, or visit https://www.maytag.com/product_help.
+2. All warranty service is provided exclusively by our authorized Maytag Service Providers. In the U.S. and Canada, direct all requests for warranty service to:
+Maytag Customer eXperience Center
+In the U.S.A. call 1-800-688-9900. In Canada call 1-800-807-6777.
+If outside the 50 United States and Canada, contact your authorized Maytag dealer to determine if another warranty applies.
+
+TEN YEAR LIMITED WARRANTY
+https://www.maytag.com/product_help
+
+DISCLAIMER OF IMPLIED WARRANTIES
+IMPLIED WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY OR IMPLIED WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE, ARE LIMITED TO ONE YEAR OR THE SHORTEST PERIOD ALLOWED BY LAW. Some states and provinces do not allow limitations on the duration of implied warranties of merchantability or fitness, so this limitation may not apply to you. This warranty gives you specific legal rights, and you also may have other rights that vary from state to state or province to province.
+
+LIMITATION OF REMEDIES; EXCLUSION OF INCIDENTAL AND CONSEQUENTIAL DAMAGES
+YOUR SOLE AND EXCLUSIVE REMEDY UNDER THIS LIMITED WARRANTY SHALL BE PRODUCT REPAIR AS PROVIDED HEREIN. MAYTAG SHALL NOT BE LIABLE FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES. Some states and provinces do not allow the exclusion or limitation of incidental or consequential damages, so these limitations and exclusions may not apply to you. This warranty gives you specific legal rights, and you also may have other rights that vary from state to state or province to province.
+
+DISCLAIMER OF REPRESENTATIONS OUTSIDE OF WARRANTY
+Maytag makes no representations about the quality, durability, or need for service or repair of this major appliance other than the representations contained in this Warranty. If you want a longer or more comprehensive warranty than the limited warranty that comes with this major appliance, you should ask Maytag or your retailer about buying an extended warranty.
+
+
+WASHING MACHINE INSTRUCTION MANUAL
+Models: MORRIS WBW-81265/2, WBW-81266/2, WBS-81270/2
+
+FEATURES
+Economic wash system  
+Using artificial intelligence, the washer uses minimum energy and water by selecting optimal water level and washing time.
+
+Low noise system  
+The washer minimizes washing and spinning noises by sensing the amount of laundry.
+
+Child-Lock  
+The Child-Lock system prevents children from pressing any button to change the program during operation.
+
+Nano-silver sterilization washing (Option)  
+Very fine silver particles on essential parts sterilize up to 99.9% as in boiling wash.
+
+Air bubble washing (Option)  
+Advanced technology generates millions of air bubbles inside the drum. Bubbles dissolve detergent completely and cleanse soil gently and neatly.
+
+CONTENTS
+PARTS AND FEATURES ................................................ 2
+WASHER SAFETY ........................................................ 3
+INSTALLATION INSTRUCTIONS .................................. 5
+INLET HOSE CONNECTION ......................................... 6
+ELECTRICAL REQUIREMENTS .................................... 7
+OPERATING YOUR WASHER ....................................... 8
+CONTROL PANEL FUNCTIONS ................................... 10
+WASHING PROCEDURE AND PROGRAM SELECTION ... 11
+PRODUCT INFORMATION .......................................... 23
+MAINTENANCE .......................................................... 24
+HOW TO CLEAN THE FILTER ..................................... 25
+REMOVING STAINS .................................................... 26
+TROUBLE SHOOTING ................................................. 27
+SPECIFICATION & WIRING DIAGRAM .......................... 28
+
+A NOTE TO YOU
+Thank you for buying a MORRIS appliance. MORRIS washers are easy to use, save time, and help you manage your home better. This manual contains valuable information about how to operate and maintain your washer properly and safely. Please read it carefully.
+
+PARTS AND FEATURES
+The parts and features of your washer are illustrated below. Become familiar with all parts and features before using your washer.
+
+NOTE
+The drawings in this manual may vary from your washer model. They show the different features of all models covered by this book. Your model may not include all features.
+
+INLET HOSE  
+DETERGENT CASE  
+CONTROL PANEL  
+DRAIN HOSE  
+ADJUSTABLE LEG  
+POWER CORD
+
+WASHER SAFETY
+Save these instructions. Your safety is important to us. To reduce the risk of fire, electrical shock, or injury when using your washer, adhere to the following basic precautions.
+
+Read all instructions before using your washer.
+- Flammable fluids (dry-cleaning solvents, kerosene, gasoline, etc.) must not be used or stored in or near your washer. Do not add flammable fluids to wash water. These substances give off vapors that can create a fire hazard or explosion.
+- After starting a cycle, do not reach into the washer until all motions stop.
+- Do not tamper with the controls.
+- The appliance is not intended for use by young children or infirm persons without supervision.
+- If the supply cord is damaged, it must be replaced by the manufacturer, its service agent, or a similarly qualified person to avoid a hazard.
+- If the appliance is supplied from a cord extension set or electrical portable outlet device, position it so it is not subjected to splashing or ingress of moisture.
+
+Please:
+- Have only a qualified person install, repair, or replace parts on washer.
+- Maintain washer properly.
+- Protect washer from weather and keep it where temperature will not fall below freezing.
+- Do not install the washer in extremely high humidity. It could cause electric shock or short circuit.
+- Connect washer to correct outlet, electrical supply, water supply, and drain.
+
+Understanding your responsibilities
+- Do not use chlorine bleach and ammonia or acid (such as vinegar or rust remover) in the same wash. Hazardous fumes can form.
+- Unplug power supply cord before attempting to service your washer.
+- Do not wash fiberglass material. Small particles can stick to fabrics in following loads and cause skin irritation.
+- Do not spray water on the control panel. It could cause fire or electric shock.
+- In dual-valve models, connecting only cold water while selecting hot or warm can cause leakage from unconnected valve.
+- This appliance must be grounded. Use a metal pipe for ground connection to avoid electrical shock.
+- This appliance can be used by children aged 8 years and above and persons with reduced physical, sensory, or mental capabilities or lack of experience and knowledge if given supervision or instruction concerning safe use and understanding hazards.
+- Children shall not play with the appliance.
+- Cleaning and user maintenance shall not be made by children without supervision.
+- To obtain user manual, visit our Store, Dealer, or Authorized Service Center.
+
+INSTALLATION INSTRUCTIONS
+Removing transit bolts
+1. Before operating the washer, remove the 3 transit bolts along with the rubber spacers.
+2. Unscrew the 3 bolts with a 10 mm hex wrench, spanner, or cross-tip screwdriver. Keep the bolts for later use.
+- If bolts are not removed, heavy vibration, noise, and malfunction may occur.
+- Transit bolts will be reused when transporting the appliance.
+
+Location of washer
+- Check location where washer will be installed. Ensure everything needed for correct installation.
+- Do not place or store washer below 0°C (32°F) to avoid damage from freezing.
+- Do not place or store laundry products on top of washer.
+- Install on horizontal solid floor. Unsuitable floor causes noise, vibration, malfunction. If not level, adjust legs up or down.
+- Ventilation openings must not be obstructed by carpeting on carpeted floor.
+- Leave space: right & left 2 cm, rear 10 cm.
+- For built-in installation, distance between washer top and upper plate at least 3 mm.
+
+INLET HOSE CONNECTION
+Connect washer to water mains using new hose sets. Old hose sets must not be reused. For single tap or single inlet valve, connect to cold water inlet. Option: Do not confuse hot and cold inlets.
+
+For Ordinary Tap
+1. Pull down collar of inlet hose to separate from water tap adapter.
+2. Loosen four screws in water tap adapter.
+3. Fit adapter into water tap, tighten screws evenly while pushing up so rubber packing attaches tightly.
+4. Remove tape, screw connector B into connector A tightly.
+5. Connect inlet hose to adapter by pulling down collar.
+6. Connect inlet hose adapter to washer water inlet, turn clockwise to fix tightly.
+- Check rubber packing inside inlet hose adapter.
+
+For Screw-Shaped Tap
+1. Screw inlet hose connector tightly to water tap.
+2. Connect connector-inlet if necessary.
+3. Insert inlet hose adapter into washer water inlet, turn to fix.
+- Check packing in inlet.
+
+ELECTRICAL REQUIREMENTS
+Electrical shock hazard: Failure to follow instructions could result in death or serious injury.
+- Electrical earth required. Do not earth to gas pipe.
+- If outlet does not fit, have proper outlet installed by qualified electrician.
+- Do not change power supply cord plug.
+- Check with qualified electrician if washer properly earthed.
+
+Recommended earthing method
+For personal safety, washer must be earthed. Equipped with power cord having earthing plug. Plug into mating earthing-type wall receptacle. If not available, customer must have proper earthed receptacle installed by qualified electrician.
+
+Drain system
+- Always install drain hose before operating washer.
+- Drain hose inside drum in packing box.
+- Connect drain hose to drain outlet at washer back.
+- Laundry tub top at least 60 cm high, no higher than 100 cm from washer bottom.
+- Secure drain hose to tub/sink with string to protect floor from leakage.
+- Do not force long drain hose back into washer; causes abnormal noise.
+
+Level adjustment
+1. Unsuitable floor causes noise, vibration, malfunction.
+2. Adjust level using adjustable legs. No gap between legs and floor. Turn legs, ensure no swaying. Tighten fixing nuts.
+3. Press four corners of top plate; no swaying. All legs must contact floor closely.
+
+OPERATING YOUR WASHER
+To obtain best washing results, operate washer properly.
+
+Preparing clothes for washing
+- Close zippers, snaps, hooks to avoid snagging.
+- Remove pins, buckles, hard objects to avoid scratching interior.
+- Empty pockets, turn inside out.
+- Turn down cuffs, turn synthetic knits inside out to avoid pilling.
+- Tie strings, sashes to avoid tangling.
+- Treat spots and stains (see page 26).
+
+Sorting
+- Separate heavily soiled from lightly soiled.
+- Separate dark colors from light, colorfast from non-colorfast.
+Soil: Heavy, Normal, Light – separate by soil amount.
+Color: White, Lights, Darks – separate white from colored.
+Lint: Producers, Collectors – wash separately.
+
+Loading
+- Drop items loosely. Items move easily through water for best cleaning, wrinkle-free results.
+- Mix large and small items. Load evenly to maintain balance. Unbalanced load causes vibration during spin.
+- Select correct load size. Overloading or small setting for load causes poor cleaning, wrinkling, lint, faster wear.
+- Reduce wash time for small loads.
+- Use large load setting for permanent press, synthetics to reduce wrinkling; more room to move.
+
+Adding detergent
+1. Detergent case.
+2. Adding fabric softener: Add measured liquid to softener inlet, below MAX line. Do not exceed; early dispensing stains clothes. Do not open case when water supplied. Avoid pouring directly on clothes.
+- Use only powder detergent for front-loader.
+- Use amount per detergent manufacturer instructions.
+- Excess detergent causes excess suds, motor overload, poor wash/rinse.
+
+THE FUNCTIONS OF THE CONTROL PANEL
+Program selector: Switch washer on/off, select programs. Rotate to choose course (see pages 12-22). Can rotate both directions. Turn to 12 o’clock position to power off. Program does not change during run except to off.
+
+Start/Hold: Press to start or pause. Operation repeats with presses.
+To change program during operation: Press Start/Hold → Turn selector to OFF (>1 sec) → Select new program → Press Start/Hold.
+
+Rinse+: Adds rinse, increases rinse time/water. Selectable except Wool, Spin, Drain.
+
+Rinse Hold: Leaves clothes in water after rinse, no spin. To drain/spin, select Drain or Spin. LED shows “rH”. Selectable except Wool, Spin, Drain.
+
+Time Delay: Pre-engage 1–12 hours. Selectable with all programs.
+
+Child Lock: Prevent child changes. During operation, press Rinse+ and Rinse Hold simultaneously. Only off works. To cancel: Press both again. Power off also cancels. To change program in lock: Press Start/Hold → Press both buttons → Select new.
+
+WASHING PROCEDURE AND PROGRAM SELECTION
+1. PROGRAM SELECTION
+- Turn selector to desired program.
+- Press options if needed (Rinse+, Rinse Hold, Time Delay).
+- Press Start/Hold.
+
+2. RESERVED WASHING (Time Delay)
+- 1–12 hours.
+Example for 8 hours: Turn on water, load laundry, close door, add detergent/softener → Press Time Delay to “8” → Press Start/Hold.
+- Each press advances 1 hour.
+- To cancel: Turn selector to off.
+
+3. SPIN ONLY
+- Rotate selector to desired spin speed.
+- Press Start/Hold.
+
+4. CHANGING PROGRAM
+- Press Start/Hold.
+- Turn selector to OFF (>1 sec).
+- Select new program/options.
+- Press Start/Hold.
+
+WASHING PROGRAMS
+Recommended programs by laundry type.
+
+| Laundry type                  | Temp.       | Options                  | Detergent type                          | Max load |
+|-------------------------------|-------------|--------------------------|-----------------------------------------|----------|
+| White cotton, linen, towels   | 60°C (95°C/Pre) | Rinse+, Rinse Hold, Time Delay | Standard with bleach/optical brighteners | Rating   |
+| Colorfast shirts, pajamas     | 40°C (Cold,60°C) | Rinse+, Rinse Hold, Time Delay | Standard with bleach/optical brighteners | Rating   |
+| Woolens (pure new wool)       | Cold (30°C) | Rinse+, Rinse Hold, Time Delay | Wool detergent                          | ≤2.0 kg  |
+| Polyamide, acrylic, polyester | 40°C (Cold,60°C) | Rinse+, Rinse Hold, Time Delay | Color/mild without optical brighteners  | ≤2.0 kg  |
+| Hand-wash delicate/wool       | Cold        | Rinse+, Rinse Hold, Time Delay | Wool/mild detergent                     | ≤2.0 kg  |
+| Lightly soiled, low spin      | Cold        | Rinse+, Rinse Hold, Time Delay | Standard with bleach/optical brighteners| -        |
+| Bulky (blanket, curtain)      | -           | Rinse+, Rinse Hold, Time Delay | Standard with bleach/optical brighteners| -        |
+| Highly soiled                 | 60°C        | Rinse+, Rinse Hold, Time Delay | Standard with bleach/optical brighteners| ≤2.0 kg  |
+| Baby clothes                  | -           | Rinse+, Rinse Hold, Time Delay | Mild detergent                          | ≤2.0 kg  |
+| Lightly soiled fast/thin      | Cold        | Rinse+, Rinse Hold, Time Delay | Color/mild without optical brighteners  | ≤2.0 kg  |
+| Cotton Eco (same as Cotton)   | 40°C (60°C) | Rinse+, Rinse Hold, Time Delay | Standard with bleach/optical brighteners| Rating   |
+
+- Rinse+: Extra rinse removes detergent residue.
+- Rinse Hold: Suspends in water post-rinse.
+- Quick 15: Very short cycle for small/clean loads.
+- Follow detergent label if differs.
+
+COTTON PROGRAMS
+Load laundry, add detergent/softener (prewash if 95°C/Pre), close door. Select Cotton (Cold,40°,60°,95°/Pre). Auto: 1000 rpm, 4 rinses. Press Start/Hold. Door locks, senses load, supplies water, washes.
+Options: Rinse+, Rinse Hold, Time Delay.
+Caution: 95°C/Pre supplies cold water before main drain to lower temperature, prevent burn. Not malfunction. Drain water may still be hot.
+
+SYNTHETICS PROGRAMS
+Load, detergent/softener, close door. Select Synthetics (20°,40°,60°). Auto: 800 rpm, 3 rinses. Press Start/Hold.
+Options: Rinse+, Rinse Hold, Time Delay.
+Max load ≤2.0 kg.
+
+WOOL / HAND WASH PROGRAMS
+Load, detergent/softener (main wash only), close door. Check washable. Use Hand Wash for hand-wash label. Select Wool/Hand Wash (Cold,30°). Auto: 400 rpm, 2 rinses. Press Start/Hold.
+Use special wool detergent. Max ≤2.0 kg.
+
+QUICK 15 PROGRAM
+Load, detergent/softener, close door. Select Quick 15. Auto: Cold, 800 rpm, 1 rinse. Press Start/Hold.
+Options: Rinse+, Rinse Hold, Time Delay. Max ≤2.0 kg.
+
+SILENT WASH PROGRAM
+Load, detergent/softener, close door. Select Silent Wash. Auto: Cold, 400 rpm, 3 rinses. Press Start/Hold.
+Options: Rinse+, Rinse Hold, Time Delay. 400 rpm reduces noise.
+
+BULKY PROGRAM
+Load, detergent/softener, close door. Select Bulky. Auto: 40°C, 800 rpm, 3 rinses. Press Start/Hold.
+Options: Rinse+, Rinse Hold, Time Delay.
+
+INTENSIVE PROGRAM
+Load, detergent/softener (prewash + main), close door. Select Intensive. Auto: Prewash, 60°C, 1200 rpm, 3 rinses. Press Start/Hold.
+Options: Rinse+, Rinse Hold, Time Delay. No wool (high temp). Max ≤2.0 kg.
+
+BABY CARE PROGRAM
+Load, detergent/softener (prewash + main), close door. Select Baby Care. Auto: Prewash, 95°C, 600 rpm, 3 rinses. Press Start/Hold.
+Options: Rinse+, Rinse Hold, Time Delay. No wool. Max ≤2.0 kg.
+Caution: Cold water before main drain to lower temp, prevent burn.
+
+SPORTS WEAR PROGRAM
+Load, detergent/softener, close door. Select Sports Wear. Auto: Cold, 800 rpm, 2 rinses. Press Start/Hold.
+Options: Rinse+, Rinse Hold, Time Delay. Max ≤2.0 kg.
+
+COTTON ECO PROGRAM
+Load, detergent/softener, close door. Press Power. Select Cotton Eco. Auto: 40°C, MAX rpm, 3 rinses. Change spin/options if needed. Press Start/Hold.
+Temps: 40°C or 60°C only. Options: Rinse+, Rinse Hold, Time Delay.
+
+PRODUCT INFORMATION
+Most efficient programs for cotton: Standard 60°C and 40°C cotton programs for normally soiled cotton, most efficient in energy/water.
+
+Load | Energy (kWh) | Water (L) | RMC (%)
+-----|--------------|-----------|--------
+Full | 1.04 | 48.8 | 61.3
+Partial | - | - | -
+
+Actual values may vary. RMC: moisture after spin.
+Off-mode: 0 W, Left-on: 0.19 W.
+
+Detergent recommendations
+- Boil-wash white linen/cotton (20–90°C): Standard with bleach/optical brighteners.
+- Colored linen/cotton (20–60°C): Color without bleach/optical.
+- Easy-care/synthetics (20–60°C): Color/mild without optical.
+- Delicate/silk (20–40°C): Mild.
+
+MAINTENANCE
+Proper care extends life.
+
+Cleaning washer
+Exterior: Wipe spills with soft damp cloth/sponge. Wipe outside occasionally.
+Interior: Clean with 250 ml chlorine bleach + 500 ml detergent. Run complete cycle. Repeat if needed.
+- No sharp/metal objects in washer. Check pockets.
+
+Winter storage/moving
+- Install/store above freezing. Water in hoses freezes, damages washer.
+Winterize: Turn off faucet, disconnect/drain inlet hoses, run drain+spin 1 min, unplug.
+To reuse: Flush pipes/hoses, reconnect hoses, turn on faucet, reconnect cord.
+
+Non-use/vacation
+Operate only when home. Unplug or turn off power, turn off water supply to avoid flooding.
+
+HOW TO CLEAN THE FILTER
+Water inlet filter
+1. Unplug.
+2. Turn off water, separate inlet hose.
+3. Pull out filter.
+4. Remove dirt with brush.
+
+Drain filter
+Screens threads, coins, pins, etc. Clean every 10 uses or drain issues.
+Caution: Hot water – careful.
+1. Open lower cover with coin.
+2. Unplug cap hose, pull out ~13–14 cm, drain into vessel.
+3. Turn pump filter left, remove foreign material.
+4. Clean, turn filter clockwise, insert cap hose, close cover.
+
+Detergent case
+Remove accumulated residue with running water jet. Remove completely if needed, clean cavity with brush. Replace, run Rinse without laundry.
+
+REMOVING STAINS
+Prewash or soak heavily soiled/greasy items. Soaking removes protein stains. Use warm water for soak/prewash; hot sets stains. Treat fresh stains. Check fabric type, colorfastness.
+
+Rules
+- Warm water for soaking.
+- Fresh stains easier.
+- Identify stain, age, fabric, colorfast.
+- Cold/warm start; hot sets some.
+- Use fabric-safe bleach.
+- Stain face down on towel, apply remover to back.
+
+Guide
+Blood: Rinse cold, soak enzyme prewash.
+Chewing gum: Harden with ice, scrape, sponge white spirits.
+Cocoa/Chocolate: Sponge cold, enzyme prewash, detergent, cold rinse.
+Coffee: Blot, cold rinse, detergent, max temp.
+Cream/Milk/Ice cream: Cold rinse, normal wash; sponge white spirits if needed.
+Deodorant: White vinegar, cold rinse, white spirits, enzyme prewash.
+Egg: Cold enzyme prewash, rinse, normal.
+Fabric softener: Bar soap, normal.
+Fruit: Sponge cold, detergent, normal.
+Grass: White spirits, enzyme prewash, normal.
+Grease/oil: Face down on cloth, back sponge white spirits/dry clean fluid, normal.
+Iron/rust: Lemon juice + salt, sun, normal.
+Lipstick: Methylated spirits, normal.
+Mildew: Warm wash, lemon juice/sun, bleach if allowed.
+Mud: Brush dry, cold rinse, detergent, normal.
+Paint oil: Scrape fresh, non-flammable fluid, normal.
+Paint water: Wet, warm rinse, normal.
+Scorch: Hydrogen peroxide cloth, hot iron press.
+
+TROUBLE SHOOTING
+Check before service.
+
+Washer not operate: Power failure? Cord connected? Power on? Start/Hold pressed? Correct laundry amount?
+
+Water not supplied (IE): Hoses connected, tap open? Frozen? Supply off? Inlet filter blocked?
+
+Not drain (OE): Hose frozen/blocked/kinked/deformed? End immersed? Filter dirty?
+
+Not spin (UE): Clothes one side? Uneven floor/vibration? Door open? (Lamp “B”)
+
+Stops during spin (PFE): Drain pump filter clogged? Pump running? Excess detergent? Hose >1 m high?
+
+Vibrating/noisy: Uneven floor? Transit bolts removed?
+
+Not malfunctions: “Wing” sound = inlet valve during supply.
+
+SPECIFICATION
+Model: WBW-81265/2, WBW-81266/2, WBS-81270/2
+Dimensions: 595 × 610 × 850 mm (W×D×H)
+Wash capacity: 8 kg
+Weight: 58.5 kg net / 62.5 kg gross
+Water consumption: 48 L
+Spin speed: 400/800/1200 rpm
+Pressure: 0.03–0.8 MPa (0.3–8 kgf/cm²)
+
+PRODUCT FICHE
+Supplier: MORRIS  
+Capacity: 8 kg  
+Energy class: A++  
+Annual energy: 215 kWh (220 cycles 60°C/40°C full/partial)  
+Per cycle: 0.86 kWh  
+Off/left-on: 0.19 W  
+Annual water: 10603 L  
+Spin class: B  
+Max spin: 1200 rpm  
+Standard programs: 60°C/40°C cotton – most efficient combined.  
+Left-on duration: 50 min  
+Noise: 79 dB(A)
+
+NOTICE ABOUT RECYCLING
+Product uses recyclable materials. Dispose electrical/electronic equipment separately at community waste center. EU separate collection systems exist. Conserve environment.
+
+DECLARATION OF CONFORMITY
+Complies with EMC 89/36/EEC incl. 93/68/EEC, Low Voltage 2006/95/EC. Norms: EN 55014-1, EN 55014-2, EN 61000-3-2, EN 61000-3-3, EN 60335-1, EN 60335-2-4, EN 60335-2-7, EN 50366.
+
+EXCLUSIVE DISTRIBUTOR: Amiridis Savidis S.A., Greece.

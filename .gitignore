@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+llm-workshop-env/
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Model files and checkpoints
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+shakespeare_model/
+preloaded_shakespeare/
+*.pkl
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Data files (optional - uncomment if you don't want to track data)
+# data/*.txt
+# data/*.json
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+

@@ -1,0 +1,13 @@
+torch
+torchvision
+torchaudio
+transformers
+datasets
+peft
+accelerate
+numpy
+matplotlib
+jupyter
+bitsandbytes
+seaborn
+tqdm

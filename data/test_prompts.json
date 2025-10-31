@@ -1,0 +1,62 @@
+[
+  {
+    "prompt": "To be or not to be, that is the ",
+    "expected": "question: Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune, or to take arms against a sea of troubles, and by opposing end them.",
+    "source": "Hamlet, Act 3, Scene 1",
+    "context": "Hamlet's famous soliloquy about life and death"
+  },
+  {
+    "prompt": "Romeo, Romeo, wherefore art thou ",
+    "expected": "Romeo? Deny thy father and refuse thy name; or, if thou wilt not, be but sworn my love, and I'll no longer be a Capulet.",
+    "source": "Romeo and Juliet, Act 2, Scene 2",
+    "context": "Juliet's balcony scene where she calls for Romeo"
+  },
+  {
+    "prompt": "All the world's a stage, and all the men and women merely ",
+    "expected": "players: They have their exits and their entrances; and one man in his time plays many parts, his acts being seven ages.",
+    "source": "As You Like It, Act 2, Scene 7",
+    "context": "Jaques' famous monologue about the seven ages of man"
+  },
+  {
+    "prompt": "What light through yonder window breaks? It is the ",
+    "expected": "east, and Juliet is the sun. Arise, fair sun, and kill the envious moon, who is already sick and pale with grief.",
+    "source": "Romeo and Juliet, Act 2, Scene 2",
+    "context": "Romeo's romantic declaration upon seeing Juliet"
+  },
+  {
+    "prompt": "Double, double toil and trouble; fire burn and ",
+    "expected": "cauldron bubble. By the pricking of my thumbs, something wicked this way comes.",
+    "source": "Macbeth, Act 4, Scene 1",
+    "context": "The three witches' incantation"
+  },
+  {
+    "prompt": "Now is the winter of our discontent made glorious summer by this ",
+    "expected": "son of York; and all the clouds that lour'd upon our house in the deep bosom of the ocean buried.",
+    "source": "Richard III, Act 1, Scene 1",
+    "context": "Richard's opening soliloquy"
+  },
+  {
+    "prompt": "Friends, Romans, countrymen, lend me your ",
+    "expected": "ears; I come to bury Caesar, not to praise him. The evil that men do lives after them; the good is oft interred with their bones.",
+    "source": "Julius Caesar, Act 3, Scene 2",
+    "context": "Mark Antony's funeral oration"
+  },
+  {
+    "prompt": "Is this a dagger which I see before me, the handle toward my ",
+    "expected": "hand? Come, let me clutch thee. I have thee not, and yet I see thee still.",
+    "source": "Macbeth, Act 2, Scene 1",
+    "context": "Macbeth's hallucination before killing Duncan"
+  },
+  {
+    "prompt": "Out, out, brief candle! Life's but a walking ",
+    "expected": "shadow, a poor player that struts and frets his hour upon the stage and then is heard no more.",
+    "source": "Macbeth, Act 5, Scene 5",
+    "context": "Macbeth's reflection on life after Lady Macbeth's death"
+  },
+  {
+    "prompt": "The lady doth protest too much, ",
+    "expected": "methinks. The lady protests too much, methinks.",
+    "source": "Hamlet, Act 3, Scene 2",
+    "context": "Queen Gertrude's comment about the play within the play"
+  }
+]
