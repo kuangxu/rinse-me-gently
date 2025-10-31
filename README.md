@@ -1,4 +1,6 @@
-# LLM Fine-Tuning Demo - Setup Guide
+# Rince Me Gently 
+
+## LLM Fine-Tuning Demo - Setup Guide
 
 A focused demonstration of fine-tuning language models using LoRA (Low-Rank Adaptation). This project provides a clean, simplified interface for training and testing language models, specifically optimized for Shakespeare text generation.
 
