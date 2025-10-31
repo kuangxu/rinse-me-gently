@@ -14,8 +14,8 @@ def test_imports():
     """Test that all modules can be imported"""
     print("\n[STATUS] Testing module imports...")
     try:
-        print("   [STEP] Importing util.config...")
-        from util.config import config
+        print("   [STEP] Importing config...")
+        from config import config
         print("   [STEP] Importing util.model_utils...")
         from util.model_utils import create_model_manager
         print("   [STEP] Importing util.data_utils...")
@@ -36,7 +36,7 @@ def test_config():
     print("\n[STATUS] Testing configuration module...")
     try:
         print("   [STEP] Loading configuration...")
-        from util.config import config
+        from config import config
         
         print("   [STEP] Validating model configuration...")
         assert config.model.model_name == "distilgpt2"
@@ -328,35 +328,6 @@ def test_shakespeare_prompts():
         return False
 
 
-def test_main_demo():
-    """Test main demo class"""
-    print("\n[STATUS] Testing main demo class...")
-    try:
-        print("   [STEP] Importing main demo module...")
-        from llm_fine_tuning_demo import LLMFineTuningDemo
-        
-        print("   [STEP] Creating demo instance...")
-        demo = LLMFineTuningDemo(interactive=False)
-        assert demo is not None
-        print("   [SUCCESS] Demo instance created")
-        
-        print("   [STEP] Running quick test...")
-        success = demo.run_quick_test()
-        assert success is True
-        print("   [SUCCESS] Quick test completed")
-        
-        print("[SUCCESS] Main demo test passed")
-        return True
-        
-    except ImportError:
-        print("   [INFO] Main demo module not found (skipping test)")
-        return True
-    except Exception as e:
-        print(f"[ERROR] Main demo test failed: {e}")
-        traceback.print_exc()
-        return False
-
-
 def run_all_tests():
     """Run all tests and print summary"""
     print("=" * 80)
@@ -372,7 +343,6 @@ def run_all_tests():
         ("Training Utils", test_training_utils),
         ("Evaluation Utils", test_evaluation_utils),
         ("Shakespeare Prompts", test_shakespeare_prompts),
-        ("Main Demo", test_main_demo),
     ]
     
     print(f"\n[INFO] Total tests to run: {len(tests)}")

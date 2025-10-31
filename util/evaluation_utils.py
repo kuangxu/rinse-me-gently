@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 from typing import List, Dict, Any, Optional
 import matplotlib.pyplot as plt
 import numpy as np
-from .config import config
+from config import config
 
 
 class EvaluationManager:

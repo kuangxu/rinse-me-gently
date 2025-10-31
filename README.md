@@ -136,25 +136,29 @@ llm-workshop-env\Scripts\activate
 Once your environment is activated, you can test models:
 
 ```bash
-# Test with prompts
-python demo_model.py --model-path ./my_fine_tuned_model
+# Test with prompts (folder name auto-generated from data file)
+python demo_model.py --model-path ./fine_tuned_shakespeare_data_model
 
 # Test + interactive chat
-python demo_model.py --model-path ./my_fine_tuned_model --interactive
+python demo_model.py --model-path ./fine_tuned_shakespeare_data_model --interactive
 
 # Use the raw (unfine-tuned) base model
 python demo_model.py --use-raw
+
+# Test with washing machine model (if you trained on that data)
+python demo_model.py --model-path ./fine_tuned_washingmachine_data_model
 ```
 
 ## 📁 What's Included
 
+- **`config.py`** - Main configuration file (edit this to customize training!)
 - **`demo_model.py`** - Test and chat with saved models
 - **`test_training_pipeline.py`** - Test training pipeline and all modules
 - **`data/`** - Data files folder
   - **`shakespeare_data.txt`** - Shakespeare text dataset for training
+  - **`washingmachine_data.txt`** - Washing machine manual dataset
   - **`test_prompts.json`** - Sample prompts for testing
 - **`util/`** - Utility modules folder
-  - **`config.py`** - Configuration settings
   - **`model_utils.py`** - Model loading and LoRA setup
   - **`data_utils.py`** - Dataset handling
   - **`training_utils.py`** - Training execution
@@ -167,11 +171,11 @@ python demo_model.py --use-raw
 ### Option A: Test Existing Model
 
 ```bash
-# Test with prompts
-python demo_model.py --model-path ./my_fine_tuned_model
+# Test with prompts (folder name auto-generated from data file)
+python demo_model.py --model-path ./fine_tuned_shakespeare_data_model
 
 # Test + interactive chat
-python demo_model.py --model-path ./my_fine_tuned_model --interactive
+python demo_model.py --model-path ./fine_tuned_shakespeare_data_model --interactive
 
 # Use the raw (unfine-tuned) base model
 python demo_model.py --use-raw
@@ -183,25 +187,67 @@ python demo_model.py --use-raw
 python test_training_pipeline.py
 ```
 
+**Note**: After training completes, the fine-tuned model is automatically saved to the folder specified in `config.training.output_dir` (auto-generated from your data file name).
+
 ## ⚙️ Customization
 
-Edit `util/config.py` to change settings:
+### Quick Configuration (Edit `config.py`)
+
+**Change Training Data File** (line ~100):
+```python
+# Easy way to switch between data files
+data_file: str = "data/shakespeare_data.txt"  # Default
+# Change to:
+data_file: str = "data/washingmachine_data.txt"  # Use washing machine data
+# Or your own:
+data_file: str = "data/my_custom_data.txt"  # Your own data
+```
+
+**Training Duration** (line ~53-61):
+```python
+# Option 1: Use epochs (full passes through dataset)
+num_train_epochs: int = 1
+
+# Option 2: Use exact number of steps
+max_steps: Optional[int] = 100  # Train for exactly 100 steps
+```
+
+**Model Output Location**:
+- Auto-generated from data file name (default): `./fine_tuned_{data_filename}_model`
+- Example: `data/shakespeare_data.txt` → `./fine_tuned_shakespeare_data_model`
+- Or set explicitly: `config.training.output_dir = "./my_custom_folder"`
+
+### Advanced Configuration
+
+Edit `config.py` directly or modify at runtime:
 
 ```python
+from config import config
+
 # Model settings
 config.model.model_name = "distilgpt2"  # Change model
 config.model.max_length = 128           # Adjust text length
 
 # Training settings  
 config.training.num_train_epochs = 1    # More epochs = better results
+config.training.max_steps = 100         # Or use exact step count
 config.training.learning_rate = 5e-4    # Learning speed
-config.training.output_dir = "./my_fine_tuned_model"  # Save location
+config.training.per_device_train_batch_size = 8  # Batch size
+# output_dir is auto-generated from data file name (or set explicitly)
 
 # Data settings
+config.data.data_file = "data/washingmachine_data.txt"  # Change data file
 config.data.max_samples = 5000          # Use more/fewer examples
 config.data.min_length = 20             # Filter short lines
 config.data.max_length = 256            # Max text length
 ```
+
+### Key Features
+
+- **Auto-generated model folders**: Model saving folder automatically matches your data file name
+- **Easy data switching**: Just change `data_file` to use different training data
+- **Flexible training duration**: Use epochs or exact step counts (`max_steps`)
+- **Clear configuration**: All settings in one easy-to-edit file (`config.py`)
 
 ## 🔧 Model Options
 
@@ -239,13 +285,15 @@ The default model is `distilgpt2` (82M parameters), which is fast and works well
 - Reduce batch size in `config.py`: `config.training.per_device_train_batch_size = 1`
 - Use fewer examples: reduce `config.data.max_samples`
 - Reduce text length: `config.model.max_length = 64`
+- Reduce training steps: `config.training.max_steps = 50` (fewer steps)
 - For Windows with low RAM, close other applications
 
 ### Slow Training
 
 - Reduce examples: `config.data.max_samples = 20` or lower
 - Reduce text length: `config.model.max_length = 64`
-- Use fewer epochs: `config.training.num_train_epochs = 1`
+- Use fewer steps: `config.training.max_steps = 50` (faster than epochs)
+- Or use fewer epochs: `config.training.num_train_epochs = 1`
 
 ### Network Issues / Download Failures
 
@@ -292,10 +340,11 @@ If training is slow, reduce the number of examples or text length.
 
 ## 📖 Next Steps
 
-1. **Test models**: Use `python demo_model.py --model-path ./my_fine_tuned_model` to test fine-tuned models
-2. **Interactive chat**: Run `python demo_model.py --model-path ./my_fine_tuned_model --interactive` for interactive testing
-3. **Experiment**: Try different models, hyperparameters, or data by editing `util/config.py`
-4. **Customize**: Modify the data files in `data/` or config settings in `util/config.py` to use your own data
+1. **Test models**: Use `python demo_model.py --model-path ./fine_tuned_shakespeare_data_model` to test fine-tuned models (or your auto-generated folder name)
+2. **Interactive chat**: Run `python demo_model.py --model-path ./fine_tuned_shakespeare_data_model --interactive` for interactive testing
+3. **Change training data**: Edit `config.py` line ~100: `data_file = "data/washingmachine_data.txt"` to use different data
+4. **Experiment**: Try different models, hyperparameters, or data by editing `config.py`
+5. **Customize**: Modify the data files in `data/` or config settings in `config.py` to use your own data
 
 ---
 

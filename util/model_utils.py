@@ -6,7 +6,7 @@ Handles model loading, LoRA configuration, and model setup
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, DataCollatorForLanguageModeling
 from peft import LoraConfig, get_peft_model, PeftModel
-from .config import config
+from config import config
 
 
 class ModelManager:

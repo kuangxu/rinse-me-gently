@@ -8,7 +8,7 @@ from transformers import Trainer, TrainingArguments
 from typing import Dict, Any, Optional, List
 import matplotlib.pyplot as plt
 import numpy as np
-from .config import config
+from config import config
 
 
 class TrainingManager:
@@ -28,21 +28,28 @@ class TrainingManager:
         print("🔧 Setting up training configuration...")
         
         # Create training arguments
-        self.training_args = TrainingArguments(
-            output_dir=config.training.output_dir,
-            num_train_epochs=config.training.num_train_epochs,
-            per_device_train_batch_size=config.training.per_device_train_batch_size,
-            learning_rate=config.training.learning_rate,
-            logging_steps=config.training.logging_steps,
-            save_strategy=config.training.save_strategy,
-            remove_unused_columns=config.training.remove_unused_columns,
-            warmup_steps=config.training.warmup_steps,
-            weight_decay=config.training.weight_decay,
-            max_grad_norm=config.training.max_grad_norm,  # Gradient clipping
-            eval_strategy=config.training.evaluation_strategy,
-            dataloader_num_workers=config.training.dataloader_num_workers,
-            fp16=config.training.fp16,  # Mixed precision training
-        )
+        training_args_dict = {
+            "output_dir": config.get_output_dir(),  # Use auto-generated path from data file name
+            "per_device_train_batch_size": config.training.per_device_train_batch_size,
+            "learning_rate": config.training.learning_rate,
+            "logging_steps": config.training.logging_steps,
+            "save_strategy": config.training.save_strategy,
+            "remove_unused_columns": config.training.remove_unused_columns,
+            "warmup_steps": config.training.warmup_steps,
+            "weight_decay": config.training.weight_decay,
+            "max_grad_norm": config.training.max_grad_norm,
+            "eval_strategy": config.training.evaluation_strategy,
+            "dataloader_num_workers": config.training.dataloader_num_workers,
+            "fp16": config.training.fp16,
+        }
+        
+        # Use max_steps if set, otherwise use num_train_epochs
+        if config.training.max_steps is not None:
+            training_args_dict["max_steps"] = config.training.max_steps
+        else:
+            training_args_dict["num_train_epochs"] = config.training.num_train_epochs
+        
+        self.training_args = TrainingArguments(**training_args_dict)
         
         # Create trainer
         self.trainer = Trainer(
@@ -63,7 +70,10 @@ class TrainingManager:
         print(f"  Training examples: {len(self.tokenized_dataset)}")
         print(f"  Batch size: {self.training_args.per_device_train_batch_size}")
         print(f"  Learning rate: {self.training_args.learning_rate}")
-        print(f"  Epochs: {self.training_args.num_train_epochs}")
+        if hasattr(self.training_args, 'max_steps') and self.training_args.max_steps is not None:
+            print(f"  Max steps: {self.training_args.max_steps}")
+        else:
+            print(f"  Epochs: {self.training_args.num_train_epochs}")
         print(f"  Logging steps: {self.training_args.logging_steps}")
         print(f"  Output directory: {self.training_args.output_dir}")
     
@@ -93,7 +103,19 @@ class TrainingManager:
             
             print(f"\n✅ Training complete!")
             print(f"⏱️  Training time: {training_time:.2f} seconds ({training_time/60:.2f} minutes)")
-            
+
+            # Save the fine-tuned model explicitly
+            try:
+                save_path = self.trainer.state.best_model_checkpoint or self.trainer.args.output_dir
+                if save_path:
+                    print(f"💾 Saving fine-tuned model to: {save_path}")
+                    self.trainer.save_model(save_path)
+                    print("✅ Model saved successfully!")
+                else:
+                    print("⚠️  Could not determine save path")
+            except Exception as e:
+                print(f"⚠️  Warning: Could not save model: {e}")
+
             return True
             
         except Exception as e:

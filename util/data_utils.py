@@ -6,7 +6,7 @@ Handles dataset loading, preprocessing, and tokenization
 from datasets import load_dataset, Dataset
 from transformers import AutoTokenizer
 from typing import List, Dict, Any, Optional
-from .config import config
+from config import config
 
 
 class DataManager:
@@ -38,17 +38,40 @@ class DataManager:
             with open(file_path, "r", encoding="utf-8") as f:
                 lines = f.readlines()
             
-            # Filter and process lines for Shakespeare text
+            # Filter and process lines
             processed_lines = []
             for line in lines:
                 line = line.strip()
-                # Skip empty lines, headers, and very short lines
-                if (len(line) >= config.data.min_length and 
-                    len(line) <= config.data.max_length and
-                    not line.isdigit() and  # Skip line numbers
-                    not line.startswith("by ") and  # Skip author lines
-                    not line.startswith("THE ")):  # Skip title lines
-                    processed_lines.append(line)
+                # Skip empty lines
+                if not line:
+                    continue
+                
+                # Skip obviously non-content lines
+                if (line.isdigit() or  # Skip line numbers
+                    line.startswith("by ") or  # Skip author lines
+                    line.startswith("THE ") or  # Skip title lines
+                    line.startswith("---|---") or  # Skip separator lines
+                    len(line) <= 2):  # Skip very short lines (1-2 chars)
+                    continue
+                
+                # For very short lines (< min_length), try to combine with next line
+                if len(line) < config.data.min_length:
+                    # These might be headers - keep them if they look meaningful
+                    # (All caps, title case, or common section headers)
+                    if (line.isupper() or 
+                        line.istitle() or 
+                        line in ["WASH", "RINSE", "SPIN", "DONE", "SENSING"]):
+                        # Keep short meaningful headers
+                        if len(line) >= 3:  # At least 3 chars
+                            processed_lines.append(line)
+                    continue
+                
+                # Filter by length
+                if len(line) > config.data.max_length:
+                    # Truncate very long lines
+                    line = line[:config.data.max_length]
+                
+                processed_lines.append(line)
             
             # Limit the number of samples for faster training
             if len(processed_lines) > config.data.max_samples:
@@ -113,13 +136,20 @@ class DataManager:
         def tokenize_function(examples):
             """Convert text to numbers (tokens) that the model can understand"""
             tokenized = self.tokenizer(
-                examples["text"], 
-                truncation=True, 
-                padding="max_length", 
+                examples["text"],
+                truncation=True,
+                padding="max_length",
                 max_length=config.model.max_length
             )
             # For causal language modeling, labels are the same as input_ids
-            tokenized["labels"] = tokenized["input_ids"].copy()
+            # BUT: we must ignore padding tokens in loss calculation by setting them to -100
+            labels = tokenized["input_ids"].copy()
+            # Replace padding tokens (pad_token_id) with -100 so they're ignored in loss
+            pad_token_id = self.tokenizer.pad_token_id if self.tokenizer.pad_token_id is not None else self.tokenizer.eos_token_id
+            labels = [[-100 if token == pad_token_id else token for token in label] for label in labels]
+            tokenized["labels"] = labels
+
+
             return tokenized
         
         # Apply tokenization
