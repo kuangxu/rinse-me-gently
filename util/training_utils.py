@@ -27,6 +27,10 @@ class TrainingManager:
         """Setup training arguments and trainer"""
         print("🔧 Setting up training configuration...")
         
+        # Disable pin_memory for MPS (Apple Silicon) - not supported and causes warnings
+        import torch
+        pin_memory = not torch.backends.mps.is_available()  # False for MPS, True for CUDA/CPU
+        
         # Create training arguments
         training_args_dict = {
             "output_dir": config.get_output_dir(),  # Use auto-generated path from data file name
@@ -41,6 +45,7 @@ class TrainingManager:
             "eval_strategy": config.training.evaluation_strategy,
             "dataloader_num_workers": config.training.dataloader_num_workers,
             "fp16": config.training.fp16,
+            "dataloader_pin_memory": pin_memory,  # Disable for MPS to prevent warnings
         }
         
         # Use max_steps if set, otherwise use num_train_epochs
@@ -105,16 +110,43 @@ class TrainingManager:
             print(f"⏱️  Training time: {training_time:.2f} seconds ({training_time/60:.2f} minutes)")
 
             # Save the fine-tuned model explicitly
+            # For PEFT/LoRA models, we need to use model.save_pretrained() instead of trainer.save_model()
+            # This ensures the adapter weights (adapter_config.json and adapter_model.safetensors) are saved correctly
             try:
                 save_path = self.trainer.state.best_model_checkpoint or self.trainer.args.output_dir
                 if save_path:
                     print(f"💾 Saving fine-tuned model to: {save_path}")
-                    self.trainer.save_model(save_path)
-                    print("✅ Model saved successfully!")
+                    
+                    # Get the model from trainer (might be wrapped)
+                    model_to_save = self.trainer.model if hasattr(self.trainer, 'model') else self.model
+                    
+                    # Check if it's a PEFT model
+                    from peft import PeftModel
+                    is_peft = isinstance(model_to_save, PeftModel) or hasattr(model_to_save, 'peft_config')
+                    
+                    if is_peft:
+                        print(f"   [INFO] Detected PEFT model - saving adapter weights only")
+                        # Save PEFT adapter (saves adapter_config.json and adapter_model.safetensors)
+                        model_to_save.save_pretrained(save_path)
+                        
+                        # Verify adapter files were created
+                        import os
+                        adapter_config_path = os.path.join(save_path, "adapter_config.json")
+                        if os.path.exists(adapter_config_path):
+                            print("✅ Model saved successfully! (PEFT adapter)")
+                        else:
+                            print(f"⚠️  Warning: adapter_config.json not found at {adapter_config_path}")
+                    else:
+                        print(f"   [INFO] Not a PEFT model - saving full model")
+                        # For non-PEFT models, save normally
+                        model_to_save.save_pretrained(save_path)
+                        print("✅ Model saved successfully!")
                 else:
                     print("⚠️  Could not determine save path")
             except Exception as e:
                 print(f"⚠️  Warning: Could not save model: {e}")
+                import traceback
+                traceback.print_exc()
 
             return True
             

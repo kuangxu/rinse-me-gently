@@ -56,7 +56,8 @@ class ModelManager:
             lora_alpha=config.lora.lora_alpha,
             target_modules=config.lora.target_modules,
             lora_dropout=config.lora.lora_dropout,
-            bias=config.lora.bias
+            bias=config.lora.bias,
+            task_type=config.lora.task_type  # Explicitly set task type to avoid warning
         )
         
         # Apply LoRA to model

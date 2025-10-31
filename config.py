@@ -20,7 +20,7 @@ from typing import List, Optional
 import os
 
 
-data_file_name = "data/letranger.txt"
+data_file_name = "data/eminen.txt"
 
 
 @dataclass
@@ -39,6 +39,7 @@ class LoRAConfig:
     target_modules: List[str] = None  # Which parts to update
     lora_dropout: float = 0.1  # Regularization
     bias: str = "none"  # Don't update bias terms
+    task_type: str = "CAUSAL_LM"  # Task type for PEFT - prevents loss_type warning
     
     def __post_init__(self):
         if self.target_modules is None:

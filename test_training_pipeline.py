@@ -167,6 +167,16 @@ def test_training_utils():
         tokenizer.pad_token = tokenizer.eos_token
         print("   [SUCCESS] Model and tokenizer loaded")
         
+        # CRITICAL: Apply LoRA adapter before training
+        # Without LoRA, the model trains all parameters, which can cause issues
+        print("   [STEP] Applying LoRA adapter...")
+        from util.model_utils import ModelManager
+        model_manager = ModelManager()
+        model_manager.model = model
+        model_manager.tokenizer = tokenizer
+        model = model_manager.setup_lora()  # Apply LoRA - only trains adapter weights
+        print("   [SUCCESS] LoRA adapter applied")
+        
         # Setup data collator for language modeling (not masked LM)
         print("   [STEP] Creating data collator...")
         data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -215,18 +225,37 @@ def test_training_utils():
 
 
 def test_evaluation_utils():
-    """Test evaluation utilities"""
+    """Test evaluation utilities - uses fine-tuned model from training test"""
     print("\n[STATUS] Testing evaluation utilities...")
     try:
         print("   [STEP] Importing evaluation modules...")
         from util.evaluation_utils import create_evaluation_manager, quick_test
         from transformers import AutoModelForCausalLM, AutoTokenizer
+        from peft import PeftModel
+        from config import config
         
-        print("   [STEP] Loading model and tokenizer...")
-        model = AutoModelForCausalLM.from_pretrained("distilgpt2")
+        print("   [STEP] Loading fine-tuned model and tokenizer...")
+        # Load base model first
+        base_model = AutoModelForCausalLM.from_pretrained("distilgpt2")
         tokenizer = AutoTokenizer.from_pretrained("distilgpt2")
         tokenizer.pad_token = tokenizer.eos_token
-        print("   [SUCCESS] Model and tokenizer loaded")
+        
+        # Load the fine-tuned LoRA adapter (from the training test)
+        model_path = config.get_output_dir()
+        try:
+            model = PeftModel.from_pretrained(base_model, model_path)
+            print(f"   [SUCCESS] Fine-tuned model loaded from {model_path}")
+        except Exception as e:
+            print(f"   [WARNING] Could not load fine-tuned model: {e}")
+            print("   [INFO] Using base model instead (this is expected on first run)")
+            model = base_model
+        
+        # Move model to appropriate device
+        import torch
+        if torch.backends.mps.is_available():
+            model = model.to("mps")
+        elif torch.cuda.is_available():
+            model = model.to("cuda")
         
         print("   [STEP] Creating evaluation manager...")
         evaluation_manager = create_evaluation_manager(model, tokenizer)
@@ -261,17 +290,36 @@ def test_evaluation_utils():
 
 
 def test_shakespeare_prompts():
-    """Test Shakespeare evaluation prompts with actual responses"""
+    """Test Shakespeare evaluation prompts with actual responses - uses fine-tuned model"""
     print("\n[STATUS] Testing Shakespeare prompts...")
     try:
-        print("   [STEP] Loading model and tokenizer...")
+        print("   [STEP] Loading fine-tuned model and tokenizer...")
         from util.evaluation_utils import create_evaluation_manager
         from transformers import AutoModelForCausalLM, AutoTokenizer
+        from peft import PeftModel
+        from config import config
         
-        model = AutoModelForCausalLM.from_pretrained("distilgpt2")
+        # Load base model first
+        base_model = AutoModelForCausalLM.from_pretrained("distilgpt2")
         tokenizer = AutoTokenizer.from_pretrained("distilgpt2")
         tokenizer.pad_token = tokenizer.eos_token
-        print("   [SUCCESS] Model and tokenizer loaded")
+        
+        # Load the fine-tuned LoRA adapter (from the training test)
+        model_path = config.get_output_dir()
+        try:
+            model = PeftModel.from_pretrained(base_model, model_path)
+            print(f"   [SUCCESS] Fine-tuned model loaded from {model_path}")
+        except Exception as e:
+            print(f"   [WARNING] Could not load fine-tuned model: {e}")
+            print("   [INFO] Using base model instead (this is expected on first run)")
+            model = base_model
+        
+        # Move model to appropriate device
+        import torch
+        if torch.backends.mps.is_available():
+            model = model.to("mps")
+        elif torch.cuda.is_available():
+            model = model.to("cuda")
         
         print("   [STEP] Creating evaluation manager...")
         evaluation_manager = create_evaluation_manager(model, tokenizer)
