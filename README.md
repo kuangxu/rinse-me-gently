@@ -1,4 +1,4 @@
-# Rince Me Gently 
+# Rinse Me Gently 
 
 ## LLM Fine-Tuning Demo - Setup Guide
 
