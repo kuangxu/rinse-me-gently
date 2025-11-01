@@ -2,7 +2,7 @@
 
 ## LLM Fine-Tuning Demo - Setup Guide
 
-A focused demonstration of fine-tuning language models using LoRA (Low-Rank Adaptation). This project provides a clean, simplified interface for training and testing language models, specifically optimized for Shakespeare text generation.
+A focused demonstration of fine-tuning language models using LoRA (Low-Rank Adaptation). This project provides a clean, simplified interface for training and testing language models with various text datasets.
 
 ## 🚀 Quick Start
 
@@ -157,6 +157,8 @@ python demo_model.py --model-path ./fine_tuned_washingmachine_data_model
 - **`data/`** - Data files folder
   - **`shakespeare_data.txt`** - Shakespeare text dataset for training
   - **`washingmachine_data.txt`** - Washing machine manual dataset
+  - **`eminen.txt`** - Eminem lyrics dataset
+  - **`letranger.txt`** - Additional text dataset
   - **`test_prompts.json`** - Sample prompts for testing
 - **`util/`** - Utility modules folder
   - **`model_utils.py`** - Model loading and LoRA setup
@@ -196,11 +198,13 @@ python test_training_pipeline.py
 **Change Training Data File** (line ~100):
 ```python
 # Easy way to switch between data files
-data_file: str = "data/shakespeare_data.txt"  # Default
-# Change to:
-data_file: str = "data/washingmachine_data.txt"  # Use washing machine data
+# Available data files:
+data_file_name = "data/shakespeare_data.txt"  # Shakespeare text
+data_file_name = "data/washingmachine_data.txt"  # Washing machine manual
+data_file_name = "data/eminen.txt"  # Eminem lyrics
+data_file_name = "data/letranger.txt"  # Additional text
 # Or your own:
-data_file: str = "data/my_custom_data.txt"  # Your own data
+data_file_name = "data/my_custom_data.txt"  # Your own data
 ```
 
 **Training Duration** (line ~53-61):
@@ -237,17 +241,20 @@ config.training.per_device_train_batch_size = 8  # Batch size
 
 # Data settings
 config.data.data_file = "data/washingmachine_data.txt"  # Change data file
+# Available: shakespeare_data.txt, washingmachine_data.txt, eminen.txt, letranger.txt
 config.data.max_samples = 5000          # Use more/fewer examples
 config.data.min_length = 20             # Filter short lines
-config.data.max_length = 256            # Max text length
+config.data.max_length = 256            # Max text length (characters)
 ```
 
 ### Key Features
 
 - **Auto-generated model folders**: Model saving folder automatically matches your data file name
-- **Easy data switching**: Just change `data_file` to use different training data
+- **Easy data switching**: Just change `data_file_name` at the top of `config.py` to use different training data
 - **Flexible training duration**: Use epochs or exact step counts (`max_steps`)
 - **Clear configuration**: All settings in one easy-to-edit file (`config.py`)
+- **Optimized for Apple Silicon**: Automatically disables unsupported features (e.g., pin_memory on MPS)
+- **Stable training**: Configured to prevent common issues like NaN gradients and padding token loss
 
 ## 🔧 Model Options
 
@@ -319,6 +326,12 @@ The default model is `distilgpt2` (82M parameters), which is fast and works well
 - Reinstall dependencies: `pip install -r requirements.txt`
 - Check Python version matches: `python --version`
 
+### Training Warnings (Fixed Automatically)
+
+- **MPS pin_memory warning**: The code automatically disables `pin_memory` on Apple Silicon (MPS) devices - this is normal and safe to ignore if you see it in older code
+- **PEFT loss_type warning**: The LoRA configuration now explicitly sets `task_type="CAUSAL_LM"` to prevent warnings about unrecognized loss types
+- Both warnings have been fixed in the latest version of the code
+
 ## 📝 Expected Training Times
 
 Times are estimates for 50 examples, 1 epoch on midrange CPU (i7, 16GB RAM):
@@ -340,11 +353,11 @@ If training is slow, reduce the number of examples or text length.
 
 ## 📖 Next Steps
 
-1. **Test models**: Use `python demo_model.py --model-path ./fine_tuned_shakespeare_data_model` to test fine-tuned models (or your auto-generated folder name)
+1. **Test models**: Use `python demo_model.py --model-path ./fine_tuned_shakespeare_data_model` to test fine-tuned models (or your auto-generated folder name based on the data file used)
 2. **Interactive chat**: Run `python demo_model.py --model-path ./fine_tuned_shakespeare_data_model --interactive` for interactive testing
-3. **Change training data**: Edit `config.py` line ~100: `data_file = "data/washingmachine_data.txt"` to use different data
+3. **Change training data**: Edit `config.py` top line: `data_file_name = "data/washingmachine_data.txt"` to use different data
 4. **Experiment**: Try different models, hyperparameters, or data by editing `config.py`
-5. **Customize**: Modify the data files in `data/` or config settings in `config.py` to use your own data
+5. **Customize**: Add your own data files to `data/` directory or modify config settings in `config.py`
 
 ---
 
