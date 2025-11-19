@@ -1,4 +1,4 @@
-# Rinse Me, Gently: An Introductory AI & Python Workshop
+# Rinse Me Gently: An Introductory AI & Python Workshop
 
 This repository contains materials for the Stanford GSB OIT 245 AI Lecture module, focusing on modern AI workflows and Python development. The workshop is structured in two parts.
 
