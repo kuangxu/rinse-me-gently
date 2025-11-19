@@ -14,6 +14,8 @@ We will be using **Cursor**, a modern code editor that integrates AI directly in
 ## Part 1: Install Cursor IDE
 
 **Cursor** is the program where we will write our code. 
+*(Note: If you prefer to use **VS Code**, that is perfectly fine too! See **Appendix A** at the bottom of this document for details.)*
+
 *Concept: An **IDE (Integrated Development Environment)** is a specialized text editor for programming. Unlike Word or Notes, it highlights your code in colors to make it readable and helps catch errors before you run them.*
 
 ### For Mac & Windows:
@@ -154,4 +156,19 @@ If you see the message:
 > My Python environment is set up and ready for AI.
 
 Then you are completely done! You have successfully set up your professional Python development environment.
+
+---
+
+## Appendix A: Using VS Code Instead
+
+If you already have **Visual Studio Code (VS Code)** installed or prefer to use it instead of Cursor, you can follow this guide with almost no changes.
+
+**What you need to know:**
+1.  **Cursor is built on top of VS Code.** This means 99% of the buttons, menus, and shortcuts are exactly the same.
+2.  **Installation:** If you don't have it, download it from [code.visualstudio.com](https://code.visualstudio.com/).
+3.  **Opening the Project:** Instead of "Open Cursor", just open "VS Code". The "File -> Open Folder" steps are identical.
+4.  **Terminal:** The terminal works exactly the same way.
+5.  **Extensions:** You might need to install the "Python" extension by Microsoft if VS Code asks you to (it usually pops up automatically when you open a `.py` file).
+
+**Summary:** Wherever this guide says "Cursor", just read it as "VS Code". Everything else remains the same!
 
