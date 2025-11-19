@@ -18,18 +18,23 @@ This repository contains materials for the Stanford GSB OIT 245 AI Lecture modul
 *   Managing training data and pipelines.
 *   Interacting with custom-trained models.
 
-## 🏁 Getting Started
+## Getting Started
 
-### 1. Download the Materials
-**The Easiest Way (Recommended):**
-1.  Scroll to the top of this page and click the green **<> Code** button.
-2.  Select **Download ZIP**.
-3.  Locate the downloaded file on your computer and unzip it (double-click).
-4.  Move the unzipped folder to your Desktop so it's easy to find.
+### Step 1: Download the Materials
 
-*(Alternative for advanced users: Run `git clone https://github.com/kuangxu/rinse_me_gently.git` in your terminal)*
+**Option A: The Easy Way (Recommended)**
+1.  Look for the green **Code** button near the top right of this page.
+2.  Click it and select **Download ZIP**.
+3.  Once downloaded, unzip the file (double-click it). You should now have a folder named `rinse_me_gently-main` (or similar) on your computer.
 
-### 2. Start the Workshop
-1.  Open the folder `AI_With_Python_PartA` inside the materials you just downloaded.
-2.  Open the file `python_setup_minicase.md`.
-3.  Follow the step-by-step guide inside!
+**Option B: The Developer Way (Git Clone)**
+If you are already comfortable with Git, you can clone the repository:
+```bash
+git clone https://github.com/kuangxu/rinse_me_gently.git
+```
+
+### Step 2: Start Part A
+1.  Open the folder you just downloaded.
+2.  Go into the `AI_With_Python_PartA` folder.
+3.  Open the file `python_setup_minicase.md`.
+4.  Follow the step-by-step guide inside to set up your environment.
