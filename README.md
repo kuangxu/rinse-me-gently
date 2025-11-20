@@ -34,7 +34,7 @@ git clone https://github.com/kuangxu/rinse_me_gently.git
 ```
 
 ### Step 2: Start Part A
-1.  Open the folder you just downloaded.
-2.  Go into the `AI_With_Python_PartA` folder.
-3.  Open the file `python_setup_minicase.md`.
-4.  Follow the step-by-step guide inside to set up your environment.
+1.  Navigate to the `AI_With_Python_PartA` folder.
+2.  Open the file `Part_A_Instructions.md`.
+3.  Follow the step-by-step guide inside to set up your environment.
+   - *Note: The virtual environment will be created at the root level so it can be shared between Part A and Part B.*

@@ -1,0 +1,19 @@
+# Combined requirements for both Part A and Part B
+# Part A dependencies
+numpy
+pandas
+matplotlib
+seaborn
+
+# Part B dependencies
+torch
+torchvision
+torchaudio
+transformers
+datasets
+peft
+accelerate
+jupyter
+bitsandbytes
+tqdm
+

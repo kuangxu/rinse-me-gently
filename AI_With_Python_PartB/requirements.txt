@@ -6,8 +6,9 @@ datasets
 peft
 accelerate
 numpy
+pandas
 matplotlib
+seaborn
 jupyter
 bitsandbytes
-seaborn
 tqdm

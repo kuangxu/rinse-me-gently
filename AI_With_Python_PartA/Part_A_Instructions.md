@@ -1,13 +1,13 @@
-# OIT 245: Python & Cursor IDE Setup Guide
+# OIT 245 AI with Python, Part A: ython & Cursor IDE Setup Guide
 
-Welcome to OIT 245! This lecture is the first of two parts where we will get to experience the state-of-the-art workflow with AI and Python.
+This lecture is the first of two parts where we will get to experience the state-of-the-art workflow with AI and Python.
 
 In today's lecture, our goal is to:
 1.  Set up Python on your computer.
 2.  Understand how to use a **Virtual Environment**.
-3.  Run a simple exercise to verify everything works.
+3.  Run simple excercises in Python. 
 
-We will be using **Cursor**, a modern code editor that integrates AI directly into the coding process. Follow these steps carefully—no prior technical knowledge is required!
+We will be using **Cursor**, a modern code editor that integrates AI directly into the coding process. That being said, this can be done with any Python code editor such as ** VS Code** (See Appendix). 
 
 ---
 
@@ -60,11 +60,15 @@ Now we will create a folder for your work and set up a "Virtual Environment".
 **What is a Virtual Environment?**  
 Think of it like a separate "sandbox" or "container" specifically for this project. It keeps the tools and libraries for this class separate from everything else on your computer, ensuring that updates in one project don't accidentally break another.
 
+**Shared Environment for Both Parts:**  
+We will create the virtual environment at the root level of the project (not inside `AI_With_Python_PartA`). This way, you can use the same environment for both Part A and Part B, which is more efficient and avoids duplicate installations.
+
 ### Step 1: Open the Folder in Cursor
 Since you have already downloaded the course materials:
 1.  Open **Cursor**.
 2.  Click on **File** in the top menu bar, then select **Open Folder...**
-3.  Navigate to the folder you downloaded and select **AI_With_Python_PartA**.
+3.  Navigate to the folder you downloaded and select the **root folder** (the main folder containing both `AI_With_Python_PartA` and `AI_With_Python_PartB`).
+   - *Note: We open the root folder so we can create a single virtual environment that works for both Part A and Part B.*
 4.  Click **Open**.
 
 ### Step 3: Open the Terminal
@@ -87,9 +91,9 @@ python3 -m venv venv
 python -m venv venv
 ```
 
-*Explanation: This command asks Python to run its "venv" tool to create a new, empty environment inside a folder named `venv`.*
+*Explanation: This command asks Python to run its "venv" tool to create a new, empty environment inside a folder named `venv` at the root of the project. This single virtual environment will be used for both Part A and Part B.*
 
-*Note: You might not see anything happen immediately. If a new folder named `venv` appears in your file list on the left, it worked!*
+*Note: You might not see anything happen immediately. If a new folder named `venv` appears in your file list on the left (at the root level, not inside AI_With_Python_PartA), it worked!*
 
 ### Step 5: Activate the Virtual Environment
 Now we need to "turn on" the environment. Type the command for your system and press **Enter**:
@@ -108,7 +112,9 @@ source venv/bin/activate
 
 **How do I know it worked?**  
 You should see `(venv)` appear at the very beginning of your command line in the terminal. It will look something like:
-`(venv) user@computer AI_With_Python_PartA %`
+`(venv) user@computer rinse_me_gently-main %`
+
+*Note: The folder name in your prompt might be slightly different, but you should see `(venv)` at the start.*
 
 ---
 
@@ -132,8 +138,9 @@ Let's write and run your first piece of code to make sure everything is working 
 
 ### Step 1: Create a File
 1.  In Cursor, look at the **Explorer** (the file list on the left).
-2.  Right-click in the empty space (or click the "New File" icon) and create a new file named `hello.py`.
-3.  Copy and paste the following code into that file:
+2.  Navigate to the `AI_With_Python_PartA` folder.
+3.  Right-click in the empty space (or click the "New File" icon) and create a new file named `hello.py`.
+4.  Copy and paste the following code into that file:
 
 ```python
 print("Hello, OIT 245!")
@@ -161,25 +168,29 @@ Then you are completely done! You have successfully set up your professional Pyt
 
 ## Part 6: Mini-Case: Fitbit Analysis
 
-Now that we have our environment set up, let's solve a real business case using Python!
+Now that we have our environment set up, let's solve the Fitbit case, which you've already seen before in Basic Modeling, but this time with Python. For simplicity, we have already made a solution script. Your goal now is to understand as much of the logic as possible, and be able to execute the code and understand the outputs. 
 
 ### Step 1: Understand the Logic
 1.  In the **Explorer** on the left, find and click on the file named `fitbit_solver.py`.
 2.  Read through the code. You don't need to understand every single character, but look at the comments (lines starting with `#`) and the function names.
 3.  **Compare with Excel**:
-    *   Think back to Week 1 when you solved this in Excel.
-    *   **Logic**: Notice how the `calculate_production_cost` function handles the tiered pricing. In Excel, this likely required a complex nested `IF` formula or a VLOOKUP table. Here, it's a series of logical `if` statements.
+    *   Think back to Basic Modeling when you solved this in Excel.
+    *   **Logic**: Notice how the `calculate_production_cost` function handles the tiered pricing. We used an IF logic in the Excel solution. Here, again, it's a series of logical `if` statements.
     *   **Optimization**: Notice the `for` loops in Part 2 and Part 3. In Excel, you used Data Tables to test different prices. Here, Python "loops" through every possible price to find the best one automatically.
 
 ### Step 2: Install Requirements
 This script uses powerful tools like `pandas` (for data) and `matplotlib` (for graphs) that don't come with standard Python. We need to install them into our virtual environment.
 
 1.  Make sure your terminal still shows `(venv)` at the start.
-2.  Type the following command and press **Enter**:
+2.  Navigate to the Part A folder (if not already there):
+    ```bash
+    cd AI_With_Python_PartA
+    ```
+3.  Type the following command and press **Enter**:
     ```bash
     pip install -r requirements.txt
     ```
-    *Explanation: This tells Python's package installer (`pip`) to read the `requirements.txt` file and install all the tools listed there.*
+    *Explanation: This tells Python's package installer (`pip`) to read the `requirements.txt` file in the Part A folder and install all the tools listed there. Alternatively, you can install from the root `requirements.txt` which includes all dependencies for both parts: `pip install -r ../requirements.txt`*
 
 ### Step 3: Run the Analysis
 Now, let's run the solver!

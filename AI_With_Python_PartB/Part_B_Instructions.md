@@ -14,10 +14,31 @@ A focused demonstration of fine-tuning language models using LoRA (Low-Rank Adap
 
 ### Quick Reference (TL;DR)
 
+**If you already completed Part A:**
+You should already have a virtual environment set up at the root of the project. Simply activate it and install Part B requirements:
+
+**Mac:**
+```bash
+source venv/bin/activate
+cd AI_With_Python_PartB
+pip install --upgrade pip && pip install torch torchvision torchaudio && pip install -r requirements.txt
+python test_training_pipeline.py
+```
+
+**Windows:**
+```powershell
+venv\Scripts\activate
+cd AI_With_Python_PartB
+python -m pip install --upgrade pip; pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu; pip install -r requirements.txt
+python test_training_pipeline.py
+```
+
+**If starting fresh (skipping Part A):**
 **Mac (3 steps):**
 ```bash
 python3 -m venv venv
 source venv/bin/activate
+cd AI_With_Python_PartB
 pip install --upgrade pip && pip install torch torchvision torchaudio && pip install -r requirements.txt
 python test_training_pipeline.py
 ```
@@ -26,6 +47,7 @@ python test_training_pipeline.py
 ```powershell
 python -m venv venv
 venv\Scripts\activate
+cd AI_With_Python_PartB
 python -m pip install --upgrade pip; pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu; pip install -r requirements.txt
 python test_training_pipeline.py
 ```
@@ -34,9 +56,34 @@ After setup, test models with `python demo_model.py --use-raw` or run the traini
 
 ### 1. Environment Setup
 
+**Important:** If you completed Part A, you should already have a virtual environment set up at the root of the project. Skip to "Activate Existing Environment" below. If you're starting fresh, follow the setup instructions.
+
 #### For Mac Users
 
-**Option A: Automated Setup Script (Recommended)**
+**If you completed Part A (Recommended):**
+```bash
+# Navigate to root folder (if not already there)
+cd ..
+
+# Activate the existing virtual environment
+source venv/bin/activate
+
+# Navigate to Part B folder
+cd AI_With_Python_PartB
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Install PyTorch (CPU version for Mac)
+pip install torch torchvision torchaudio
+
+# Install other dependencies
+pip install -r requirements.txt
+```
+
+**If starting fresh:**
+
+**Option A: Automated Setup Script**
 ```bash
 # Make script executable (if needed)
 chmod +x setup_environment.sh
@@ -53,11 +100,17 @@ The script will:
 
 **Option B: Manual Setup with Python venv**
 ```bash
-# Create virtual environment
+# Navigate to root folder (parent directory)
+cd ..
+
+# Create virtual environment at root (shared for both parts)
 python3 -m venv venv
 
 # Activate virtual environment
 source venv/bin/activate
+
+# Navigate to Part B folder
+cd AI_With_Python_PartB
 
 # Upgrade pip
 pip install --upgrade pip
@@ -70,12 +123,17 @@ pip install -r requirements.txt
 ```
 
 **Option C: Using Conda (if you have Anaconda/Miniconda)**
+*Note: If you completed Part A with a venv, we recommend using that same venv for consistency. Only use conda if you're starting fresh and prefer conda.*
+
 ```bash
 # Create conda environment
 conda create -n llm-workshop python=3.10 -y
 
 # Activate environment
 conda activate llm-workshop
+
+# Navigate to Part B folder
+cd AI_With_Python_PartB
 
 # Install PyTorch (CPU version)
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
@@ -86,13 +144,42 @@ pip install -r requirements.txt
 
 #### For Windows Users
 
+**If you completed Part A (Recommended):**
+```powershell
+# Navigate to root folder (if not already there)
+cd ..
+
+# Activate the existing virtual environment
+venv\Scripts\activate
+
+# Navigate to Part B folder
+cd AI_With_Python_PartB
+
+# Upgrade pip
+python -m pip install --upgrade pip
+
+# Install PyTorch (CPU version for Windows)
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+# Install other dependencies
+pip install -r requirements.txt
+```
+
+**If starting fresh:**
+
 **Option A: Using Python venv (Recommended)**
 ```powershell
-# Create virtual environment
+# Navigate to root folder (parent directory)
+cd ..
+
+# Create virtual environment at root (shared for both parts)
 python -m venv venv
 
 # Activate virtual environment
 venv\Scripts\activate
+
+# Navigate to Part B folder
+cd AI_With_Python_PartB
 
 # Upgrade pip
 python -m pip install --upgrade pip
@@ -105,12 +192,17 @@ pip install -r requirements.txt
 ```
 
 **Option B: Using Conda (if you have Anaconda/Miniconda)**
+*Note: If you completed Part A with a venv, we recommend using that same venv for consistency. Only use conda if you're starting fresh and prefer conda.*
+
 ```powershell
 # Create conda environment
 conda create -n llm-workshop python=3.10 -y
 
 # Activate environment
 conda activate llm-workshop
+
+# Navigate to Part B folder
+cd AI_With_Python_PartB
 
 # Install PyTorch (CPU version)
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
@@ -121,14 +213,28 @@ pip install -r requirements.txt
 
 ### 2. Activate Environment
 
+**Important:** The virtual environment should be at the root of the project (not inside `AI_With_Python_PartB`). If you completed Part A, the venv is already set up there.
+
 **Mac:**
 ```bash
+# From root folder
 source venv/bin/activate
+
+# Or from Part B folder
+cd ..
+source venv/bin/activate
+cd AI_With_Python_PartB
 ```
 
 **Windows:**
 ```powershell
+# From root folder
 venv\Scripts\activate
+
+# Or from Part B folder
+cd ..
+venv\Scripts\activate
+cd AI_With_Python_PartB
 ```
 
 ### 3. Test Models
