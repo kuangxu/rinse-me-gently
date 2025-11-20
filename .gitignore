@@ -53,3 +53,5 @@ logs/
 *.temp
 *.bak
 
+# Images
+*.png
