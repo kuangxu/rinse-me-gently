@@ -79,36 +79,36 @@ Type the following command into the terminal and press **Enter**:
 
 **For Mac:**
 ```bash
-python3 -m venv llm-workshop-env
+python3 -m venv venv
 ```
 
 **For Windows:**
 ```bash
-python -m venv llm-workshop-env
+python -m venv venv
 ```
 
-*Explanation: This command asks Python to run its "venv" tool to create a new, empty environment inside a folder named `llm-workshop-env`.*
+*Explanation: This command asks Python to run its "venv" tool to create a new, empty environment inside a folder named `venv`.*
 
-*Note: You might not see anything happen immediately. If a new folder named `llm-workshop-env` appears in your file list on the left, it worked!*
+*Note: You might not see anything happen immediately. If a new folder named `venv` appears in your file list on the left, it worked!*
 
 ### Step 5: Activate the Virtual Environment
 Now we need to "turn on" the environment. Type the command for your system and press **Enter**:
 
 **For Mac:**
 ```bash
-source llm-workshop-env/bin/activate
+source venv/bin/activate
 ```
 
 **For Windows:**
 ```bash
-.\llm-workshop-env\Scripts\activate
+.\venv\Scripts\activate
 ```
 
-*Explanation: "Activating" tells your terminal to stop looking at the global system for tools and instead look strictly inside your new `llm-workshop-env` folder. This ensures you are using the correct, isolated versions of your tools.*
+*Explanation: "Activating" tells your terminal to stop looking at the global system for tools and instead look strictly inside your new `venv` folder. This ensures you are using the correct, isolated versions of your tools.*
 
 **How do I know it worked?**  
-You should see `(llm-workshop-env)` appear at the very beginning of your command line in the terminal. It will look something like:
-`(llm-workshop-env) user@computer AI_With_Python_PartA %`
+You should see `(venv)` appear at the very beginning of your command line in the terminal. It will look something like:
+`(venv) user@computer AI_With_Python_PartA %`
 
 ---
 
@@ -116,7 +116,7 @@ You should see `(llm-workshop-env)` appear at the very beginning of your command
 
 Let's verify that Python is ready to go inside your virtual environment.
 
-1.  In the same terminal (where you see `(llm-workshop-env)`), type:
+1.  In the same terminal (where you see `(venv)`), type:
     ```bash
     python --version
     ```
@@ -143,7 +143,7 @@ print("My Python environment is set up and ready for AI.")
 4.  Save the file (Cmd+S on Mac, Ctrl+S on Windows).
 
 ### Step 2: Run the Code
-1.  Go back to your **Terminal** at the bottom (make sure you still see `(llm-workshop-env)`).
+1.  Go back to your **Terminal** at the bottom (make sure you still see `(venv)`).
 2.  Type the following command and press **Enter**:
 
 ```bash
@@ -156,6 +156,43 @@ If you see the message:
 > My Python environment is set up and ready for AI.
 
 Then you are completely done! You have successfully set up your professional Python development environment.
+
+---
+
+## Part 6: Mini-Case: Fitbit Analysis
+
+Now that we have our environment set up, let's solve a real business case using Python!
+
+### Step 1: Understand the Logic
+1.  In the **Explorer** on the left, find and click on the file named `fitbit_solver.py`.
+2.  Read through the code. You don't need to understand every single character, but look at the comments (lines starting with `#`) and the function names.
+3.  **Compare with Excel**:
+    *   Think back to Week 1 when you solved this in Excel.
+    *   **Logic**: Notice how the `calculate_production_cost` function handles the tiered pricing. In Excel, this likely required a complex nested `IF` formula or a VLOOKUP table. Here, it's a series of logical `if` statements.
+    *   **Optimization**: Notice the `for` loops in Part 2 and Part 3. In Excel, you used Data Tables to test different prices. Here, Python "loops" through every possible price to find the best one automatically.
+
+### Step 2: Install Requirements
+This script uses powerful tools like `pandas` (for data) and `matplotlib` (for graphs) that don't come with standard Python. We need to install them into our virtual environment.
+
+1.  Make sure your terminal still shows `(venv)` at the start.
+2.  Type the following command and press **Enter**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    *Explanation: This tells Python's package installer (`pip`) to read the `requirements.txt` file and install all the tools listed there.*
+
+### Step 3: Run the Analysis
+Now, let's run the solver!
+
+1.  In the terminal, type:
+    ```bash
+    python fitbit_solver.py
+    ```
+2.  Watch the output! You will see:
+    *   The calculated profit for the specific scenario.
+    *   The optimal price found by testing hundreds of options.
+    *   The global optimal strategy.
+3.  **Check the Graphs**: Look in your file explorer. You should see new image files (ending in `.png`) created by the script. Click on them to view the profit curves and heatmaps!
 
 ---
 

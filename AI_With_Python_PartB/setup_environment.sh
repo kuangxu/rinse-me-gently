@@ -76,11 +76,11 @@ setup_python_venv() {
     
     # Create virtual environment
     echo "📦 Creating virtual environment 'llm-workshop'..."
-    python3 -m venv llm-workshop-env
+    python3 -m venv venv
     
     # Activate environment
     echo "🔄 Activating environment..."
-    source llm-workshop-env/bin/activate
+    source venv/bin/activate
     
     # Upgrade pip
     echo "⬆️ Upgrading pip..."
@@ -98,7 +98,7 @@ setup_python_venv() {
     echo "✅ Setup complete!"
     echo ""
     echo "To start the workshop:"
-    echo "1. source llm-workshop-env/bin/activate"
+    echo "1. source venv/bin/activate"
     echo "2. jupyter notebook"
     echo "3. Open the 'LLM_Fine_Tuning_Demo.ipynb' notebook"
     echo ""

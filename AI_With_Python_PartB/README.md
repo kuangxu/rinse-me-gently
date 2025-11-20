@@ -16,16 +16,16 @@ A focused demonstration of fine-tuning language models using LoRA (Low-Rank Adap
 
 **Mac (3 steps):**
 ```bash
-python3 -m venv llm-workshop-env
-source llm-workshop-env/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 pip install --upgrade pip && pip install torch torchvision torchaudio && pip install -r requirements.txt
 python test_training_pipeline.py
 ```
 
 **Windows (3 steps):**
 ```powershell
-python -m venv llm-workshop-env
-llm-workshop-env\Scripts\activate
+python -m venv venv
+venv\Scripts\activate
 python -m pip install --upgrade pip; pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu; pip install -r requirements.txt
 python test_training_pipeline.py
 ```
@@ -54,10 +54,10 @@ The script will:
 **Option B: Manual Setup with Python venv**
 ```bash
 # Create virtual environment
-python3 -m venv llm-workshop-env
+python3 -m venv venv
 
 # Activate virtual environment
-source llm-workshop-env/bin/activate
+source venv/bin/activate
 
 # Upgrade pip
 pip install --upgrade pip
@@ -89,10 +89,10 @@ pip install -r requirements.txt
 **Option A: Using Python venv (Recommended)**
 ```powershell
 # Create virtual environment
-python -m venv llm-workshop-env
+python -m venv venv
 
 # Activate virtual environment
-llm-workshop-env\Scripts\activate
+venv\Scripts\activate
 
 # Upgrade pip
 python -m pip install --upgrade pip
@@ -123,12 +123,12 @@ pip install -r requirements.txt
 
 **Mac:**
 ```bash
-source llm-workshop-env/bin/activate
+source venv/bin/activate
 ```
 
 **Windows:**
 ```powershell
-llm-workshop-env\Scripts\activate
+venv\Scripts\activate
 ```
 
 ### 3. Test Models
@@ -312,17 +312,17 @@ The default model is `distilgpt2` (82M parameters), which is fast and works well
 ### Environment Activation Issues
 
 **Mac:**
-- If activation fails: `source llm-workshop-env/bin/activate`
+- If activation fails: `source venv/bin/activate`
 - Check Python version: `python3 --version` (needs 3.10+)
 
 **Windows:**
 - Use PowerShell or Command Prompt (not Git Bash for activation)
-- Path: `llm-workshop-env\Scripts\activate`
+- Path: `venv\Scripts\activate`
 - If blocked by execution policy: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
 ### Import Errors
 
-- Ensure virtual environment is activated (you should see `(llm-workshop-env)` in terminal prompt)
+- Ensure virtual environment is activated (you should see `(venv)` in terminal prompt)
 - Reinstall dependencies: `pip install -r requirements.txt`
 - Check Python version matches: `python --version`
 
