@@ -1,0 +1,15 @@
+# Cursor Rules for AI Lecture Materials
+
+## Documentation Style Guidelines
+
+- **No emojis**: Do not use emojis in any documentation files (.md, .txt, etc.)
+- **No em-dashes**: Use regular hyphens (-) instead of em-dashes (—) or en-dashes (–)
+- **Plain text formatting**: Keep documentation clean and professional without decorative characters
+
+## When Editing Documentation
+
+- Remove any emojis found in markdown files
+- Replace em-dashes (—) with regular hyphens (-)
+- Replace en-dashes (–) with regular hyphens (-)
+- Maintain consistent, professional tone throughout
+

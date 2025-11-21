@@ -115,6 +115,8 @@ source venv/bin/activate
 .\venv\Scripts\activate
 ```
 
+*Note: If you encounter an error message like "cannot be loaded because running script is disabled" on Windows, see **Appendix C** below for troubleshooting solutions.*
+
 *Explanation: "Activating" tells your terminal to stop looking at the global system for tools and instead look strictly inside your new `venv` folder. This ensures you are using the correct, isolated versions of your tools.*
 
 **How do I know it worked?**  
@@ -304,6 +306,36 @@ If you struggled with creating an effective prompt in Part 7, here is an example
 
 ```
 Create a Python script `jetblue_solver.py` that reads `AI_With_Python_PartA/Case_Text/Jetblue_raw.md` and solves all questions in that document. Print results to the terminal and save visualizations as PNG files when appropriate.
+```
+
+---
+
+## Appendix C: Windows Virtual Environment Activation Troubleshooting
+
+If you encounter an error message like "cannot be loaded because running script is disabled" when trying to activate the virtual environment on Windows, this is due to PowerShell's execution policy security feature. Here are three solutions:
+
+**Solution 1: Use Command Prompt instead of PowerShell (Easiest)**
+1. In Cursor, click the dropdown arrow next to the `+` button in the terminal panel (or right-click the terminal tab).
+2. Select **Command Prompt** (or **cmd**) instead of PowerShell.
+3. Then try the activation command again:
+   ```bash
+   .\venv\Scripts\activate
+   ```
+
+**Solution 2: Change PowerShell Execution Policy (Temporary)**
+If you need to use PowerShell, run this command first (you may need to run Cursor as Administrator):
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+```
+Then try activating again:
+```bash
+.\venv\Scripts\activate
+```
+
+**Solution 3: Use the batch file directly**
+You can also try:
+```bash
+venv\Scripts\activate.bat
 ```
 
 
