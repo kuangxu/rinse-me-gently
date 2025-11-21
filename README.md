@@ -3,7 +3,7 @@
 > "Come, gentle night, come, loving black brow night, give me my Romeo."  
 > — William Shakespeare, *Romeo and Juliet*, Act 3, Scene 2
 
-This repository contains materials for the Stanford GSB OIT 245 AI Lecture module, focusing on modern AI workflows and Python development. The workshop is structured in two parts.
+This is a two part lecture focusing on introducing a basic Python workflow as well as LLM fine tuning to a relatively non-technical audience. 
 
 ## Repository Structure
 
@@ -15,7 +15,7 @@ This repository contains materials for the Stanford GSB OIT 245 AI Lecture modul
 
 **Start here to prepare your local environment for the workshop.**
 
-### Part B: LLM Fine-Tuning (`AI_With_Python_PartB`)
+### Part B: LLM Fine-Tuning (`AI_With_Python_PartB`) 
 **Objective:** Execute a state-of-the-art AI workflow.
 *   Fine-tuning a Large Language Model (LLM).
 *   Managing training data and pipelines.
@@ -37,7 +37,8 @@ git clone https://github.com/kuangxu/rinse_me_gently.git
 ```
 
 ### Step 2: Start Part A
-1.  Navigate to the `AI_With_Python_PartA` folder.
-2.  Open the file `Part_A_Instructions.md`.
+1.  Navigate to the `AI_With_Python_PartA` folder on GitHub (in your web browser).
+2.  Click on `Part_A_Instructions.md` to view the instructions directly on GitHub.
 3.  Follow the step-by-step guide inside to set up your environment.
    - *Note: The virtual environment will be created at the root level so it can be shared between Part A and Part B.*
+   - *Tip: If you're using Cursor IDE, you can also open `.md` files locally and press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows/Linux) to render them in a preview pane.*
