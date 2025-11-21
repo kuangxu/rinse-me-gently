@@ -1,13 +1,13 @@
-# OIT 245 AI with Python, Part A: ython & Cursor IDE Setup Guide
+# OIT 245 AI with Python, Part A: Python & Cursor IDE Setup Guide
 
 This lecture is the first of two parts where we will get to experience the state-of-the-art workflow with AI and Python.
 
 In today's lecture, our goal is to:
 1.  Set up Python on your computer.
 2.  Understand how to use a **Virtual Environment**.
-3.  Run simple excercises in Python. 
+3.  Run simple exercises in Python. 
 
-We will be using **Cursor**, a modern code editor that integrates AI directly into the coding process. That being said, this can be done with any Python code editor such as ** VS Code** (See Appendix). 
+We will be using **Cursor**, a modern code editor that integrates AI directly into the coding process. That being said, this can be done with any Python code editor such as **VS Code** (See Appendix). 
 
 ---
 
@@ -71,7 +71,7 @@ Since you have already downloaded the course materials:
    - *Note: We open the root folder so we can create a single virtual environment that works for both Part A and Part B.*
 4.  Click **Open**.
 
-### Step 3: Open the Terminal
+### Step 2: Open the Terminal
 We need to type a few commands. We will use the "Terminal" built into Cursor.
 *Concept: The **Terminal** (or Command Line) lets you control your computer using text commands instead of a mouse. It gives you direct access to system tools that aren't always available via buttons.*
 
@@ -138,7 +138,7 @@ Let's write and run your first piece of code to make sure everything is working 
 
 ### Step 1: Create a File
 1.  In Cursor, look at the **Explorer** (the file list on the left).
-2.  Navigate to the `AI_With_Python_PartA` folder.
+2.  Navigate to the `AI_With_Python_PartA/Python_Scripts` folder.
 3.  Right-click in the empty space (or click the "New File" icon) and create a new file named `hello.py`.
 4.  Copy and paste the following code into that file:
 
@@ -147,11 +147,15 @@ print("Hello, OIT 245!")
 print("My Python environment is set up and ready for AI.")
 ```
 
-4.  Save the file (Cmd+S on Mac, Ctrl+S on Windows).
+5.  Save the file (Cmd+S on Mac, Ctrl+S on Windows).
 
 ### Step 2: Run the Code
 1.  Go back to your **Terminal** at the bottom (make sure you still see `(venv)`).
-2.  Type the following command and press **Enter**:
+2.  Navigate to the Python_Scripts folder (if not already there):
+    ```bash
+    cd AI_With_Python_PartA/Python_Scripts
+    ```
+3.  Type the following command and press **Enter**:
 
 ```bash
 python hello.py
@@ -171,7 +175,7 @@ Then you are completely done! You have successfully set up your professional Pyt
 Now that we have our environment set up, let's solve the Fitbit case, which you've already seen before in Basic Modeling, but this time with Python. For simplicity, we have already made a solution script. Your goal now is to understand as much of the logic as possible, and be able to execute the code and understand the outputs. 
 
 ### Step 1: Understand the Logic
-1.  In the **Explorer** on the left, find and click on the file named `fitbit_solver.py`.
+1.  In the **Explorer** on the left, navigate to the `Python_Scripts` folder and find and click on the file named `fitbit_solver.py`. This is the Python solution for the Fitbit case. You can find the raw text of the case in the `Case_Text` folder. 
 2.  Read through the code. You don't need to understand every single character, but look at the comments (lines starting with `#`) and the function names.
 3.  **Compare with Excel**:
     *   Think back to Basic Modeling when you solved this in Excel.
@@ -190,20 +194,90 @@ This script uses powerful tools like `pandas` (for data) and `matplotlib` (for g
     ```bash
     pip install -r requirements.txt
     ```
-    *Explanation: This tells Python's package installer (`pip`) to read the `requirements.txt` file in the Part A folder and install all the tools listed there. Alternatively, you can install from the root `requirements.txt` which includes all dependencies for both parts: `pip install -r ../requirements.txt`*
+    *Explanation: This tells Python's package installer (`pip`) to read the `requirements.txt` file in the Part A folder and install all the tools listed there.*
 
 ### Step 3: Run the Analysis
 Now, let's run the solver!
 
-1.  In the terminal, type:
+1.  Navigate to the Python_Scripts folder:
+    ```bash
+    cd Python_Scripts
+    ```
+2.  In the terminal, type:
     ```bash
     python fitbit_solver.py
     ```
-2.  Watch the output! You will see:
+3.  Watch the output! You will see:
     *   The calculated profit for the specific scenario.
     *   The optimal price found by testing hundreds of options.
     *   The global optimal strategy.
 3.  **Check the Graphs**: Look in your file explorer. You should see new image files (ending in `.png`) created by the script. Click on them to view the profit curves and heatmaps!
+
+---
+
+## Part 7: Using AI to Solve the JetBlue Case (Optional)
+
+This part is optional and will give you hands-on experience using an AI coding agent, such as Cursor's built-in AI assistant. You'll learn how to effectively communicate with AI to generate Python code for a business problem.
+
+### Step 1: Open Cursor's AI Agent Chat
+
+1.  In Cursor, look for the **AI Chat** or **Agent** feature. This is typically accessible via:
+    *   A chat icon in the sidebar
+    *   A keyboard shortcut (often `Cmd+L` on Mac or `Ctrl+L` on Windows)
+    *   The menu: **View** -> **Chat** or **AI** -> **Chat**
+2.  A chat window will appear where you can interact with the AI assistant.
+3.  **If you've obtained a student discounted membership with Cursor, make sure you sign in using your Stanford email.**
+
+### Step 2: Prepare the Case Text
+
+1.  Navigate to the `Case_Text` folder in the Explorer.
+2.  Open `Jetblue_raw.md` to familiarize yourself with the case.
+3.  You'll need to reference this file when creating your prompt for the AI.
+
+### Step 3: Create Your Prompt
+
+**Your Challenge:** Try to create a prompt yourself that asks the AI to:
+- Read the JetBlue case text from `Case_Text/Jetblue_raw.md`
+- Create a Python script that solves all four questions in the case
+- Include terminal output (print statements) showing results
+- Generate and save visualization graphs as PNG files when appropriate
+
+**Tips for Writing Effective Prompts:**
+- Be specific about what you want (e.g., "create a Python script", "solve all 4 questions")
+- Reference the case file location
+- Mention the style you want (similar to `fitbit_solver.py`)
+- Ask for clear output (terminal prints and saved images)
+- Specify the file name for the output script (e.g., `jetblue_solver.py`)
+
+### Step 4: Iterate and Refine
+
+1.  **First Attempt**: Try your initial prompt and see what the AI generates.
+2.  **Review the Output**: Check if the script addresses all questions from the case and produces the expected outputs.
+3.  **Follow-up Questions**: If the initial attempt doesn't fully solve the problem, ask follow-up questions to refine the solution.
+
+### Step 5: Save and Run Your Solution
+
+1.  Once you're satisfied with the generated script, save it as `jetblue_solver.py` in the `Python_Scripts` folder.
+2.  Make sure your virtual environment is activated (you should see `(venv)` in your terminal).
+3.  Navigate to the `Python_Scripts` folder:
+    ```bash
+    cd AI_With_Python_PartA/Python_Scripts
+    ```
+4.  Run the script:
+    ```bash
+    python jetblue_solver.py
+    ```
+5.  Review the terminal output and any generated PNG files.
+
+### Step 6: Reflection
+
+After completing this exercise, think about:
+- What made your prompt effective (or ineffective)?
+- How many iterations did it take to get a working solution?
+- What would you do differently next time?
+- How does this compare to writing code manually?
+
+**Hint:** If you really struggle with creating an effective prompt, you can look at **Appendix B** below for an example prompt that successfully generates a JetBlue solver. However, we encourage you to try creating your own first!
 
 ---
 
@@ -219,4 +293,17 @@ If you already have **Visual Studio Code (VS Code)** installed or prefer to use 
 5.  **Extensions:** You might need to install the "Python" extension by Microsoft if VS Code asks you to (it usually pops up automatically when you open a `.py` file).
 
 **Summary:** Wherever this guide says "Cursor", just read it as "VS Code". Everything else remains the same!
+
+---
+
+## Appendix B: Example AI Prompt for JetBlue Case
+
+If you struggled with creating an effective prompt in Part 7, here is an example prompt that successfully generates a complete Python solution for the JetBlue case.
+
+**Example Prompt:**
+
+```
+Create a Python script `jetblue_solver.py` that reads `AI_With_Python_PartA/Case_Text/Jetblue_raw.md` and solves all questions in that document. Print results to the terminal and save visualizations as PNG files when appropriate.
+```
+
 

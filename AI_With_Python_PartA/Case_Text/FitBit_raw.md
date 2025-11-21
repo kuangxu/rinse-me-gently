@@ -40,7 +40,6 @@ $20.00
 
 
 
-
 Previous Max Number Devices
 Max Number Devices
 Total Time (in weeks)
@@ -81,3 +80,4 @@ Part II
 Using a Data Table, find out what price Fitbit should charge for their device in order maximize profits? You may assume that the prices should stay within $100 and 400. [Consider prices between $100 and $400 in increments of $10]
 
 Using a Two-Dimensional Data Table, find out how your optimal price Question 2 changes as you move the announced shipping date? [Consider prices between $100 and $400 in increments of $10, and announced shipping date between 4 and 15 weeks in increment of 1 week]
+
