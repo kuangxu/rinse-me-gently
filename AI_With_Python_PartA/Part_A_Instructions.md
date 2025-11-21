@@ -79,11 +79,12 @@ We need to type a few commands. We will use the "Terminal" built into Cursor.
 2.  A panel will appear at the bottom of the screen. This is where you type commands.
 
 ### Step 3: Navigate to the Project Root (if needed)
-Make sure you're in the root folder of the project (the one containing both `AI_With_Python_PartA` and `AI_With_Python_PartB`). If you just opened the folder in Cursor, you should already be there. You can verify by checking that your terminal prompt shows the project folder name, or type:
-```bash
-pwd
-```
-(This shows your current directory - "print working directory")
+Make sure you're in the root folder of the project (the one containing both `AI_With_Python_PartA` and `AI_With_Python_PartB`). If you just opened the folder in Cursor, you should already be there. 
+
+**How to check which folder you're in:**
+- Type `pwd` (Mac) or `cd` (Windows) to see your current directory path
+- Your terminal prompt usually shows the folder name at the end
+- If you're not in the right folder, use `cd` followed by the path to navigate (e.g., `cd /path/to/project` on Mac or `cd C:\path\to\project` on Windows)
 
 ### Step 4: Create the Virtual Environment
 Type the following command into the terminal and press **Enter**:
@@ -153,7 +154,7 @@ Let's write and run your first piece of code to make sure everything is working 
 
 ### Step 2: Run the Code
 1.  Go back to your **Terminal** at the bottom (make sure you still see `(venv)`).
-2.  Navigate to the Python_Scripts folder (if not already there):
+2.  Navigate to the Python_Scripts folder. *Tip: If you're not sure where you are, type `pwd` (Mac) or `cd` (Windows) to check your current location.*
     ```bash
     cd AI_With_Python_PartA/Python_Scripts
     ```
@@ -188,7 +189,7 @@ Now that we have our environment set up, let's solve the Fitbit case, which you'
 This script uses powerful tools like `pandas` (for data) and `matplotlib` (for graphs) that don't come with standard Python. We need to install them into our virtual environment.
 
 1.  Make sure your terminal still shows `(venv)` at the start.
-2.  Navigate to the Part A folder (if not already there):
+2.  Navigate to the Part A folder. *Tip: Use `pwd` (Mac) or `cd` (Windows) to check your current location first.*
     ```bash
     cd AI_With_Python_PartA
     ```
@@ -201,7 +202,7 @@ This script uses powerful tools like `pandas` (for data) and `matplotlib` (for g
 ### Step 3: Run the Analysis
 Now, let's run the solver!
 
-1.  Navigate to the Python_Scripts folder:
+1.  Navigate to the Python_Scripts folder. *Tip: If you're already in `AI_With_Python_PartA`, you can use `cd Python_Scripts`. If you're at the project root, use `cd AI_With_Python_PartA/Python_Scripts`.*
     ```bash
     cd Python_Scripts
     ```
@@ -261,7 +262,7 @@ This part is optional and will give you hands-on experience using an AI coding a
 
 1.  Once you're satisfied with the generated script, save it as `jetblue_solver.py` in the `Python_Scripts` folder.
 2.  Make sure your virtual environment is activated (you should see `(venv)` in your terminal).
-3.  Navigate to the `Python_Scripts` folder:
+3.  Navigate to the `Python_Scripts` folder. *Tip: Check your current location with `pwd` (Mac) or `cd` (Windows) if needed.*
     ```bash
     cd AI_With_Python_PartA/Python_Scripts
     ```
