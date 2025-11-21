@@ -22,12 +22,22 @@ If you are already comfortable with Git, you can clone the repository:
 git clone https://github.com/kuangxu/rinse_me_gently.git
 ```
 
-### Step 2: Start Part A
+### Step 2: Start Part A - **IMPORTANT: How to View Instructions**
+
+**⚠️ DO NOT open `.md` files in raw text format!** The instructions are formatted markdown files that must be viewed properly to be readable.
+
+**Option A: View on GitHub (Recommended)**
 1.  Navigate to the `AI_With_Python_PartA` folder on GitHub (in your web browser).
 2.  Click on `Part_A_Instructions.md` to view the instructions directly on GitHub.
-3.  Follow the step-by-step guide inside to set up your environment.
-   - *Note: The virtual environment will be created at the root level so it can be shared between Part A and Part B.*
-   - *Tip: If you're using Cursor IDE, you can also open `.md` files locally and press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows/Linux) to render them in a preview pane.*
+3.  GitHub will automatically render the markdown with proper formatting.
+4.  Follow the step-by-step guide inside to set up your environment.
+
+**Option B: View in Cursor/VS Code**
+If you're using Cursor or VS Code, you can also open `.md` files locally and press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows/Linux) to render them in a preview pane.
+
+**Important Notes:**
+- The virtual environment will be created at the root level so it can be shared between Part A and Part B.
+- If you see raw markdown code (with `#`, `**`, backticks, etc.), you're viewing it incorrectly. Use one of the methods above!
 
 
 ## Repository Structure
