@@ -1,4 +1,4 @@
-# OIT 245 AI with Python, Part A: Python & Cursor IDE Setup Guide
+# AI with Python, Part A: Python & Cursor IDE Setup Guide
 
 This lecture is the first of two parts where we will get to experience the state-of-the-art workflow with AI and Python.
 
@@ -150,7 +150,7 @@ Let's write and run your first piece of code to make sure everything is working 
 4.  Copy and paste the following code into that file:
 
 ```python
-print("Hello, OIT 245!")
+print("Hello, World!")
 print("My Python environment is set up and ready for AI.")
 ```
 
@@ -170,7 +170,7 @@ python hello.py
 
 ### Step 3: Success!
 If you see the message:
-> Hello, OIT 245!
+> Hello, World!
 > My Python environment is set up and ready for AI.
 
 Then you are completely done! You have successfully set up your professional Python development environment.
@@ -233,7 +233,7 @@ This part is optional and will give you hands-on experience using an AI coding a
     *   A keyboard shortcut (often `Cmd+L` on Mac or `Ctrl+L` on Windows)
     *   The menu: **View** -> **Chat** or **AI** -> **Chat**
 2.  A chat window will appear where you can interact with the AI assistant.
-3.  **If you've obtained a student discounted membership with Cursor, make sure you sign in using your Stanford email.**
+3.  **If you've obtained a student discounted membership with Cursor, make sure you sign in using your student email.**
 
 ### Step 2: Prepare the Case Text
 
