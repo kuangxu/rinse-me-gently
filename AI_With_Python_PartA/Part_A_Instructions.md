@@ -143,18 +143,11 @@ Let's verify that Python is ready to go inside your virtual environment.
 
 Let's write and run your first piece of code to make sure everything is working perfectly.
 
-### Step 1: Create a File
+### Step 1: Open the Hello World File
 1.  In Cursor, look at the **Explorer** (the file list on the left).
 2.  Navigate to the `AI_With_Python_PartA/Python_Scripts` folder.
-3.  Right-click in the empty space (or click the "New File" icon) and create a new file named `hello.py`.
-4.  Copy and paste the following code into that file:
-
-```python
-print("Hello, World!")
-print("My Python environment is set up and ready for AI.")
-```
-
-5.  Save the file (Cmd+S on Mac, Ctrl+S on Windows).
+3.  Click on the file named `hello.py` to open it.
+4.  Take a look at the code inside - it's a simple script that prints a greeting message.
 
 ### Step 2: Run the Code
 1.  Go back to your **Terminal** at the bottom (make sure you still see `(venv)`).
@@ -170,7 +163,7 @@ python hello.py
 
 ### Step 3: Success!
 If you see the message:
-> Hello, World!
+> Hello, OIT 245!
 > My Python environment is set up and ready for AI.
 
 Then you are completely done! You have successfully set up your professional Python development environment.
