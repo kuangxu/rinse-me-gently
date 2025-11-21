@@ -163,7 +163,7 @@ python hello.py
 
 ### Step 3: Success!
 If you see the message:
-> Hello, OIT 245!
+> Hello, World!
 > My Python environment is set up and ready for AI.
 
 Then you are completely done! You have successfully set up your professional Python development environment.

@@ -4,7 +4,75 @@
 
 A focused demonstration of fine-tuning language models using LoRA (Low-Rank Adaptation). This project provides a clean, simplified interface for training and testing language models with various text datasets.
 
-## 🚀 Quick Start
+## 🎯 Coming from Part A?
+
+**Great news!** If you completed Part A, you already have everything set up. Your virtual environment is ready at the root of the project. Follow these simple steps:
+
+### Step 1: Open Cursor and Navigate to Your Project
+1. Open **Cursor** (or VS Code if you're using that instead).
+2. Make sure you have the **root folder** open (the one containing both `AI_With_Python_PartA` and `AI_With_Python_PartB`).
+   - If you're not sure, go to **File** -> **Open Folder...** and select the root folder.
+
+### Step 2: Open the Terminal
+1. In Cursor, click **Terminal** -> **New Terminal** (or use the keyboard shortcut).
+2. A terminal panel will appear at the bottom.
+
+### Step 3: Verify Your Location
+Make sure you're in the root folder. You can check by typing:
+```bash
+pwd
+```
+You should see a path ending with your project folder name (the one containing both `AI_With_Python_PartA` and `AI_With_Python_PartB`).
+
+### Step 4: Activate Your Virtual Environment
+**Mac:**
+```bash
+source venv/bin/activate
+```
+
+**Windows:**
+```powershell
+.\venv\Scripts\activate
+```
+
+**How do you know it worked?**  
+You should see `(venv)` at the beginning of your terminal prompt, just like in Part A. It will look something like:
+```
+(venv) user@computer project-name %
+```
+
+### Step 5: Navigate to Part B Folder
+```bash
+cd AI_With_Python_PartB
+```
+
+### Step 6: Install Part B Requirements
+**Mac:**
+```bash
+pip install --upgrade pip
+pip install torch torchvision torchaudio
+pip install -r requirements.txt
+```
+
+**Windows:**
+```powershell
+python -m pip install --upgrade pip
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements.txt
+```
+
+*Note: This may take a few minutes as PyTorch and other ML libraries are being installed.*
+
+### Step 7: Test Your Setup
+```bash
+python test_training_pipeline.py
+```
+
+If this runs successfully, you're all set! You can now proceed to the "Test Models" section below.
+
+---
+
+## 🚀 Quick Start (For Everyone)
 
 ### Prerequisites
 
@@ -27,7 +95,7 @@ python test_training_pipeline.py
 
 **Windows:**
 ```powershell
-venv\Scripts\activate
+.\venv\Scripts\activate
 cd AI_With_Python_PartB
 python -m pip install --upgrade pip; pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu; pip install -r requirements.txt
 python test_training_pipeline.py
@@ -46,7 +114,7 @@ python test_training_pipeline.py
 **Windows (3 steps):**
 ```powershell
 python -m venv venv
-venv\Scripts\activate
+.\venv\Scripts\activate
 cd AI_With_Python_PartB
 python -m pip install --upgrade pip; pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu; pip install -r requirements.txt
 python test_training_pipeline.py
@@ -56,17 +124,22 @@ After setup, test models with `python demo_model.py --use-raw` or run the traini
 
 ### 1. Environment Setup
 
-**Important:** If you completed Part A, you should already have a virtual environment set up at the root of the project. Skip to "Activate Existing Environment" below. If you're starting fresh, follow the setup instructions.
+**Important:** 
+- **If you completed Part A**: Please follow the step-by-step guide in the "🎯 Coming from Part A?" section at the top of this document. It will walk you through activating your existing virtual environment and installing Part B requirements.
+- **If you're starting fresh**: Follow the setup instructions below.
 
 #### For Mac Users
 
 **If you completed Part A (Recommended):**
 ```bash
-# Navigate to root folder (if not already there)
+# Make sure you're in the root folder (the one containing both Part A and Part B)
+# If you're in Part B folder, navigate up:
 cd ..
 
 # Activate the existing virtual environment
 source venv/bin/activate
+
+# You should see (venv) in your prompt. If not, the activation didn't work.
 
 # Navigate to Part B folder
 cd AI_With_Python_PartB
@@ -146,11 +219,14 @@ pip install -r requirements.txt
 
 **If you completed Part A (Recommended):**
 ```powershell
-# Navigate to root folder (if not already there)
+# Make sure you're in the root folder (the one containing both Part A and Part B)
+# If you're in Part B folder, navigate up:
 cd ..
 
 # Activate the existing virtual environment
-venv\Scripts\activate
+.\venv\Scripts\activate
+
+# You should see (venv) in your prompt. If not, the activation didn't work.
 
 # Navigate to Part B folder
 cd AI_With_Python_PartB
@@ -176,7 +252,9 @@ cd ..
 python -m venv venv
 
 # Activate virtual environment
-venv\Scripts\activate
+.\venv\Scripts\activate
+
+# You should see (venv) in your prompt. If not, the activation didn't work.
 
 # Navigate to Part B folder
 cd AI_With_Python_PartB
@@ -229,13 +307,16 @@ cd AI_With_Python_PartB
 **Windows:**
 ```powershell
 # From root folder
-venv\Scripts\activate
+.\venv\Scripts\activate
 
 # Or from Part B folder
 cd ..
-venv\Scripts\activate
+.\venv\Scripts\activate
 cd AI_With_Python_PartB
 ```
+
+**How do you know it worked?**  
+You should see `(venv)` at the beginning of your terminal prompt, just like in Part A. If you don't see it, the activation didn't work - try the command again.
 
 ### 3. Test Models
 
@@ -423,8 +504,9 @@ The default model is `distilgpt2` (82M parameters), which is fast and works well
 
 **Windows:**
 - Use PowerShell or Command Prompt (not Git Bash for activation)
-- Path: `venv\Scripts\activate`
+- Path: `.\venv\Scripts\activate` (note the `.\` at the beginning)
 - If blocked by execution policy: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+- Make sure you see `(venv)` in your prompt after activation
 
 ### Import Errors
 
@@ -451,8 +533,16 @@ If training is slow, reduce the number of examples or text length.
 
 ## 🎓 Getting Started Checklist
 
+**If you completed Part A:**
+- [ ] Virtual environment activated (you see `(venv)` in your terminal prompt)
+- [ ] Navigated to `AI_With_Python_PartB` folder
+- [ ] Installed Part B requirements (PyTorch and other dependencies)
+- [ ] Test training pipeline runs: `python test_training_pipeline.py`
+- [ ] Ready to test models: `python demo_model.py --use-raw`
+
+**If starting fresh:**
 - [ ] Python 3.10+ installed and working
-- [ ] Virtual environment created and activated
+- [ ] Virtual environment created and activated (you see `(venv)` in your terminal prompt)
 - [ ] All packages installed (`pip install -r requirements.txt`)
 - [ ] Test training pipeline runs: `python test_training_pipeline.py`
 - [ ] Ready to test models: `python demo_model.py --use-raw`

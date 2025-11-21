@@ -5,21 +5,7 @@
 
 This is a two part lecture focusing on introducing a basic Python workflow as well as LLM fine tuning to a relatively non-technical audience. 
 
-## Repository Structure
 
-### Part A: Setup & Introduction (`AI_With_Python_PartA`)
-**Objective:** Establish a professional development environment.
-*   Setting up Python and the Cursor IDE (or VS Code).
-*   Understanding and configuring Virtual Environments.
-*   Executing initial Python scripts.
-
-**Start here to prepare your local environment for the workshop.**
-
-### Part B: LLM Fine-Tuning (`AI_With_Python_PartB`) 
-**Objective:** Execute a state-of-the-art AI workflow.
-*   Fine-tuning a Large Language Model (LLM).
-*   Managing training data and pipelines.
-*   Interacting with custom-trained models.
 
 ## Getting Started
 
@@ -42,3 +28,20 @@ git clone https://github.com/kuangxu/rinse_me_gently.git
 3.  Follow the step-by-step guide inside to set up your environment.
    - *Note: The virtual environment will be created at the root level so it can be shared between Part A and Part B.*
    - *Tip: If you're using Cursor IDE, you can also open `.md` files locally and press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows/Linux) to render them in a preview pane.*
+
+
+## Repository Structure
+
+### Part A: Setup & Introduction (`AI_With_Python_PartA`)
+**Objective:** Establish a professional development environment.
+*   Setting up Python and the Cursor IDE (or VS Code).
+*   Understanding and configuring Virtual Environments.
+*   Executing initial Python scripts.
+
+**Start here to prepare your local environment for the workshop.**
+
+### Part B: LLM Fine-Tuning (`AI_With_Python_PartB`) 
+**Objective:** Execute a state-of-the-art AI workflow.
+*   Fine-tuning a Large Language Model (LLM).
+*   Managing training data and pipelines.
+*   Interacting with custom-trained models.
