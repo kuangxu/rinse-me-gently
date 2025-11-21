@@ -1,5 +1,8 @@
 # Rinse Me Gently: An Introductory AI & Python Workshop
 
+> "Come, gentle night, come, loving black brow night, give me my Romeo."  
+> — William Shakespeare, *Romeo and Juliet*, Act 3, Scene 2
+
 This repository contains materials for the Stanford GSB OIT 245 AI Lecture module, focusing on modern AI workflows and Python development. The workshop is structured in two parts.
 
 ## Repository Structure

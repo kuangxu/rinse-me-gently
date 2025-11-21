@@ -78,6 +78,13 @@ We need to type a few commands. We will use the "Terminal" built into Cursor.
 1.  In Cursor, look at the top menu. Click **Terminal** -> **New Terminal**.
 2.  A panel will appear at the bottom of the screen. This is where you type commands.
 
+### Step 3: Navigate to the Project Root (if needed)
+Make sure you're in the root folder of the project (the one containing both `AI_With_Python_PartA` and `AI_With_Python_PartB`). If you just opened the folder in Cursor, you should already be there. You can verify by checking that your terminal prompt shows the project folder name, or type:
+```bash
+pwd
+```
+(This shows your current directory - "print working directory")
+
 ### Step 4: Create the Virtual Environment
 Type the following command into the terminal and press **Enter**:
 
@@ -211,7 +218,7 @@ Now, let's run the solver!
     *   The calculated profit for the specific scenario.
     *   The optimal price found by testing hundreds of options.
     *   The global optimal strategy.
-3.  **Check the Graphs**: Look in your file explorer. You should see new image files (ending in `.png`) created by the script. Click on them to view the profit curves and heatmaps!
+4.  **Check the Graphs**: Look in your file explorer. You should see new image files (ending in `.png`) created by the script. Click on them to view the profit curves and heatmaps!
 
 ---
 
