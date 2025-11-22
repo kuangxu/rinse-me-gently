@@ -1,10 +1,13 @@
-# Rinse Me Gently 
+# Rinse My Gently, Part B: Finetune LLMs
 
-## LLM Fine-Tuning Demo - Setup Guide
+This exercise is the second of two parts where we will get to experience the state-of-the-art workflow with AI and Python.
 
-A focused demonstration of fine-tuning language models using LoRA (Low-Rank Adaptation). This project provides a clean, simplified interface for training and testing language models with various text datasets.
+In today's exercise, our goal is to:
+1. Set up a separate virtual environment for Part B (similar to Part A).
+2. Understand how to fine-tune a language model using LoRA (Low-Rank Adaptation).
+3. Experience how training data shapes a model's behavior and output.
 
-*Concept: **Fine-tuning** is like teaching a pre-trained language model new tricks. Instead of training from scratch (which would take weeks and require massive computing power), we use a technique called **LoRA (Low-Rank Adaptation)** that efficiently updates just a small portion of the model's parameters. This allows us to customize the model's behavior on specific tasks or styles of text in just minutes.*
+We will be using **Cursor** (or VS Code), the same code editor from Part A. This exercise provides a focused demonstration of fine-tuning language models using LoRA, a technique that efficiently adapts pre-trained models to specific tasks or domains. You'll get hands-on experience training and testing language models with various text datasets.
 
 *Note: If you're viewing this file in raw text format, use GitHub's web viewer or press `Cmd+Shift+V` (Mac) / `Ctrl+Shift+V` (Windows) in Cursor/VS Code to see the formatted version.*
 
