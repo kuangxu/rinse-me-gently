@@ -20,7 +20,9 @@ We will be using **Cursor** (or VS Code), the same code editor from Part A. This
   - [1.1 Load an LLM](#11-load-an-llm)
   - [1.2 Fine Tune Your First LLM](#12-fine-tune-your-first-llm)
   - [1.3 Run Fine Tuned LLM](#13-run-fine-tuned-llm)
-  - [1.4 Optional: Repeat Fine Tune + Run Model with Data of Choice](#14-optional-repeat-fine-tune--run-model-with-data-of-choice)
+  - [1.4 Repeat Fine Tune + Run Model with Data of Your Choice](#14-repeat-fine-tune--run-model-with-data-of-your-choice)
+  - [1.5 Optional: Try a Better Base Model (Qwen)](#15-optional-try-a-better-base-model-qwen)
+- [Chapter 2 - Questions and Explorations](#chapter-2---questions-and-explorations)
 
 ---
 
