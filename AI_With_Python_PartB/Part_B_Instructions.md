@@ -111,7 +111,7 @@ This project uses specialized machine learning libraries that don't come with st
 
 Now that everything is set up, let's load and test a language model! We'll start with the "vanilla" (untrained) base model to see how it behaves before we fine-tune it.
 
-*Concept: A **language model** is an AI that has been trained to predict the next word in a sequence. DistilGPT-2 (the baseline model we'll use) is a distilled version of GPT-2 that is faster and lighter while retaining core capabilities. You will see that this model produces semi-coherent sentences, but is really not yet very smart. *
+*Concept: A **language model** is an AI that has been trained to predict the next word in a sequence. DistilGPT-2 (the baseline model we'll use) is a distilled version of GPT-2 that is faster and lighter while retaining core capabilities. You will see that this model produces semi-coherent sentences, but is really not yet very smart.*
 
 #### Step 1: Test the Base Model
 
@@ -246,6 +246,8 @@ Let's have a conversation with our fine-tuned model:
     ```
 
 2. Try talking to the model! Compare the responses to what the base model would have said earlier. What differences do you notice? 
+
+3. The model will generate responses and display them. You can continue the conversation by typing more prompts.
 
 4. When you're done, type `quit`, `exit`, `bye`, or `q` to exit, or press `Ctrl+C`.
 
