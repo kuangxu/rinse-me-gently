@@ -1,5 +1,13 @@
 # Cursor Rules for AI Lecture Materials
 
+## Audience Context
+
+- **Target Audience**: Economics BS students with basic non-technical background
+- **Writing Style**: Write clearly and simply. Avoid jargon. Explain technical concepts in plain language. But don't be verbose. 
+- **Assumptions**: Students have minimal programming/tech background. Use analogies and simple explanations when introducing technical concepts
+- **Tone**: Professional but accessible, encouraging, step-by-step guidance
+
+
 ## Documentation Style Guidelines
 
 - **No emojis**: Do not use emojis in any documentation files (.md, .txt, etc.)
@@ -12,4 +20,5 @@
 - Replace em-dashes (—) with regular hyphens (-)
 - Replace en-dashes (–) with regular hyphens (-)
 - Maintain consistent, professional tone throughout
+- Use simple, clear language appropriate for economics BS students without extensive tech background
 

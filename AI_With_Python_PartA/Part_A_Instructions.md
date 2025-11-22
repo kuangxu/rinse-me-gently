@@ -1,8 +1,8 @@
 # AI with Python, Part A: Python & Cursor IDE Setup Guide
 
-This lecture is the first of two parts where we will get to experience the state-of-the-art workflow with AI and Python.
+This exercise is the first of two parts where we will get to experience the state-of-the-art workflow with AI and Python.
 
-In today's lecture, our goal is to:
+In today's exercise, our goal is to:
 1.  Set up Python on your computer.
 2.  Understand how to use a **Virtual Environment**.
 3.  Run simple exercises in Python. 
@@ -116,7 +116,7 @@ source venv/bin/activate
 .\venv\Scripts\activate
 ```
 
-*Note: If you encounter an error message like "cannot be loaded because running script is disabled" on Windows, see **Appendix C** below for troubleshooting solutions.*
+*Note: If you encounter an error message like "cannot be loaded because running script is disabled" on Windows, this is due to PowerShell's execution policy security feature. **Permanent Solution: Use Command Prompt instead of PowerShell.** In Cursor, click the dropdown arrow next to the `+` button in the terminal panel (or right-click the terminal tab), then select **Command Prompt** (or **cmd**) instead of PowerShell. Then try the activation command again. For alternative solutions, see **Appendix C** below.*
 
 *Explanation: "Activating" tells your terminal to stop looking at the global system for tools and instead look strictly inside your new `venv` folder. This ensures you are using the correct, isolated versions of your tools.*
 
@@ -313,17 +313,9 @@ Create a Python script `jetblue_solver.py` that reads `AI_With_Python_PartA/Case
 
 ## Appendix C: Windows Virtual Environment Activation Troubleshooting
 
-If you encounter an error message like "cannot be loaded because running script is disabled" when trying to activate the virtual environment on Windows, this is due to PowerShell's execution policy security feature. Here are three solutions:
+If you encounter an error message like "cannot be loaded because running script is disabled" when trying to activate the virtual environment on Windows, this is due to PowerShell's execution policy security feature. The permanent solution is to use Command Prompt instead of PowerShell (see Step 5 in Part 3). Here are alternative solutions if you need to use PowerShell:
 
-**Solution 1: Use Command Prompt instead of PowerShell (Easiest)**
-1. In Cursor, click the dropdown arrow next to the `+` button in the terminal panel (or right-click the terminal tab).
-2. Select **Command Prompt** (or **cmd**) instead of PowerShell.
-3. Then try the activation command again:
-   ```bash
-   .\venv\Scripts\activate
-   ```
-
-**Solution 2: Change PowerShell Execution Policy (Temporary)**
+**Solution 1: Change PowerShell Execution Policy (Temporary)**
 If you need to use PowerShell, run this command first (you may need to run Cursor as Administrator):
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
@@ -333,7 +325,7 @@ Then try activating again:
 .\venv\Scripts\activate
 ```
 
-**Solution 3: Use the batch file directly**
+**Solution 2: Use the batch file directly**
 You can also try:
 ```bash
 venv\Scripts\activate.bat

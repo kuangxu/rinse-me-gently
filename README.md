@@ -3,7 +3,7 @@
 > "Come, gentle night, come, loving black brow night, give me my Romeo."  
 > — William Shakespeare, *Romeo and Juliet*, Act 3, Scene 2
 
-This is a two part lecture focusing on introducing a basic Python workflow as well as LLM fine tuning to a relatively non-technical audience. 
+This is a two part exercise focusing on introducing a basic Python workflow as well as LLM fine tuning to a relatively non-technical audience. 
 
 
 
