@@ -39,15 +39,18 @@ check_result() {
     fi
 }
 
-# Get the directory where the script is located
+# Get the directory where the script is located and navigate to Part B directory
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd "$SCRIPT_DIR"
+# Script is in "For Instructor Only/" subdirectory, so go up one level to Part B directory
+PART_B_DIR="$( cd "$SCRIPT_DIR/.." && pwd )"
+cd "$PART_B_DIR"
 
 print_section "Chapter 1 Test Suite - LLM Fine-Tuning Demo"
 
 # Check if we're in the right directory
 if [ ! -f "run_model.py" ] || [ ! -f "finetune_llm.py" ]; then
     echo -e "${RED}Error: This script must be run from the AI_With_Python_PartB directory${NC}"
+    echo -e "${RED}Current directory: $(pwd)${NC}"
     exit 1
 fi
 
