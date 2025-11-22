@@ -200,6 +200,9 @@ class TrainingManager:
         
         if config.visualization.show_plots:
             plt.show()
+        else:
+            # Close the figure if not showing to free memory
+            plt.close()
         
         return losses
     

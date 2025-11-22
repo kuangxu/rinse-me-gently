@@ -114,14 +114,14 @@ Now that everything is set up, let's load and test a language model! We'll start
 2. Make sure you're in the `AI_With_Python_PartB` folder.
 3. Type the following command and press **Enter**:
     ```bash
-    python run_model.py --use-raw
+    python run_model.py --use-raw --prompts-file data/shakespeare_prompts.json
     ```
 
-*Explanation: The `--use-raw` flag tells the script to load the base DistilGPT-2 model without any fine-tuning. This is our "before" baseline - we'll compare this to the fine-tuned model later.*
+*Explanation: The `--use-raw` flag tells the script to load the base DistilGPT-2 model without any fine-tuning. The `--prompts-file` flag specifies which test prompts to use. This is our "before" baseline - we'll compare this to the fine-tuned model later.*
 
 4. Watch the output! The script will:
     - Load the DistilGPT-2 model
-    - Run some default test prompts
+    - Run Shakespeare test prompts
     - Display the model's responses
 
 **What to observe:** Notice how the model responds. It generates text, but it may not be particularly relevant or coherent for specific topics. This is expected - the model hasn't been trained on our custom data yet!
@@ -209,12 +209,12 @@ Now let's test our fine-tuned model and see how it compares to the base model! T
 2. Make sure you're in the `AI_With_Python_PartB` folder.
 3. Type the following command and press **Enter**:
     ```bash
-    python run_model.py --model-path ./fine_tuned_washingmachine_data_model
+    python run_model.py --model-path ./fine_tuned_washingmachine_data_model --prompts-file data/shakespeare_prompts.json
     ```
 
-*Explanation: This loads the fine-tuned model we just created. Notice we're NOT using `--use-raw` anymore - we want to use our customized model!*
+*Explanation: This loads the fine-tuned model we just created. Notice we're NOT using `--use-raw` anymore - we want to use our customized model! The `--prompts-file` flag specifies which test prompts to use (the same Shakespeare prompts we used in section 1.1).*
 
-4. The script will load the model and run the default test prompts (the same ones it used with the base model).
+4. The script will load the model and run the Shakespeare test prompts (the same ones it used with the base model in section 1.1).
 
 **What to observe:** Compare these responses to what you saw in section 1.1. The fine-tuned model should generate more relevant and coherent text, especially when the prompts relate to the training data.
 
@@ -246,12 +246,12 @@ Let's have a conversation with our fine-tuned model:
 
 ---
 
-### 1.4 Optional: Repeat Fine Tune + Run Model with Data of Your Choice
+### 1.4 Repeat Fine Tune + Run Model with Data of Your Choice
 
 Now that you've seen how fine-tuning works, try it with different datasets! The `data` folder contains several options:
 
-- `shakespeare_data.txt` - Shakespeare's works
 - `eminen.txt` - Eminem lyrics
+- `shakespeare_data.txt` - Shakespeare's works
 - `washingmachine_data.txt` - Washing machine information (already used)
 
 If you feel adventurous, try creating your own text file! Simply create a `.txt` file in the `data` folder with your own content, and use it just like the examples above.
@@ -260,43 +260,55 @@ If you feel adventurous, try creating your own text file! Simply create a `.txt`
 
 #### Step 1: Fine-Tune with Your Chosen Dataset
 
-Follow the same process as in section 1.2, but use a different dataset. Replace `shakespeare_data.txt` with your chosen file:
+Repeat the fine-tuning process from section 1.2, but change the data file. For example, to use Shakespeare data:
 
 ```bash
 python finetune_llm.py --data data/shakespeare_data.txt
 ```
 
-The model will be saved to a folder based on your file name (e.g., `./fine_tuned_shakespeare_data_model`).
+**What changes:** Only the `--data` argument. The model will be saved to a folder based on your file name (e.g., `./fine_tuned_shakespeare_data_model`).
 
 #### Step 2: Test Your New Fine-Tuned Model
 
-Follow the same testing process as in section 1.3. Use your new model's path instead:
+Repeat the testing process from section 1.3, but use your new model's path:
 
 ```bash
-python run_model.py --model-path ./fine_tuned_shakespeare_data_model
 python run_model.py --model-path ./fine_tuned_shakespeare_data_model --prompts-file data/shakespeare_prompts.json
-python run_model.py --model-path ./fine_tuned_shakespeare_data_model --interactive
 ```
 
-Try prompts that match your training data's style. For Shakespeare, try:
-- "Write a sonnet about Python programming"
-- "Tell me a story in Shakespearean style"
+**What changes:** Only the `--model-path` argument (and optionally the `--prompts-file` to match your training data).
 
-#### Step 4: Experiment and Compare
+---
 
-Try fine-tuning with different datasets and compare the results:
-- How does the Shakespeare model differ from the washing machine model?
-- What happens if you train on Eminem lyrics?
-- Can you create a model that writes in a specific style?
+### 1.5 Optional: Try a Better Base Model (Qwen)
 
-**Tips:**
-- Each fine-tuning creates a new model folder, so you can keep multiple fine-tuned models
-- You can always go back to the base model using `--use-raw`
-- Experiment with different prompts to see how each model responds
+You can also try using a more advanced base model called Qwen. This model is more capable than DistilGPT-2, but it runs a bit slower.
+
+#### Step 1: Test the Qwen Base Model
+
+Repeat step 1.1 from section 1.1, but use the Qwen model instead:
+
+```bash
+python run_model.py --use-raw --model-name qwen --prompts-file data/shakespeare_prompts.json
+```
+
+*Explanation: The `--model-name qwen` flag tells the script to use the Qwen model instead of DistilGPT-2. Qwen is a more recent and capable model, but it takes longer to load and generate responses.*
+
+**What to observe:** Compare the responses from Qwen to what you saw with DistilGPT-2. The Qwen model should produce more coherent and relevant text, but you may notice it takes longer to generate responses.
 
 
-# Chapter 2 - Qustions, Exploration and Deeper Dives
 
-## Excercises and Questions
+## Chapter 2 - Questions and Explorations
 
-TBD
+1. After you have completed all steps above, discuss with your neighbors: What did you find most surprising versus least surprising? What did you learn about LLMs that you didn't know before from simply using an existing, consumer-facing LLM?
+
+2. The fine-tuning of an LLM is in fact a great example of how simulation is used to optimize a heuristic. In the context of our lectures, can you explain at a high level what type of simulation is taking place here (what is random and uncertain)? Explain also what is the heuristic, objective function, and optimization being performed?
+
+3. Open up the figure of the loss curve that was generated after you ran the fine-tuning script. What do you notice?
+
+4. [This takes more time, recommend doing it offline] Time-permitting, open `config.py` and look for "TRAINING HYPERPARAMETERS". Try changing a few parameters (examples below) and see how it impacts fine-tuning and its final outcome:
+   - `learning_rate`: Try values like `1e-4` (0.0001) or `1e-3` (0.001) - how does this affect training speed and final loss?
+   - `num_train_epochs`: Try `2` or `3` instead of `1` - does more training improve the model?
+   - `per_device_train_batch_size`: Try `4` or `16` instead of `8` - how does batch size affect training time and memory usage?
+
+

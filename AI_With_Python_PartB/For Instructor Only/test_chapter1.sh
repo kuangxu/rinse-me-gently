@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Test script for Chapter 1 of Part B Instructions
-# This script tests all non-interactive parts of Chapter 1
+# This script tests all non-interactive parts of Chapter 1 (sections 1.1, 1.2, and 1.3)
+# Sections 1.4 and 1.5 are skipped (optional exercises)
 
 set -e  # Exit on error
 
@@ -75,8 +76,8 @@ fi
 # ============================================
 print_section "Section 1.1: Load an LLM - Test Base Model"
 
-print_step "1.1 Step 1: Testing base model (--use-raw)"
-python run_model.py --use-raw
+print_step "1.1 Step 1: Testing base model (--use-raw) with Shakespeare prompts"
+python run_model.py --use-raw --prompts-file data/shakespeare_prompts.json
 check_result
 
 # Note: Interactive mode (1.1 Step 2) is skipped as it requires user input
@@ -102,8 +103,8 @@ fi
 # ============================================
 print_section "Section 1.3: Run Fine Tuned LLM"
 
-print_step "1.3 Step 1: Testing fine-tuned washing machine model with default prompts"
-python run_model.py --model-path ./fine_tuned_washingmachine_data_model
+print_step "1.3 Step 1: Testing fine-tuned washing machine model with Shakespeare prompts"
+python run_model.py --model-path ./fine_tuned_washingmachine_data_model --prompts-file data/shakespeare_prompts.json
 check_result
 
 print_step "1.3 Step 2: Testing fine-tuned washing machine model with washing machine prompts"
@@ -111,6 +112,8 @@ python run_model.py --model-path ./fine_tuned_washingmachine_data_model --prompt
 check_result
 
 # Note: Interactive mode (1.3 Step 3) is skipped as it requires user input
+
+# Note: Sections 1.4 and 1.5 are skipped (optional exercises for students to try on their own)
 
 # ============================================
 # Summary

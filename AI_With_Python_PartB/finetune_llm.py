@@ -564,7 +564,17 @@ def run_fine_tuning(data_file: str, use_qwen=False):
         
         # Print model save location
         output_dir = config.get_output_dir()
+        
+        # Plot and save loss curve in the main Part B folder (easy for students to access)
+        import os
+        # Get the directory where this script is located (Part B folder)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        loss_curve_path = os.path.join(script_dir, "loss_curve.png")
+        print(f"\n[STATUS] Generating loss curve...")
+        training_manager.plot_training_curve(save_path=loss_curve_path)
+        
         print(f"\n[INFO] Fine-tuned model saved to: {output_dir}")
+        print(f"[INFO] Loss curve saved to: {loss_curve_path}")
         print(f"[INFO] You can now use this model with run_model.py")
         if use_qwen:
             print(f"[INFO] Example: python run_model.py --model-path {output_dir} --model-name qwen")
