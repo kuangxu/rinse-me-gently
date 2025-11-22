@@ -229,7 +229,7 @@ This part is optional and will give you hands-on experience using an AI coding a
     *   A keyboard shortcut (often `Cmd+L` on Mac or `Ctrl+L` on Windows)
     *   The menu: **View** -> **Chat** or **AI** -> **Chat**
 2.  A chat window will appear where you can interact with the AI assistant.
-3.  **If you've obtained a student discounted membership with Cursor, make sure you sign in using your student email.**
+3.  **If you've obtained a discounted membership with Cursor, make sure you sign in using your email.**
 
 ### Step 2: Prepare the Case Text
 

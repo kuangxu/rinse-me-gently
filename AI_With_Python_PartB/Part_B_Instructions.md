@@ -12,7 +12,7 @@ If you completed **Part A**, you're already set up! Here's what you need to know
 - **You're already using Cursor** (or VS Code) - keep using the same setup
 - **You just need to** activate your existing venv and install Part B's additional requirements
 
-**Quick start for Part A students:**
+**Quick start for users who completed Part A:**
 1. Open Cursor with the **root folder** (same as Part A - should contain both `AI_With_Python_PartA` and `AI_With_Python_PartB`)
 2. Open Terminal in Cursor
 3. Activate your existing venv: `source venv/bin/activate` (Mac) or `.\venv\Scripts\activate` (Windows)
