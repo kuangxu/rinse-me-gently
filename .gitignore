@@ -29,6 +29,10 @@ shakespeare_model/
 preloaded_shakespeare/
 *.pkl
 
+# Fine-tuned model directories
+**/fine_tuned*/
+fine_tuned*/
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
