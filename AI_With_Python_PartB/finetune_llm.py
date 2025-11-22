@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# Main fine-tuning script: Trains a language model on custom data using LoRA.
+# Usage examples:
+#   python finetune_llm.py --data data/shakespeare_data.txt                    # Train with DistilGPT-2 (default)
+#   python finetune_llm.py --data data/washingmachine_data.txt --qwen         # Train with Qwen model
+#   python finetune_llm.py --test                                             # Run test suite
+# Function: Orchestrates model loading, data preparation, training, and saves fine-tuned model.
 """
 Fine-tuning script for LLM Fine-Tuning Demo
 This script can be used to:
@@ -11,6 +17,23 @@ import traceback
 import time
 import argparse
 from typing import List, Dict, Any
+
+# --- QWEN CONFIGURATION CONSTANTS ---
+QWEN_MODEL_ID = "Qwen/Qwen2.5-0.5B"
+# Qwen uses the Llama architecture, so LoRA targets are different from DistilGPT-2
+QWEN_TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+
+def apply_qwen_config(config_obj):
+    """
+    Augments the configuration object to use Qwen 2.5 settings.
+    This overrides the default distilgpt2 settings if the --qwen flag is used.
+    """
+    print(f"\n[CONFIG] ⚡ Applying Qwen 2.5 0.5B Configuration Overrides")
+    config_obj.model.model_name = QWEN_MODEL_ID
+    config_obj.lora.target_modules = QWEN_TARGET_MODULES
+    print(f"   Model set to: {config_obj.model.model_name}")
+    print(f"   LoRA targets set to: {config_obj.lora.target_modules}")
 
 
 def test_imports():
@@ -42,6 +65,8 @@ def test_config():
         from config import config
         
         print("   [STEP] Validating model configuration...")
+        # Note: This test assumes default config. If running with Qwen, this might technically fail
+        # unless we update the test logic, but we'll leave it to verify the *defaults*.
         assert config.model.model_name == "distilgpt2"
         print(f"   [INFO] Model name: {config.model.model_name}")
         
@@ -332,27 +357,27 @@ def test_shakespeare_prompts():
         shakespeare_tests = [
             {
                 "prompt": "To be or not to be, that is the ",
-                "expected": "question: Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune, or to take arms against a sea of troubles, and by opposing end them.",
+                "response_in_original_text": "question: Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune, or to take arms against a sea of troubles, and by opposing end them.",
                 "source": "Hamlet, Act 3, Scene 1"
             },
             {
                 "prompt": "Romeo, Romeo, wherefore art thou ",
-                "expected": "Romeo? Deny thy father and refuse thy name; or, if thou wilt not, be but sworn my love, and I'll no longer be a Capulet.",
+                "response_in_original_text": "Romeo? Deny thy father and refuse thy name; or, if thou wilt not, be but sworn my love, and I'll no longer be a Capulet.",
                 "source": "Romeo and Juliet, Act 2, Scene 2"
             },
             {
                 "prompt": "All the world's a stage, and all the men and women merely ",
-                "expected": "players: They have their exits and their entrances; and one man in his time plays many parts, his acts being seven ages.",
+                "response_in_original_text": "players: They have their exits and their entrances; and one man in his time plays many parts, his acts being seven ages.",
                 "source": "As You Like It, Act 2, Scene 7"
             },
             {
                 "prompt": "What light through yonder window breaks? It is the ",
-                "expected": "east, and Juliet is the sun. Arise, fair sun, and kill the envious moon, who is already sick and pale with grief.",
+                "response_in_original_text": "east, and Juliet is the sun. Arise, fair sun, and kill the envious moon, who is already sick and pale with grief.",
                 "source": "Romeo and Juliet, Act 2, Scene 2"
             },
             {
                 "prompt": "Double, double toil and trouble; fire burn and ",
-                "expected": "cauldron bubble. By the pricking of my thumbs, something wicked this way comes.",
+                "response_in_original_text": "cauldron bubble. By the pricking of my thumbs, something wicked this way comes.",
                 "source": "Macbeth, Act 4, Scene 1"
             }
         ]
@@ -360,7 +385,7 @@ def test_shakespeare_prompts():
         for i, test in enumerate(shakespeare_tests, 1):
             print(f"\n   [TEST {i}/{len(shakespeare_tests)}] Processing...")
             print(f"      Prompt: \"{test['prompt']}\"")
-            print(f"      Expected: \"{test['expected']}\"")
+            print(f"      Response in Original Text: \"{test['response_in_original_text']}\"")
             print(f"      Source: {test['source']}")
             try:
                 print(f"      [STATUS] Generating response...")
@@ -448,8 +473,13 @@ def run_all_tests():
     return passed == total
 
 
-def run_fine_tuning():
-    """Main fine-tuning function - trains a model on the configured dataset"""
+def run_fine_tuning(data_file: str, use_qwen=False):
+    """Main fine-tuning function - trains a model on the specified dataset
+    
+    Args:
+        data_file: Path to the training data file (required)
+        use_qwen: If True, use Qwen model instead of DistilGPT-2
+    """
     print("=" * 80)
     print("LLM Fine-Tuning Pipeline - Starting Training")
     print("=" * 80)
@@ -462,16 +492,30 @@ def run_fine_tuning():
         from util.training_utils import create_training_manager
         from config import config
         
+        # AUGMENTATION: Apply Qwen config if requested
+        if use_qwen:
+            apply_qwen_config(config)
+        
         print("[SUCCESS] Modules imported")
         
         # Step 1: Create model manager and load base model
         print("\n[STEP 1/5] Loading base model and tokenizer...")
         model_manager = create_model_manager()
         model, tokenizer = model_manager.load_model_and_tokenizer()
+        
+        # AUGMENTATION: Qwen needs explicit padding token setting
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+            # We also need to ensure the model knows about this change
+            model.config.pad_token_id = tokenizer.pad_token_id
+            print("[INFO] Tokenizer pad_token was None. Set to eos_token (Required for Qwen).")
+            
         print("[SUCCESS] Base model and tokenizer loaded")
         
         # Step 2: Setup LoRA adapter for efficient fine-tuning
         print("\n[STEP 2/5] Setting up LoRA adapter...")
+        # Note: setup_lora() reads from config.lora.target_modules, which was already
+        # updated by apply_qwen_config() if use_qwen is True
         model = model_manager.setup_lora()
         print("[SUCCESS] LoRA adapter configured")
         
@@ -482,8 +526,9 @@ def run_fine_tuning():
         
         # Step 4: Load and tokenize dataset
         print("\n[STEP 4/5] Loading and tokenizing dataset...")
+        print(f"[INFO] Loading data from: {data_file}")
         data_manager = create_data_manager(tokenizer)
-        data_manager.load_dataset()
+        data_manager.load_dataset(custom_file=data_file)
         tokenized_dataset = data_manager.tokenize_dataset()
         
         # Validate dataset
@@ -514,10 +559,17 @@ def run_fine_tuning():
         # Print training summary
         training_manager.print_training_summary()
         
+        # Update config data file to generate correct output directory name
+        config.data.data_file = data_file
+        
         # Print model save location
         output_dir = config.get_output_dir()
         print(f"\n[INFO] Fine-tuned model saved to: {output_dir}")
-        print("[INFO] You can now use this model with run_model.py")
+        print(f"[INFO] You can now use this model with run_model.py")
+        if use_qwen:
+            print(f"[INFO] Example: python run_model.py --model-path {output_dir} --model-name qwen")
+        else:
+            print(f"[INFO] Example: python run_model.py --model-path {output_dir}")
         
         return True
         
@@ -531,17 +583,32 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fine-tune an LLM or run tests")
     parser.add_argument("--test", action="store_true",
                        help="Run test suite instead of fine-tuning")
-    parser.add_argument("--train", action="store_true",
-                       help="Run fine-tuning (default if no --test)")
+    parser.add_argument("--data", type=str, required=False,
+                       help="Path to training data file (required for fine-tuning)")
+    parser.add_argument("--qwen", action="store_true",
+                       help="Use Qwen 2.5 0.5B model instead of DistilGPT-2")
     
     args = parser.parse_args()
     
-    # Default to training if neither flag is set, or if --train is explicitly set
+    # Handle test mode
     if args.test:
         print("[INFO] Running in test mode...")
+        # Note: Tests run with default config (DistilGPT-2) unless we modify run_all_tests signature
         success = run_all_tests()
         sys.exit(0 if success else 1)
-    else:
-        print("[INFO] Running in fine-tuning mode...")
-        success = run_fine_tuning()
-        sys.exit(0 if success else 1)
+    
+    # For fine-tuning, data file is required
+    if not args.data:
+        print("[ERROR] --data argument is required for fine-tuning")
+        print("Example: python finetune_llm.py --data data/shakespeare_data.txt")
+        sys.exit(1)
+    
+    # Validate data file exists
+    import os
+    if not os.path.exists(args.data):
+        print(f"[ERROR] Data file not found: {args.data}")
+        sys.exit(1)
+    
+    print(f"[INFO] Running in fine-tuning mode... (Model: {'qwen' if args.qwen else 'distilgpt2'})")
+    success = run_fine_tuning(data_file=args.data, use_qwen=args.qwen)
+    sys.exit(0 if success else 1)

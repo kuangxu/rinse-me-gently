@@ -1,3 +1,6 @@
+# Configuration module: Central settings for model, training, data, and evaluation.
+# Usage: Import with `from config import config`, then access settings like `config.data.data_file`.
+# Function: Manages all hyperparameters (learning rate, batch size, LoRA settings) and data paths.
 """
 Configuration module for LLM Fine-Tuning Demo
 Contains all hyperparameters and settings for the fine-tuning process

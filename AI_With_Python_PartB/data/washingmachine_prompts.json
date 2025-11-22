@@ -1,0 +1,38 @@
+[
+  {
+    "prompt": "Use only High Efficiency detergents. The package will be marked ",
+    "response_in_original_text": "\"HE\" or \"High Efficiency.\" Low-water washing creates excessive sudsing with a regular non-HE detergent.",
+    "source": "Top-Loading High Efficiency Washer Use and Care Guide",
+    "context": "Instructions for selecting the correct detergent type"
+  },
+  {
+    "prompt": "When the START/Pause button is pressed, the washer will fill to an initial water level and begin ",
+    "response_in_original_text": "sensing to determine the load size. The washer will then continue filling to the appropriate water level based on load size and proceed to Wash.",
+    "source": "Control Panel and Features - Sensing",
+    "context": "Explanation of the automatic load sensing feature"
+  },
+  {
+    "prompt": "For best results, evenly load items in loose heaps ",
+    "response_in_original_text": "around the washplate. IMPORTANT: You will not see a washer basket full of water as with your past agitator-style washer.",
+    "source": "What's New Under the Lid? - Automatic Load Size Sensing",
+    "context": "Instructions for proper loading technique"
+  },
+  {
+    "prompt": "Select the setting most suitable for your load. For heavily soiled and sturdy fabrics, select ",
+    "response_in_original_text": "Heavy Soil Level for more wash time. For lightly soiled and delicate fabrics, select Light Soil Level for less wash time.",
+    "source": "Control Panel and Features - Soil Level",
+    "context": "Guidance on selecting appropriate soil level settings"
+  },
+  {
+    "prompt": "Do not wash articles that have been previously cleaned in, washed in, soaked in, or spotted with ",
+    "response_in_original_text": "gasoline, dry-cleaning solvents, or other flammable or explosive substances, as they give off vapors that could ignite or explode.",
+    "source": "Washer Safety - Important Safety Instructions",
+    "context": "Critical safety warning about flammable materials"
+  },
+  {
+    "prompt": "This cycle will fill to a water level higher than in normal wash cycles to provide ",
+    "response_in_original_text": "rinsing at a level above the water line for normal wash cycle. During this cycle, there will be some agitation and spinning to increase the removal of soils.",
+    "source": "Washer Maintenance - Clean Washer Cycle Operation",
+    "context": "Description of the cleaning cycle operation"
+  }
+]

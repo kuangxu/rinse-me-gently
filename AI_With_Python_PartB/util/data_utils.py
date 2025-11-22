@@ -1,3 +1,6 @@
+# Data utilities: Loads, preprocesses, and tokenizes training datasets.
+# Usage: `from util.data_utils import create_data_manager` then `data_manager.load_dataset()`.
+# Function: Manages text file loading, filtering, tokenization, and dataset validation.
 """
 Data utilities for LLM Fine-Tuning Demo
 Handles dataset loading, preprocessing, and tokenization

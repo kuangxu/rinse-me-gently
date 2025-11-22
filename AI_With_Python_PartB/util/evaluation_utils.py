@@ -1,3 +1,6 @@
+# Evaluation utilities: Tests fine-tuned models with prompts and analyzes responses.
+# Usage: `from util.evaluation_utils import create_evaluation_manager` then `evaluator.test_model(prompt)`.
+# Function: Generates text from prompts, compares models, analyzes response quality, and provides interactive testing.
 """
 Evaluation utilities for LLM Fine-Tuning Demo
 Handles model testing, evaluation, and result visualization

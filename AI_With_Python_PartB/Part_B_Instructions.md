@@ -3,3 +3,300 @@
 ## LLM Fine-Tuning Demo - Setup Guide
 
 A focused demonstration of fine-tuning language models using LoRA (Low-Rank Adaptation). This project provides a clean, simplified interface for training and testing language models with various text datasets.
+
+*Concept: **Fine-tuning** is like teaching a pre-trained language model new tricks. Instead of training from scratch (which would take weeks and require massive computing power), we use a technique called **LoRA (Low-Rank Adaptation)** that efficiently updates just a small portion of the model's parameters. This allows us to customize the model's behavior on specific tasks or styles of text in just minutes.*
+
+*Note: If you're viewing this file in raw text format, use GitHub's web viewer or press `Cmd+Shift+V` (Mac) / `Ctrl+Shift+V` (Windows) in Cursor/VS Code to see the formatted version.*
+
+---
+
+## Table of Contents
+
+- [Chapter 0 - Setting Up Python and Virtual Environment](#chapter-0---setting-up-python-and-virtual-environment)
+- [Chapter 1 - Tuning Your First LLM](#chapter-1---tuning-your-first-llm)
+  - [1.1 Load an LLM](#11-load-an-llm)
+  - [1.2 Fine Tune Your First LLM](#12-fine-tune-your-first-llm)
+  - [1.3 Run Fine Tuned LLM](#13-run-fine-tuned-llm)
+  - [1.4 Optional: Repeat Fine Tune + Run Model with Data of Choice](#14-optional-repeat-fine-tune--run-model-with-data-of-choice)
+
+---
+
+## Chapter 0 - Setting Up Python and Virtual Environment
+
+If you completed Part A of this exercise, you already know how to set up a virtual environment! We'll do the same thing here, but this time in the `AI_With_Python_PartB` folder.
+
+**Why a separate environment?**  
+Just like in Part A, we create a virtual environment to keep this project's dependencies isolated. Part B uses different Python packages (like `transformers` and `torch` for machine learning), so it needs its own environment.
+
+### Step 1: Open the Part B Folder in Cursor
+
+1. Open **Cursor**.
+2. Click on **File** in the top menu bar, then select **Open Folder...**
+3. Navigate to your course materials and select the **`AI_With_Python_PartB`** folder (not the root folder).
+4. Click **Open**.
+
+### Step 2: Open the Terminal
+
+1. In Cursor, click **Terminal** -> **New Terminal**.
+2. A panel will appear at the bottom of the screen.
+
+### Step 3: Navigate to the Part B Folder (if needed)
+
+Make sure you're in the `AI_With_Python_PartB` folder. If you just opened the folder in Cursor, you should already be there.
+
+**How to check which folder you're in:**
+- Type `pwd` (Mac) or `cd` (Windows) to see your current directory path
+- Your terminal prompt usually shows the folder name at the end
+- If you're not in the right folder, use `cd` followed by the path to navigate
+
+### Step 4: Create the Virtual Environment
+
+Type the following command into the terminal and press **Enter**:
+
+**For Mac:**
+```bash
+python3 -m venv venv
+```
+
+**For Windows:**
+```bash
+python -m venv venv
+```
+
+*Explanation: This creates a new, empty virtual environment inside a folder named `venv` within the `AI_With_Python_PartB` folder. This is the same process you used in Part A!*
+
+### Step 5: Activate the Virtual Environment
+
+Now we need to "turn on" the environment. Type the command for your system and press **Enter**:
+
+**For Mac:**
+```bash
+source venv/bin/activate
+```
+
+**For Windows:**
+```bash
+.\venv\Scripts\activate
+```
+
+**How do I know it worked?**  
+You should see `(venv)` appear at the very beginning of your command line in the terminal. It will look something like:
+`(venv) user@computer AI_With_Python_PartB %`
+
+### Step 6: Install Required Packages
+
+This project uses specialized machine learning libraries that don't come with standard Python. We need to install them into our virtual environment.
+
+1. Make sure your terminal still shows `(venv)` at the start.
+2. Make sure you're in the Part B folder. *Tip: Use `pwd` (Mac) or `cd` (Windows) to check your current location.*
+3. Type the following command and press **Enter**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+*Explanation: This tells Python's package installer (`pip`) to read the `requirements.txt` file and install all the tools listed there. This includes PyTorch (for deep learning), Transformers (for language models), and other essential libraries.*
+
+*Note: This installation may take several minutes, especially the first time. The packages are large because they include pre-trained models and machine learning frameworks.*
+
+---
+
+## Chapter 1 - Tuning Your First LLM
+
+### 1.1 Load an LLM
+
+Now that everything is set up, let's load and test a language model! We'll start with the "vanilla" (untrained) base model to see how it behaves before we fine-tune it.
+
+*Concept: A **language model** is an AI that has been trained to predict the next word in a sequence. DistilGPT-2 (the baseline model we'll use) is a distilled version of GPT-2 that is faster and lighter while retaining core capabilities. You will see that this model produces semi-coherent sentences, but is really not yet very smart. *
+
+#### Step 1: Test the Base Model
+
+1. Make sure your terminal still shows `(venv)` at the start.
+2. Make sure you're in the `AI_With_Python_PartB` folder.
+3. Type the following command and press **Enter**:
+    ```bash
+    python run_model.py --use-raw
+    ```
+
+*Explanation: The `--use-raw` flag tells the script to load the base DistilGPT-2 model without any fine-tuning. This is our "before" baseline - we'll compare this to the fine-tuned model later.*
+
+4. Watch the output! The script will:
+    - Load the DistilGPT-2 model
+    - Run some default test prompts
+    - Display the model's responses
+
+**What to observe:** Notice how the model responds. It generates text, but it may not be particularly relevant or coherent for specific topics. This is expected - the model hasn't been trained on our custom data yet!
+
+#### Step 2: Try Interactive Mode
+
+Now let's have a conversation with the model! Interactive mode lets you type prompts and see responses in real-time.
+
+1. In the same terminal (still with `(venv)` active), type:
+    ```bash
+    python run_model.py --use-raw --interactive
+    ```
+
+2. The script will load the model and then prompt you with `You: `.
+
+3. Type a question or prompt and press **Enter**. For example:
+    - "Tell me about washing machines"
+    - "What is the weather like?"
+    - "Write a poem about Python"
+
+4. The model will generate a response and display it.
+
+5. You can continue the conversation by typing more prompts.
+
+#### Step 3: Exit Interactive Mode
+
+When you're done experimenting, you can exit interactive mode in several ways:
+
+**Method 1: Type a quit command**
+- Type `quit`, `exit`, `bye`, or `q` and press **Enter**
+
+**Method 2: Keyboard interrupt**
+- Press `Ctrl+C` (Mac and Windows) to immediately exit
+
+---
+
+### 1.2 Fine Tune Your First LLM
+
+Now for the exciting part - we'll fine-tune the model on custom data! We'll use the washing machine dataset to teach the model about washing machines.
+
+*Concept: **Fine-tuning** adapts a pre-trained model to a specific task or domain. Instead of training from scratch, we use LoRA to efficiently update just a small portion of the model's parameters. This is like giving a well-read person a specialized book - they already know language, but now they know more about this specific topic.*
+
+#### Step 1: Run the Fine-Tuning Script
+
+1. Make sure your terminal still shows `(venv)` at the start.
+2. Make sure you're in the `AI_With_Python_PartB` folder.
+3. Type the following command and press **Enter**:
+    ```bash
+    python finetune_llm.py --data data/washingmachine_data.txt
+    ```
+
+*Explanation: This command tells the fine-tuning script to train the model using the washing machine dataset. The `--data` flag specifies which file to use for training.*
+
+#### Step 2: Watch the Training Process
+
+The script will:
+1. Load the base DistilGPT-2 model
+2. Prepare the washing machine data
+3. Apply LoRA adapters (the efficient fine-tuning technique)
+4. Train the model for several epochs using optimization (via a Stochastic Gradient Descent Algorithm)
+5. Save the fine-tuned model to a folder
+
+**What to expect:**
+- You'll see progress bars showing training steps
+- The script will display training metrics that look like this: `{'loss': 4.0596, 'grad_norm': 1.064, 'learning_rate': 0.000297, 'epoch': 2.86}`
+  
+  Here's what each term means:
+  - **loss**: A measure of how wrong the model's predictions are (lower is better). You can think of loss as a form of objective function that measures how good a model is at predicting the training text that follows the prompt.
+  - **grad_norm**: The size of the gradient (the direction and magnitude of parameter updates). This helps prevent the model from making updates that are too large, which could destabilize training. Values around 1.0 are typically good.
+  - **learning_rate**: How big of steps the model takes when learning. A smaller learning rate (like 0.0003) means smaller, more careful steps. This is set automatically and decreases over time to help the model converge smoothly.
+  - **epoch**: How many times the model has seen the entire training dataset. An epoch of 2.86 means the model has gone through the data almost 3 times. More epochs generally mean better learning, but too many can lead to overfitting.
+- At the end, you'll see a message like: `Fine-tuned model saved to: ./fine_tuned_washingmachine_data_model`
+
+*Note: The output folder name is automatically generated from your data file name. For `washingmachine_data.txt`, it creates `fine_tuned_washingmachine_data_model`.*
+
+---
+
+### 1.3 Run Fine Tuned LLM
+
+Now let's test our fine-tuned model and see how it compares to the base model! The fine-tuned model should be much better at generating text related to washing machines.
+
+#### Step 1: Load the Fine-Tuned Model
+
+1. Make sure your terminal still shows `(venv)` at the start.
+2. Make sure you're in the `AI_With_Python_PartB` folder.
+3. Type the following command and press **Enter**:
+    ```bash
+    python run_model.py --model-path ./fine_tuned_washingmachine_data_model
+    ```
+
+*Explanation: This loads the fine-tuned model we just created. Notice we're NOT using `--use-raw` anymore - we want to use our customized model!*
+
+4. The script will load the model and run the default test prompts (the same ones it used with the base model).
+
+**What to observe:** Compare these responses to what you saw in section 1.1. The fine-tuned model should generate more relevant and coherent text, especially when the prompts relate to the training data.
+
+#### Step 2: Test with Washing Machine Prompts
+
+Now let's use prompts specifically designed for washing machines:
+
+1. In the same terminal, type:
+    ```bash
+    python run_model.py --model-path ./fine_tuned_washingmachine_data_model --prompts-file data/washingmachine_prompts.json
+    ```
+
+*Explanation: The `--prompts-file` flag tells the script to use a different set of test prompts. These prompts are specifically designed to test the model's knowledge about washing machines.*
+
+2. Watch the output! The model should generate responses that are much more relevant to washing machines compared to the base model.
+
+#### Step 3: Try Interactive Mode with Your Fine-Tuned Model
+
+Let's have a conversation with our fine-tuned model:
+
+1. Type the following command:
+    ```bash
+    python run_model.py --model-path ./fine_tuned_washingmachine_data_model --interactive
+    ```
+
+2. Try talking to the model! Compare the responses to what the base model would have said earlier. What differences do you notice? 
+
+4. When you're done, type `quit`, `exit`, `bye`, or `q` to exit, or press `Ctrl+C`.
+
+---
+
+### 1.4 Optional: Repeat Fine Tune + Run Model with Data of Your Choice
+
+Now that you've seen how fine-tuning works, try it with different datasets! The `data` folder contains several options:
+
+- `shakespeare_data.txt` - Shakespeare's works
+- `eminen.txt` - Eminem lyrics
+- `washingmachine_data.txt` - Washing machine information (already used)
+
+If you feel adventurous, try creating your own text file! Simply create a `.txt` file in the `data` folder with your own content, and use it just like the examples above.
+
+*Concept: Different training data will teach the model different styles and knowledge. A model trained on Shakespeare will write in an old English style, while one trained on Eminem lyrics will have a very different tone and vocabulary.*
+
+#### Step 1: Fine-Tune with Your Chosen Dataset
+
+Follow the same process as in section 1.2, but use a different dataset. Replace `shakespeare_data.txt` with your chosen file:
+
+```bash
+python finetune_llm.py --data data/shakespeare_data.txt
+```
+
+The model will be saved to a folder based on your file name (e.g., `./fine_tuned_shakespeare_data_model`).
+
+#### Step 2: Test Your New Fine-Tuned Model
+
+Follow the same testing process as in section 1.3. Use your new model's path instead:
+
+```bash
+python run_model.py --model-path ./fine_tuned_shakespeare_data_model
+python run_model.py --model-path ./fine_tuned_shakespeare_data_model --prompts-file data/shakespeare_prompts.json
+python run_model.py --model-path ./fine_tuned_shakespeare_data_model --interactive
+```
+
+Try prompts that match your training data's style. For Shakespeare, try:
+- "Write a sonnet about Python programming"
+- "Tell me a story in Shakespearean style"
+
+#### Step 4: Experiment and Compare
+
+Try fine-tuning with different datasets and compare the results:
+- How does the Shakespeare model differ from the washing machine model?
+- What happens if you train on Eminem lyrics?
+- Can you create a model that writes in a specific style?
+
+**Tips:**
+- Each fine-tuning creates a new model folder, so you can keep multiple fine-tuned models
+- You can always go back to the base model using `--use-raw`
+- Experiment with different prompts to see how each model responds
+
+
+# Chapter 2 - Qustions, Exploration and Deeper Dives
+
+## Excercises and Questions
+
+TBD

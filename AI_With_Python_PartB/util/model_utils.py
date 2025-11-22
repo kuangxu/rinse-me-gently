@@ -1,3 +1,6 @@
+# Model utilities: Loads base models, configures LoRA adapters, and sets up data collators.
+# Usage: `from util.model_utils import create_model_manager` then `model_manager.load_model_and_tokenizer()`.
+# Function: Manages model/tokenizer loading, LoRA setup for efficient fine-tuning, and training data collation.
 """
 Model utilities for LLM Fine-Tuning Demo
 Handles model loading, LoRA configuration, and model setup
@@ -22,8 +25,11 @@ class ModelManager:
         """Load the base model and tokenizer"""
         print(f"🔄 Loading {config.model.model_name} model...")
         
+        # Helper to allow remote code (needed for Qwen models)
+        load_args = {"trust_remote_code": True}
+        
         # Load tokenizer
-        self.tokenizer = AutoTokenizer.from_pretrained(config.model.model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(config.model.model_name, **load_args)
         
         # Set padding token
         if config.model.pad_token is None:
@@ -32,7 +38,7 @@ class ModelManager:
             self.tokenizer.pad_token = config.model.pad_token
             
         # Load model
-        self.model = AutoModelForCausalLM.from_pretrained(config.model.model_name)
+        self.model = AutoModelForCausalLM.from_pretrained(config.model.model_name, **load_args)
         
         # Move model to appropriate device
         import torch
@@ -147,26 +153,29 @@ class ModelManager:
             model_path: Path to the saved model (LoRA adapter directory)
             use_raw: If True, load only the base model without adapters
         """
+        # Helper to allow remote code (needed for Qwen models)
+        load_args = {"trust_remote_code": True}
+        
         if use_raw:
             print("🔄 Loading raw base model (no adapters)...")
             # Load base model directly
-            self.tokenizer = AutoTokenizer.from_pretrained(config.model.model_name)
+            self.tokenizer = AutoTokenizer.from_pretrained(config.model.model_name, **load_args)
             self.tokenizer.pad_token = self.tokenizer.eos_token
-            self.model = AutoModelForCausalLM.from_pretrained(config.model.model_name)
+            self.model = AutoModelForCausalLM.from_pretrained(config.model.model_name, **load_args)
         else:
             print(f"🔄 Loading saved model from {model_path}...")
             
             # Load tokenizer from saved path or fall back to base model name
             try:
-                self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+                self.tokenizer = AutoTokenizer.from_pretrained(model_path, **load_args)
             except:
                 # If tokenizer not in saved path, use base model tokenizer
-                self.tokenizer = AutoTokenizer.from_pretrained(config.model.model_name)
+                self.tokenizer = AutoTokenizer.from_pretrained(config.model.model_name, **load_args)
             
             self.tokenizer.pad_token = self.tokenizer.eos_token
             
             # Load base model first
-            base_model = AutoModelForCausalLM.from_pretrained(config.model.model_name)
+            base_model = AutoModelForCausalLM.from_pretrained(config.model.model_name, **load_args)
             
             # Load LoRA adapter
             self.model = PeftModel.from_pretrained(base_model, model_path)

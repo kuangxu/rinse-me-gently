@@ -1,0 +1,38 @@
+[
+  {
+    "prompt": "To be or not to be, that is the ",
+    "response_in_original_text": "question: Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune, or to take arms against a sea of troubles, and by opposing end them.",
+    "source": "Hamlet, Act 3, Scene 1",
+    "context": "Hamlet's famous soliloquy about life and death"
+  },
+  {
+    "prompt": "Romeo, Romeo, wherefore art thou ",
+    "response_in_original_text": "Romeo? Deny thy father and refuse thy name; or, if thou wilt not, be but sworn my love, and I'll no longer be a Capulet.",
+    "source": "Romeo and Juliet, Act 2, Scene 2",
+    "context": "Juliet's balcony scene where she calls for Romeo"
+  },
+  {
+    "prompt": "All the world's a stage, and all the men and women merely ",
+    "response_in_original_text": "players: They have their exits and their entrances; and one man in his time plays many parts, his acts being seven ages.",
+    "source": "As You Like It, Act 2, Scene 7",
+    "context": "Jaques' famous monologue about the seven ages of man"
+  },
+  {
+    "prompt": "What light through yonder window breaks? It is the ",
+    "response_in_original_text": "east, and Juliet is the sun. Arise, fair sun, and kill the envious moon, who is already sick and pale with grief.",
+    "source": "Romeo and Juliet, Act 2, Scene 2",
+    "context": "Romeo's romantic declaration upon seeing Juliet"
+  },
+  {
+    "prompt": "Double, double toil and trouble; fire burn and ",
+    "response_in_original_text": "cauldron bubble. By the pricking of my thumbs, something wicked this way comes.",
+    "source": "Macbeth, Act 4, Scene 1",
+    "context": "The three witches' incantation"
+  },
+  {
+    "prompt": "Now is the winter of our discontent made glorious summer by this ",
+    "response_in_original_text": "son of York; and all the clouds that lour'd upon our house in the deep bosom of the ocean buried.",
+    "source": "Richard III, Act 1, Scene 1",
+    "context": "Richard's opening soliloquy"
+  }
+]

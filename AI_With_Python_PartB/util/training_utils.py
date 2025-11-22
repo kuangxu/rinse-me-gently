@@ -1,3 +1,6 @@
+# Training utilities: Configures and executes model training with progress tracking.
+# Usage: `from util.training_utils import create_training_manager` then `training_manager.train()`.
+# Function: Sets up training arguments, runs training loop, saves models, and tracks loss curves.
 """
 Training utilities for LLM Fine-Tuning Demo
 Handles training configuration, execution, and monitoring
