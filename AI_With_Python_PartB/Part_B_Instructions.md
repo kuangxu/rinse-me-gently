@@ -91,7 +91,7 @@ You should see `(venv)` appear at the very beginning of your command line in the
 ### Step 6: Install Required Packages
 
 This project uses specialized machine learning libraries that don't come with standard Python. We need to install them into our virtual environment.
-
+    
 1. Make sure your terminal still shows `(venv)` at the start.
 2. Make sure you're in the Part B folder. *Tip: Use `pwd` (Mac) or `cd` (Windows) to check your current location.*
 3. Type the following command and press **Enter**:
