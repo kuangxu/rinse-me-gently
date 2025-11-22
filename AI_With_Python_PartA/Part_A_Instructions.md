@@ -1,4 +1,4 @@
-# AI with Python, Part A: Python & Cursor IDE Setup Guide
+# Rinse My Gently, Part A: Python & Cursor IDE Setup Guide
 
 This exercise is the first of two parts where we will get to experience the state-of-the-art workflow with AI and Python.
 
@@ -8,6 +8,21 @@ In today's exercise, our goal is to:
 3.  Run simple exercises in Python. 
 
 We will be using **Cursor**, a modern code editor that integrates AI directly into the coding process. That being said, this can be done with any Python code editor such as **VS Code** (See Appendix). 
+
+---
+
+## Table of Contents
+
+- [Part 1: Install Cursor IDE](#part-1-install-cursor-ide)
+- [Part 2: Install Python](#part-2-install-python)
+- [Part 3: Setting Up Your Project](#part-3-setting-up-your-project)
+- [Part 4: Verify Everything](#part-4-verify-everything)
+- [Part 5: Run a Simple Exercise](#part-5-run-a-simple-exercise)
+- [Part 6: Mini-Case: Fitbit Analysis](#part-6-mini-case-fitbit-analysis)
+- [Part 7: Using AI to Solve the JetBlue Case (Optional)](#part-7-using-ai-to-solve-the-jetblue-case-optional)
+- [Appendix A: Using VS Code Instead](#appendix-a-using-vs-code-instead)
+- [Appendix B: Example AI Prompt for JetBlue Case](#appendix-b-example-ai-prompt-for-jetblue-case)
+- [Appendix C: Windows Virtual Environment Activation Troubleshooting](#appendix-c-windows-virtual-environment-activation-troubleshooting)
 
 ---
 
