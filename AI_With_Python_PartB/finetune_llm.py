@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """
-Test script for LLM Fine-Tuning Demo modules
-This script tests all the modules to ensure they work correctly
+Fine-tuning script for LLM Fine-Tuning Demo
+This script can be used to:
+1. Fine-tune a model (main functionality)
+2. Run tests to verify all modules work correctly
 """
 
 import sys
 import traceback
 import time
+import argparse
 from typing import List, Dict, Any
 
 
@@ -445,6 +448,100 @@ def run_all_tests():
     return passed == total
 
 
+def run_fine_tuning():
+    """Main fine-tuning function - trains a model on the configured dataset"""
+    print("=" * 80)
+    print("LLM Fine-Tuning Pipeline - Starting Training")
+    print("=" * 80)
+    
+    try:
+        # Import required modules
+        print("\n[STATUS] Importing modules...")
+        from util.model_utils import create_model_manager
+        from util.data_utils import create_data_manager
+        from util.training_utils import create_training_manager
+        from config import config
+        
+        print("[SUCCESS] Modules imported")
+        
+        # Step 1: Create model manager and load base model
+        print("\n[STEP 1/5] Loading base model and tokenizer...")
+        model_manager = create_model_manager()
+        model, tokenizer = model_manager.load_model_and_tokenizer()
+        print("[SUCCESS] Base model and tokenizer loaded")
+        
+        # Step 2: Setup LoRA adapter for efficient fine-tuning
+        print("\n[STEP 2/5] Setting up LoRA adapter...")
+        model = model_manager.setup_lora()
+        print("[SUCCESS] LoRA adapter configured")
+        
+        # Step 3: Setup data collator
+        print("\n[STEP 3/5] Creating data collator...")
+        data_collator = model_manager.setup_data_collator()
+        print("[SUCCESS] Data collator created")
+        
+        # Step 4: Load and tokenize dataset
+        print("\n[STEP 4/5] Loading and tokenizing dataset...")
+        data_manager = create_data_manager(tokenizer)
+        data_manager.load_dataset()
+        tokenized_dataset = data_manager.tokenize_dataset()
+        
+        # Validate dataset
+        if not data_manager.validate_dataset():
+            print("[ERROR] Dataset validation failed")
+            return False
+        
+        print(f"[SUCCESS] Dataset ready: {len(tokenized_dataset)} samples")
+        
+        # Step 5: Create training manager and train
+        print("\n[STEP 5/5] Setting up training and starting fine-tuning...")
+        training_manager = create_training_manager(model, tokenized_dataset, data_collator)
+        training_manager.setup_training()
+        
+        print("\n" + "=" * 80)
+        print("[STATUS] Starting fine-tuning process...")
+        print("=" * 80)
+        
+        start_time = time.time()
+        training_manager.train(show_progress=True)
+        elapsed_time = time.time() - start_time
+        
+        print("\n" + "=" * 80)
+        print("[SUCCESS] Fine-tuning completed!")
+        print("=" * 80)
+        print(f"Training time: {elapsed_time:.2f} seconds ({elapsed_time/60:.2f} minutes)")
+        
+        # Print training summary
+        training_manager.print_training_summary()
+        
+        # Print model save location
+        output_dir = config.get_output_dir()
+        print(f"\n[INFO] Fine-tuned model saved to: {output_dir}")
+        print("[INFO] You can now use this model with run_model.py")
+        
+        return True
+        
+    except Exception as e:
+        print(f"\n[ERROR] Fine-tuning failed: {e}")
+        traceback.print_exc()
+        return False
+
+
 if __name__ == "__main__":
-    success = run_all_tests()
-    sys.exit(0 if success else 1)
+    parser = argparse.ArgumentParser(description="Fine-tune an LLM or run tests")
+    parser.add_argument("--test", action="store_true",
+                       help="Run test suite instead of fine-tuning")
+    parser.add_argument("--train", action="store_true",
+                       help="Run fine-tuning (default if no --test)")
+    
+    args = parser.parse_args()
+    
+    # Default to training if neither flag is set, or if --train is explicitly set
+    if args.test:
+        print("[INFO] Running in test mode...")
+        success = run_all_tests()
+        sys.exit(0 if success else 1)
+    else:
+        print("[INFO] Running in fine-tuning mode...")
+        success = run_fine_tuning()
+        sys.exit(0 if success else 1)

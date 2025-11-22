@@ -18,9 +18,10 @@ import torch
 class ModelDemo:
     """Demo class for testing fine-tuned models"""
     
-    def __init__(self, model_path: Optional[str], use_raw: bool = False):
+    def __init__(self, model_path: Optional[str], use_raw: bool = False, model_name: str = "distilgpt2"):
         self.model_path = model_path
         self.use_raw = use_raw
+        self.model_name = model_name
         self.model = None
         self.tokenizer = None
         self.test_prompts = []
@@ -28,20 +29,32 @@ class ModelDemo:
     def load_model(self):
         """Load the model and tokenizer (raw or fine-tuned)"""
         if self.use_raw:
-            print("\n[STATUS] Loading raw base model...")
+            print(f"\n[STATUS] Loading raw base model ({self.model_name})...")
         else:
             print(f"\n[STATUS] Loading fine-tuned model from {self.model_path}...")
         
         try:
             # Load tokenizer and set padding token
-            print("[STEP 1/4] Loading tokenizer...")
-            self.tokenizer = AutoTokenizer.from_pretrained("distilgpt2")
+            # Try loading from model path first (for fine-tuned models), then fall back to base model
+            print(f"[STEP 1/4] Loading tokenizer...")
+            if not self.use_raw and self.model_path:
+                try:
+                    self.tokenizer = AutoTokenizer.from_pretrained(self.model_path)
+                    print(f"   [INFO] Loaded tokenizer from fine-tuned model path")
+                except:
+                    # Fall back to base model tokenizer
+                    self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+                    print(f"   [INFO] Using base model tokenizer ({self.model_name})")
+            else:
+                self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+                print(f"   [INFO] Using base model tokenizer ({self.model_name})")
+            
             self.tokenizer.pad_token = self.tokenizer.eos_token
             print(f"[STEP 1/4] ✓ Tokenizer loaded (vocab size: {len(self.tokenizer)})")
             
             # Load base model
-            print("[STEP 2/4] Loading base model...")
-            base_model = AutoModelForCausalLM.from_pretrained("distilgpt2")
+            print(f"[STEP 2/4] Loading base model ({self.model_name})...")
+            base_model = AutoModelForCausalLM.from_pretrained(self.model_name)
             print("[STEP 2/4] ✓ Base model loaded")
             
             # Move to appropriate device (GPU/MPS if available, else CPU)
@@ -286,6 +299,9 @@ def main():
                        help="Temperature for text generation (higher = more creative)")
     parser.add_argument("--use-raw", action="store_true",
                        help="Use raw base model (no fine-tuned adapters)")
+    parser.add_argument("--model-name", type=str, default="distilgpt2",
+                       choices=["distilgpt2", "gpt2"],
+                       help="Base model name to use (default: distilgpt2)")
     parser.add_argument("--training-text", type=str,
                        help="Path to training text file to create prompts from")
     
@@ -321,8 +337,8 @@ def main():
     
     # Create demo instance
     print("\n[STATUS] Initializing ModelDemo instance...")
-    demo = ModelDemo(args.model_path, use_raw=args.use_raw)
-    print("[SUCCESS] ModelDemo initialized")
+    demo = ModelDemo(args.model_path, use_raw=args.use_raw, model_name=args.model_name)
+    print(f"[SUCCESS] ModelDemo initialized (model: {args.model_name})")
     
     try:
         # Load model

@@ -60,15 +60,15 @@ Now we will create a folder for your work and set up a "Virtual Environment".
 **What is a Virtual Environment?**  
 Think of it like a separate "sandbox" or "container" specifically for this project. It keeps the tools and libraries for this class separate from everything else on your computer, ensuring that updates in one project don't accidentally break another.
 
-**Shared Environment for Both Parts:**  
-We will create the virtual environment at the root level of the project (not inside `AI_With_Python_PartA`). This way, you can use the same environment for both Part A and Part B, which is more efficient and avoids duplicate installations.
+**Part-Specific Environment:**  
+We will create a virtual environment inside the `AI_With_Python_PartA` folder. This keeps Part A's dependencies separate from Part B, which will have its own virtual environment.
 
 ### Step 1: Open the Folder in Cursor
 Since you have already downloaded the course materials:
 1.  Open **Cursor**.
 2.  Click on **File** in the top menu bar, then select **Open Folder...**
-3.  Navigate to the folder you downloaded and select the **root folder** (the main folder containing both `AI_With_Python_PartA` and `AI_With_Python_PartB`).
-   - *Note: We open the root folder so we can create a single virtual environment that works for both Part A and Part B.*
+3.  Navigate to the folder you downloaded and select the **`AI_With_Python_PartA`** folder (not the root folder).
+   - *Note: We open the Part A folder directly so we can create a virtual environment specific to Part A.*
 4.  Click **Open**.
 
 ### Step 2: Open the Terminal
@@ -78,13 +78,13 @@ We need to type a few commands. We will use the "Terminal" built into Cursor.
 1.  In Cursor, look at the top menu. Click **Terminal** -> **New Terminal**.
 2.  A panel will appear at the bottom of the screen. This is where you type commands.
 
-### Step 3: Navigate to the Project Root (if needed)
-Make sure you're in the root folder of the project (the one containing both `AI_With_Python_PartA` and `AI_With_Python_PartB`). If you just opened the folder in Cursor, you should already be there. 
+### Step 3: Navigate to the Part A Folder (if needed)
+Make sure you're in the `AI_With_Python_PartA` folder. If you just opened the folder in Cursor, you should already be there. 
 
 **How to check which folder you're in:**
 - Type `pwd` (Mac) or `cd` (Windows) to see your current directory path
 - Your terminal prompt usually shows the folder name at the end
-- If you're not in the right folder, use `cd` followed by the path to navigate (e.g., `cd /path/to/project` on Mac or `cd C:\path\to\project` on Windows)
+- If you're not in the right folder, use `cd` followed by the path to navigate (e.g., `cd /path/to/AI_With_Python_PartA` on Mac or `cd C:\path\to\AI_With_Python_PartA` on Windows)
 
 ### Step 4: Create the Virtual Environment
 Type the following command into the terminal and press **Enter**:
@@ -99,9 +99,9 @@ python3 -m venv venv
 python -m venv venv
 ```
 
-*Explanation: This command asks Python to run its "venv" tool to create a new, empty environment inside a folder named `venv` at the root of the project. This single virtual environment will be used for both Part A and Part B.*
+*Explanation: This command asks Python to run its "venv" tool to create a new, empty environment inside a folder named `venv` within the `AI_With_Python_PartA` folder. This virtual environment is specific to Part A.*
 
-*Note: You might not see anything happen immediately. If a new folder named `venv` appears in your file list on the left (at the root level, not inside AI_With_Python_PartA), it worked!*
+*Note: You might not see anything happen immediately. If a new folder named `venv` appears in your file list on the left (inside the `AI_With_Python_PartA` folder), it worked!*
 
 ### Step 5: Activate the Virtual Environment
 Now we need to "turn on" the environment. Type the command for your system and press **Enter**:
@@ -148,15 +148,15 @@ Let's write and run your first piece of code to make sure everything is working 
 
 ### Step 1: Open the Hello World File
 1.  In Cursor, look at the **Explorer** (the file list on the left).
-2.  Navigate to the `AI_With_Python_PartA/Python_Scripts` folder.
+2.  Navigate to the `Python_Scripts` folder.
 3.  Click on the file named `hello.py` to open it.
 4.  Take a look at the code inside - it's a simple script that prints a greeting message.
 
 ### Step 2: Run the Code
 1.  Go back to your **Terminal** at the bottom (make sure you still see `(venv)`).
-2.  Navigate to the Python_Scripts folder. *Tip: If you're not sure where you are, type `pwd` (Mac) or `cd` (Windows) to check your current location.*
+2.  Navigate to the Python_Scripts folder. *Tip: If you're not sure where you are, type `pwd` (Mac) or `cd` (Windows) to check your current location. If you're already in the `AI_With_Python_PartA` folder, you can just navigate to `Python_Scripts`.*
     ```bash
-    cd AI_With_Python_PartA/Python_Scripts
+    cd Python_Scripts
     ```
 3.  Type the following command and press **Enter**:
 
@@ -189,10 +189,7 @@ Now that we have our environment set up, let's solve the Fitbit case, which you'
 This script uses powerful tools like `pandas` (for data) and `matplotlib` (for graphs) that don't come with standard Python. We need to install them into our virtual environment.
 
 1.  Make sure your terminal still shows `(venv)` at the start.
-2.  Navigate to the Part A folder. *Tip: Use `pwd` (Mac) or `cd` (Windows) to check your current location first.*
-    ```bash
-    cd AI_With_Python_PartA
-    ```
+2.  Make sure you're in the Part A folder. *Tip: Use `pwd` (Mac) or `cd` (Windows) to check your current location. If you're not in the `AI_With_Python_PartA` folder, navigate there with `cd AI_With_Python_PartA`.*
 3.  Type the following command and press **Enter**:
     ```bash
     pip install -r requirements.txt
@@ -202,7 +199,7 @@ This script uses powerful tools like `pandas` (for data) and `matplotlib` (for g
 ### Step 3: Run the Analysis
 Now, let's run the solver!
 
-1.  Navigate to the Python_Scripts folder. *Tip: If you're already in `AI_With_Python_PartA`, you can use `cd Python_Scripts`. If you're at the project root, use `cd AI_With_Python_PartA/Python_Scripts`.*
+1.  Navigate to the Python_Scripts folder. *Tip: If you're already in `AI_With_Python_PartA`, you can use `cd Python_Scripts`.*
     ```bash
     cd Python_Scripts
     ```
@@ -262,9 +259,9 @@ This part is optional and will give you hands-on experience using an AI coding a
 
 1.  Once you're satisfied with the generated script, save it as `jetblue_solver.py` in the `Python_Scripts` folder.
 2.  Make sure your virtual environment is activated (you should see `(venv)` in your terminal).
-3.  Navigate to the `Python_Scripts` folder. *Tip: Check your current location with `pwd` (Mac) or `cd` (Windows) if needed.*
+3.  Navigate to the `Python_Scripts` folder. *Tip: Check your current location with `pwd` (Mac) or `cd` (Windows) if needed. If you're already in `AI_With_Python_PartA`, use `cd Python_Scripts`.*
     ```bash
-    cd AI_With_Python_PartA/Python_Scripts
+    cd Python_Scripts
     ```
 4.  Run the script:
     ```bash
@@ -306,7 +303,7 @@ If you struggled with creating an effective prompt in Part 7, here is an example
 **Example Prompt:**
 
 ```
-Create a Python script `jetblue_solver.py` that reads `AI_With_Python_PartA/Case_Text/Jetblue_raw.md` and solves all questions in that document. Print results to the terminal and save visualizations as PNG files when appropriate.
+Create a Python script `jetblue_solver.py` that reads `Case_Text/Jetblue_raw.md` and solves all questions in that document. Print results to the terminal and save visualizations as PNG files when appropriate.
 ```
 
 ---

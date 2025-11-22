@@ -1,3 +1,4 @@
+# Core ML/AI packages
 torch
 torchvision
 torchaudio
@@ -5,10 +6,16 @@ transformers
 datasets
 peft
 accelerate
+
+# Data processing and visualization
 numpy
 pandas
 matplotlib
 seaborn
-jupyter
-bitsandbytes
+
+# Utilities
 tqdm
+jupyter
+
+# Optional: For quantization (not used in current scripts but may be useful)
+bitsandbytes
