@@ -36,7 +36,7 @@ git clone https://github.com/kuangxu/rinse_me_gently.git
 If you're using Cursor or VS Code, you can also open `.md` files locally and press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows/Linux) to render them in a preview pane.
 
 **Important Notes:**
-- The virtual environment will be created at the root level so it can be shared between Part A and Part B.
+- Each part (Part A and Part B) has its own virtual environment and requirements file, keeping dependencies isolated.
 - If you see raw markdown code (with `#`, `**`, backticks, etc.), you're viewing it incorrectly. Use one of the methods above!
 
 
