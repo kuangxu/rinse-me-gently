@@ -1,4 +1,5 @@
-# Rinse Me Gently: An Introductory AI & Python Workshop
+
+# Rinse Me Gently: A Gentle Introduction to Python and AI 
 
 > "Come, gentle night, come, loving black brow night, give me my Romeo."  
 > — William Shakespeare, *Romeo and Juliet*, Act 3, Scene 2
