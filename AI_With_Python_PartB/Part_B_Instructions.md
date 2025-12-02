@@ -169,7 +169,13 @@ When you're done experimenting, you can exit interactive mode in several ways:
 
 Now for the exciting part - we'll fine-tune the model on custom data! We'll use the washing machine dataset to teach the model about washing machines.
 
-*Concept: **Fine-tuning** adapts a pre-trained model to a specific task or domain. Instead of training from scratch, we use LoRA to efficiently update just a small portion of the model's parameters. This is like giving a well-read person a specialized book - they already know language, but now they know more about this specific topic.*
+*Concept: **Fine-tuning** adapts a pre-trained model to a specific task or domain. Instead of training from scratch, we use LoRA (Low-Rank Adaptation) to efficiently update just a small portion of the model's parameters. LoRA was introduced in 2021 by researchers at Microsoft and CMU as a way to fine-tune large language models without updating all billions of parameters. Instead, LoRA freezes the original model weights and adds small, trainable "adapter" matrices to specific layers. This approach can reduce trainable parameters by 10,000 times while maintaining similar performance. The key insight is that model adaptations can be represented in a low-dimensional space - think of it like making small adjustments to a complex system rather than rebuilding it from scratch. This is like giving a well-read person a specialized book - they already know language, but now they know more about this specific topic.*
+
+<p align="center">
+  <img src="assets/image.png" alt="LoRA Architecture" width="40%">
+</p>
+
+*Figure 1: LoRA reparametrization from the original paper. The pretrained weights W remain frozen, while only the small adapter matrices A and B are trained. Source: [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) (Hu et al., 2021)*
 
 #### Step 1: Run the Fine-Tuning Script
 
