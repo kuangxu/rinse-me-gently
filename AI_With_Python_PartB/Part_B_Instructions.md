@@ -208,7 +208,7 @@ The script will:
   - **epoch**: How many times the model has seen the entire training dataset. An epoch of 2.86 means the model has gone through the data almost 3 times. More epochs generally mean better learning, but too many can lead to overfitting.
 - At the end, you'll see a message like: `Fine-tuned model saved to: ./fine_tuned_washingmachine_data_model`
 
-*Note: The output folder name is automatically generated from your data file name. For `washingmachine_data.txt`, it creates `fine_tuned_washingmachine_data_model`.*
+*Note: The output folder name is automatically generated from your data file name. For `washingmachine_data.txt`, it creates `fine_tuned_washingmachine_data_model`. When you use a different data file (like `shakespeare_data.txt`), the folder name will automatically adapt (e.g., `fine_tuned_shakespeare_data_model`).*
 
 ---
 

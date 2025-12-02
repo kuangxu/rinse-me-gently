@@ -538,6 +538,11 @@ def run_fine_tuning(data_file: str, use_qwen=False):
         
         print(f"[SUCCESS] Dataset ready: {len(tokenized_dataset)} samples")
         
+        # Update config data file to generate correct output directory name
+        # This must be done BEFORE setup_training() so the output directory uses the correct data file name
+        config.data.data_file = data_file
+        config.training.output_dir = None  # Reset to force regeneration with new data file name
+        
         # Step 5: Create training manager and train
         print("\n[STEP 5/5] Setting up training and starting fine-tuning...")
         training_manager = create_training_manager(model, tokenized_dataset, data_collator)
@@ -559,10 +564,7 @@ def run_fine_tuning(data_file: str, use_qwen=False):
         # Print training summary
         training_manager.print_training_summary()
         
-        # Update config data file to generate correct output directory name
-        config.data.data_file = data_file
-        
-        # Print model save location
+        # Print model save location (output_dir was already set correctly during setup_training)
         output_dir = config.get_output_dir()
         
         # Plot and save loss curve in the main Part B folder (easy for students to access)
