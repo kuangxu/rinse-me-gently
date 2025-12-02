@@ -583,6 +583,10 @@ def run_fine_tuning(data_file: str, use_qwen=False):
         else:
             print(f"[INFO] Example: python run_model.py --model-path {output_dir}")
         
+        print("\n" + "=" * 80)
+        print("[SUCCESS] Fine-tuning pipeline completed successfully!")
+        print("=" * 80)
+        
         return True
         
     except Exception as e:
