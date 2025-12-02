@@ -59,3 +59,5 @@ logs/
 
 # Images
 *.png
+# Exception: allow the LoRA diagram in assets
+!AI_With_Python_PartB/assets/image.png
