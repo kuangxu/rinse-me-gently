@@ -46,3 +46,6 @@ runs/
 *.tmp
 *.temp
 
+
+# cursor rules
+*.cursorrules
