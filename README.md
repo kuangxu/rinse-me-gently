@@ -23,15 +23,15 @@ If you are already comfortable with Git, you can clone the repository:
 git clone https://github.com/kuangxu/rinse_me_gently.git
 ```
 
-### Step 2: Start Part A - **IMPORTANT: How to View Instructions**
+### Step 2: Choose Your Starting Point
 
 **⚠️ DO NOT open `.md` files in raw text format!** The instructions are formatted markdown files that must be viewed properly to be readable.
 
 **Option A: View on GitHub (Recommended)**
-1.  Navigate to the `AI_With_Python_PartA` folder on GitHub (in your web browser).
-2.  Click on `Part_A_Instructions.md` to view the instructions directly on GitHub.
+1.  Navigate to the appropriate folder (`AI_With_Python_PartA` or `AI_With_Python_PartB`) on GitHub (in your web browser).
+2.  Click on the instructions file (`Part_A_Instructions.md` or `Part_B_Instructions.md`) to view it directly on GitHub.
 3.  GitHub will automatically render the markdown with proper formatting.
-4.  Follow the step-by-step guide inside to set up your environment.
+4.  Follow the step-by-step guide inside.
 
 **Option B: View in Cursor/VS Code**
 If you're using Cursor or VS Code, you can also open `.md` files locally and press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows/Linux) to render them in a preview pane.
@@ -39,6 +39,7 @@ If you're using Cursor or VS Code, you can also open `.md` files locally and pre
 **Important Notes:**
 - Each part (Part A and Part B) has its own virtual environment and requirements file, keeping dependencies isolated.
 - If you see raw markdown code (with `#`, `**`, backticks, etc.), you're viewing it incorrectly. Use one of the methods above!
+- **Starting Part B directly?** Part B can be started independently, but if you're new to Python, virtual environments, or Git, we recommend starting with Part A first. Part B instructions reference Part A for detailed explanations of basic concepts like cloning repositories and setting up virtual environments.
 
 
 ## Repository Structure
@@ -49,10 +50,12 @@ If you're using Cursor or VS Code, you can also open `.md` files locally and pre
 *   Understanding and configuring Virtual Environments.
 *   Executing initial Python scripts.
 
-**Start here to prepare your local environment for the workshop.**
+**Start here if you're new to Python or need detailed setup instructions.**
 
 ### Part B: LLM Fine-Tuning (`AI_With_Python_PartB`) 
 **Objective:** Execute a state-of-the-art AI workflow.
 *   Fine-tuning a Large Language Model (LLM).
 *   Managing training data and pipelines.
 *   Interacting with custom-trained models.
+
+**Can be started independently.** If you're already familiar with Python, virtual environments, and Git, you can jump directly to Part B. The Part B instructions reference Part A for detailed explanations of basic concepts.

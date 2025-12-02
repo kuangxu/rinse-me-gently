@@ -28,16 +28,24 @@ We will be using **Cursor** (or VS Code), the same code editor from Part A. This
 
 ## Chapter 0 - Setting Up Python and Virtual Environment
 
-If you completed Part A of this exercise, you already know how to set up a virtual environment! We'll do the same thing here, but this time in the `AI_With_Python_PartB` folder.
+This chapter provides a quick setup guide for Part B. If you completed Part A, you already know how to set up a virtual environment! We'll do the same thing here, but this time in the `AI_With_Python_PartB` folder.
+
+**New to virtual environments, Python setup, or Git?**  
+For detailed explanations of these concepts, see **Part A** (`AI_With_Python_PartA/Part_A_Instructions.md`). This chapter provides a brief summary assuming you understand the basics.
 
 **Why a separate environment?**  
-Just like in Part A, we create a virtual environment to keep this project's dependencies isolated. Part B uses different Python packages (like `transformers` and `torch` for machine learning), so it needs its own environment.
+Part B uses different Python packages (such as `transformers` and `torch` for machine learning), so it needs its own isolated virtual environment.
+
+
 
 ### Step 1: Open the Part B Folder in Cursor
 
-1. Open **Cursor**.
-2. Click on **File** in the top menu bar, then select **Open Folder...**
-3. Navigate to your course materials and select the **`AI_With_Python_PartB`** folder (not the root folder).
+**Note:** If you are doing this as part of OIT 245, please make sure to re-download the [repository](https://github.com/kuangxu/rinse_me_gently) before starting Part B. This will ensure you have the most up to date files.
+
+
+1. Open **Cursor** (or VS Code - see Part A for setup instructions if needed).
+2. Click on **File** -> **Open Folder...**
+3. Navigate to and select the **`AI_With_Python_PartB`** folder (not the root folder).
 4. Click **Open**.
 
 ### Step 2: Open the Terminal
@@ -49,14 +57,11 @@ Just like in Part A, we create a virtual environment to keep this project's depe
 
 Make sure you're in the `AI_With_Python_PartB` folder. If you just opened the folder in Cursor, you should already be there.
 
-**How to check which folder you're in:**
-- Type `pwd` (Mac) or `cd` (Windows) to see your current directory path
-- Your terminal prompt usually shows the folder name at the end
-- If you're not in the right folder, use `cd` followed by the path to navigate
+**How to check:** Type `pwd` (Mac) or `cd` (Windows) to see your current directory path.
 
 ### Step 4: Create the Virtual Environment
 
-Type the following command into the terminal and press **Enter**:
+Type the following command and press **Enter**:
 
 **For Mac:**
 ```bash
@@ -68,11 +73,11 @@ python3 -m venv venv
 python -m venv venv
 ```
 
-*Explanation: This creates a new, empty virtual environment inside a folder named `venv` within the `AI_With_Python_PartB` folder. This is the same process you used in Part A!*
+*For detailed explanation of virtual environments, see Part A, Part 3.*
 
 ### Step 5: Activate the Virtual Environment
 
-Now we need to "turn on" the environment. Type the command for your system and press **Enter**:
+Type the command for your system and press **Enter**:
 
 **For Mac:**
 ```bash
@@ -84,24 +89,21 @@ source venv/bin/activate
 .\venv\Scripts\activate
 ```
 
+*Note: If you encounter activation errors on Windows, see Part A, Appendix C for troubleshooting.*
+
 **How do I know it worked?**  
-You should see `(venv)` appear at the very beginning of your command line in the terminal. It will look something like:
-`(venv) user@computer AI_With_Python_PartB %`
+You should see `(venv)` at the beginning of your terminal prompt, like: `(venv) user@computer AI_With_Python_PartB %`
 
 ### Step 6: Install Required Packages
 
-This project uses specialized machine learning libraries that don't come with standard Python. We need to install them into our virtual environment.
-    
-1. Make sure your terminal still shows `(venv)` at the start.
-2. Make sure you're in the Part B folder. *Tip: Use `pwd` (Mac) or `cd` (Windows) to check your current location.*
+1. Make sure your terminal shows `(venv)` at the start.
+2. Make sure you're in the Part B folder.
 3. Type the following command and press **Enter**:
     ```bash
     pip install -r requirements.txt
     ```
 
-*Explanation: This tells Python's package installer (`pip`) to read the `requirements.txt` file and install all the tools listed there. This includes PyTorch (for deep learning), Transformers (for language models), and other essential libraries.*
-
-*Note: This installation may take several minutes, especially the first time. The packages are large because they include pre-trained models and machine learning frameworks.*
+*This installs PyTorch, Transformers, and other machine learning libraries. The installation may take several minutes, especially the first time.*
 
 ---
 
