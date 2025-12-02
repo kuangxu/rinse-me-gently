@@ -145,9 +145,9 @@ Now let's have a conversation with the model! Interactive mode lets you type pro
 2. The script will load the model and then prompt you with `You: `.
 
 3. Type a question or prompt and press **Enter**. For example:
-    - "Tell me about washing machines"
-    - "What is the weather like?"
-    - "Write a poem about Python"
+    - "What is your name?"
+    - "How are you?"
+    - "What do you like to eat?"
 
 4. The model will generate a response and display it.
 
