@@ -1,21 +1,21 @@
-# Core ML/AI packages
+# Core ML/AI packages (required)
 torch
-torchvision
-torchaudio
 transformers
 datasets
 peft
 accelerate
 
-# Data processing and visualization
+# Data processing and visualization (required)
 numpy
-pandas
 matplotlib
-seaborn
 
-# Utilities
+# Utilities (required for progress bars)
 tqdm
-jupyter
 
-# Optional: For quantization (not used in current scripts but may be useful)
-bitsandbytes
+# Optional packages (not directly imported but may be useful)
+# torchvision  # For computer vision (not needed for NLP tasks)
+# torchaudio  # For audio processing (not needed for NLP tasks)
+# pandas  # For advanced data manipulation (not used in current scripts)
+# seaborn  # For advanced visualizations (not used in current scripts)
+# jupyter  # For Jupyter notebooks (optional)
+# bitsandbytes  # For model quantization (optional)
